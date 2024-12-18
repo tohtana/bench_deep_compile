@@ -1,0 +1,888 @@
+HOST_IP: 10.8.32.150
+NUM_NODES: 4
+NUM_PROCESSES: 32
+BACKEND: deepspeed
+ZERO_STAGE: 3
+MODEL: meta-llama/Meta-Llama-3-70B-Instruct
+EXTRA_OPTS: --batch_size 1 --seq_length 512 --activation_checkpointing --profile --profile_dir /mnt/post-training-ppo/projects/z3n/prof_osdi2025_repro --compile --schedule --passes prefetch,selective_gather
+[2024-12-16 19:55:31,001] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:31,909] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+W1216 19:55:34.531000 3453671 torch/distributed/run.py:793] 
+W1216 19:55:34.531000 3453671 torch/distributed/run.py:793] *****************************************
+W1216 19:55:34.531000 3453671 torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1216 19:55:34.531000 3453671 torch/distributed/run.py:793] *****************************************
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+[2024-12-16 19:55:38,860] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,432] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,467] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,547] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,595] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,609] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,634] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,635] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:39,742] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:40,481] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:40,515] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:40,595] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:40,603] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:40,632] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:40,634] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:40,687] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:55:42,325] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:55:43,016] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:55:43,062] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:55:43,089] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:55:43,115] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:55:43,115] [INFO] [comm.py:694:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-12-16 19:55:43,144] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:55:43,259] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:55:43,334] [INFO] [comm.py:663:init_distributed] cdb=None
+Running on device: cuda:2 is_deepspeed: True
+[2024-12-16 19:55:43,796] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Running on device: cuda:0 is_deepspeed: True
+Loading model and tokenizer...
+Running on device: cuda:4 is_deepspeed: True
+[2024-12-16 19:55:45,014] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Running on device: cuda:5 is_deepspeed: True
+Running on device: cuda:1 is_deepspeed: True
+Running on device: cuda:3 is_deepspeed: True
+Running on device: cuda:6 is_deepspeed: True
+[2024-12-16 19:55:45,162] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Running on device: cuda:7 is_deepspeed: True
+[2024-12-16 19:55:45,245] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:55:45,271] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+NCCL version 2.21.5+cuda12.4
+[2024-12-16 19:55:45,341] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:55:45,427] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:55:45,638] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:55:50,871] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 723, num_elems = 70.55B
+Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.51it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.58it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.61it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.58it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.53it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.54it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.58it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:19,  1.43it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:19,  1.43it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:19,  1.42it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:19,  1.41it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:19,  1.41it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:19,  1.41it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:19,  1.41it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:01<00:45,  1.59s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:22,  1.20it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:22,  1.21it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:22,  1.20it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:22,  1.19it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:22,  1.19it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:22,  1.18it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:22,  1.19it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:02<00:32,  1.14s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:20,  1.24it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:20,  1.25it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:20,  1.24it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:21,  1.23it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:21,  1.23it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:21,  1.23it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:21,  1.22it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:03<00:27,  1.01s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:03<00:20,  1.23it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:03<00:20,  1.23it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:03<00:20,  1.23it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:03<00:20,  1.23it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:03<00:20,  1.22it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:03<00:20,  1.22it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:03<00:20,  1.21it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:04<00:25,  1.02it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:04<00:20,  1.15it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:04<00:21,  1.14it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:04<00:20,  1.14it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:04<00:21,  1.14it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:04<00:21,  1.14it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:04<00:21,  1.14it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:04<00:21,  1.13it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:05<00:23,  1.05it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:05<00:20,  1.13it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:05<00:20,  1.13it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:05<00:20,  1.13it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:05<00:20,  1.13it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:05<00:20,  1.13it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:05<00:20,  1.12it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:05<00:20,  1.12it/s]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:22,  1.08it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:06<00:19,  1.14it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:06<00:19,  1.14it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:06<00:19,  1.14it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:06<00:19,  1.14it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:06<00:19,  1.14it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:06<00:19,  1.13it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:06<00:19,  1.13it/s]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:20,  1.13it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:07<00:17,  1.19it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:07<00:17,  1.19it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:07<00:17,  1.19it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:07<00:17,  1.19it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:07<00:17,  1.18it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:07<00:17,  1.18it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:07<00:17,  1.18it/s]Loading checkpoint shards:  27%|██▋       | 8/30 [00:07<00:19,  1.15it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:08<00:16,  1.21it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:08<00:16,  1.21it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:08<00:16,  1.21it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:08<00:16,  1.21it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:08<00:16,  1.20it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:08<00:16,  1.20it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:08<00:16,  1.20it/s]Loading checkpoint shards:  30%|███       | 9/30 [00:08<00:18,  1.15it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:09<00:15,  1.20it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:09<00:16,  1.18it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:09<00:16,  1.18it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:09<00:16,  1.18it/s]Loading checkpoint shards:  33%|███▎      | 10/30 [00:09<00:16,  1.18it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:09<00:15,  1.20it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:09<00:15,  1.19it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:09<00:15,  1.18it/s]Loading checkpoint shards:  37%|███▋      | 11/30 [00:10<00:15,  1.20it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:10<00:14,  1.18it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:10<00:14,  1.18it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:10<00:14,  1.18it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:10<00:14,  1.18it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:10<00:14,  1.18it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:10<00:14,  1.17it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:10<00:14,  1.16it/s]Loading checkpoint shards:  40%|████      | 12/30 [00:10<00:14,  1.20it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:11<00:13,  1.22it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:11<00:13,  1.22it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:11<00:13,  1.22it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:11<00:13,  1.22it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:11<00:13,  1.22it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:11<00:13,  1.22it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:11<00:13,  1.21it/s]Loading checkpoint shards:  43%|████▎     | 13/30 [00:11<00:14,  1.20it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:12<00:12,  1.24it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:12<00:12,  1.24it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:12<00:12,  1.24it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:12<00:12,  1.23it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:12<00:12,  1.23it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:12<00:12,  1.23it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:12<00:12,  1.22it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:12<00:13,  1.18it/s]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:13<00:12,  1.14it/s]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:13<00:12,  1.14it/s]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:13<00:12,  1.15it/s]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:13<00:12,  1.14it/s]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:13<00:12,  1.14it/s]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:13<00:12,  1.14it/s]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:13<00:12,  1.13it/s]Loading checkpoint shards:  50%|█████     | 15/30 [00:13<00:14,  1.05it/s]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:14<00:13,  1.00s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:14<00:13,  1.00s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:14<00:13,  1.00s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:14<00:13,  1.01s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:14<00:13,  1.01s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:14<00:13,  1.01s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:14<00:13,  1.01s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:15<00:15,  1.08s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:15<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:15<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:15<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:15<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:15<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:15<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:15<00:12,  1.07s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:16<00:13,  1.07s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:16<00:11,  1.05s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:16<00:11,  1.05s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:16<00:11,  1.05s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:16<00:11,  1.05s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:16<00:11,  1.05s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:16<00:11,  1.05s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:16<00:11,  1.06s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:17<00:12,  1.05s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:17<00:10,  1.06s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:17<00:10,  1.06s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:18<00:10,  1.06s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:17<00:10,  1.06s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:18<00:10,  1.06s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:18<00:10,  1.07s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:18<00:10,  1.07s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:18<00:11,  1.08s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:19<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:19<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:19<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:19<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:19<00:09,  1.11s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:19<00:09,  1.11s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:19<00:09,  1.11s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:19<00:10,  1.08s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:20<00:08,  1.11s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:20<00:08,  1.11s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:20<00:08,  1.11s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:20<00:08,  1.11s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:20<00:08,  1.11s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:20<00:08,  1.12s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:20<00:08,  1.11s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:20<00:09,  1.07s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:21<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:21<00:07,  1.12s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:21<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:21<00:07,  1.12s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:21<00:07,  1.12s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:21<00:07,  1.12s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:21<00:07,  1.12s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:21<00:08,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:22<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:22<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:22<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:22<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:22<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:22<00:06,  1.09s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:22<00:06,  1.09s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:22<00:07,  1.08s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:23<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:23<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:23<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:23<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:23<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:23<00:05,  1.07s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:23<00:05,  1.06s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:23<00:06,  1.09s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:24<00:04,  1.08s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:24<00:04,  1.08s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:24<00:04,  1.08s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:24<00:04,  1.08s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:24<00:04,  1.09s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:24<00:04,  1.08s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:24<00:04,  1.09s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:24<00:05,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:25<00:03,  1.09s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:25<00:03,  1.09s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:25<00:03,  1.09s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:25<00:03,  1.09s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:25<00:03,  1.09s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:25<00:03,  1.10s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:25<00:03,  1.10s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:25<00:04,  1.07s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:26<00:02,  1.10s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:26<00:02,  1.10s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:26<00:02,  1.10s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:26<00:02,  1.11s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:26<00:02,  1.10s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:26<00:02,  1.11s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:26<00:02,  1.11s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.08s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:27<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:27<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:27<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:27<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:27<00:01,  1.11s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:27<00:01,  1.11s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:27<00:01,  1.11s/it]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.07it/s]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.07it/s]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.07it/s]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.06it/s]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.06it/s]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.06it/s]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:28<00:00,  1.06it/s]
+Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.11s/it]Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.09s/it]Loading checkpoint shards: 100%|██████████| 30/30 [00:29<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:29<00:00,  1.01it/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading dataset...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-12-16 19:56:23,292] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-12-16 19:56:23,500] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:56:23,535] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:56:23,549] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:56:23,576] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-12-16 19:56:23,828] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:56:23,887] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-12-16 19:56:25,217] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.16.2+30504941, git-hash=30504941, git-branch=osdi_repro
+[2024-12-16 19:56:25,217] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:56:25,239] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-12-16 19:56:25,240] [INFO] [logging.py:128:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2024-12-16 19:56:25,240] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2024-12-16 19:56:25,322] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2024-12-16 19:56:25,322] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2024-12-16 19:56:25,322] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2024-12-16 19:56:25,322] [INFO] [logging.py:128:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2024-12-16 19:56:25,541] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2024-12-16 19:56:25,542] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 9.92 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:56:25,543] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.74 GB, percent = 5.4%
+[2024-12-16 19:56:25,546] [INFO] [stage3.py:168:__init__] Reduce bucket size 500000000
+[2024-12-16 19:56:25,546] [INFO] [stage3.py:169:__init__] Prefetch bucket size 50000000
+[2024-12-16 19:56:25,733] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-12-16 19:56:25,733] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:56:25,734] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.74 GB, percent = 5.4%
+Parameter Offload: Total persistent parameters: 1318912 in 161 params
+[2024-12-16 19:56:26,010] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-12-16 19:56:26,011] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:56:26,011] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.75 GB, percent = 5.4%
+[2024-12-16 19:56:26,215] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2024-12-16 19:56:26,216] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:56:26,216] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.75 GB, percent = 5.4%
+[2024-12-16 19:56:28,188] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 21
+[2024-12-16 19:56:28,189] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 4.11 GB         Max_CA 12 GB 
+[2024-12-16 19:56:28,190] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 112.13 GB, percent = 6.3%
+[2024-12-16 19:56:28,378] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2024-12-16 19:56:28,379] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 4.11 GB         Max_CA 4 GB 
+[2024-12-16 19:56:28,379] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 112.13 GB, percent = 6.3%
+[2024-12-16 19:56:28,588] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2024-12-16 19:56:28,589] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.45 GB         CA 12.76 GB         Max_CA 13 GB 
+[2024-12-16 19:56:28,589] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 112.13 GB, percent = 6.3%
+[2024-12-16 19:56:29,981] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2024-12-16 19:56:29,982] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.32 GB         CA 12.76 GB         Max_CA 13 GB 
+[2024-12-16 19:56:29,982] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.68 GB, percent = 5.4%
+[2024-12-16 19:56:30,183] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2024-12-16 19:56:30,184] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.72 GB         CA 13.16 GB         Max_CA 13 GB 
+[2024-12-16 19:56:30,184] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.68 GB, percent = 5.4%
+[2024-12-16 19:56:30,185] [INFO] [stage3.py:528:_setup_for_real_optimizer] optimizer state initialized
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+[2024-12-16 19:56:31,588] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2024-12-16 19:56:31,589] [INFO] [utils.py:782:see_memory_usage] MA 17.36 GB         Max_MA 21.28 GB         CA 22.11 GB         Max_CA 22 GB 
+[2024-12-16 19:56:31,589] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.76 GB, percent = 5.4%
+[2024-12-16 19:56:31,590] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2024-12-16 19:56:31,590] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2024-12-16 19:56:31,590] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2024-12-16 19:56:31,590] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[2e-05], mom=[(0.9, 0.999)]
+[2024-12-16 19:56:31,593] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   amp_params ................... False
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   bfloat16_enabled ............. True
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2024-12-16 19:56:31,593] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7fd3c7808310>
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   dump_state ................... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... None
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   fp16_auto_cast ............... None
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   fp16_enabled ................. False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 1
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1
+[2024-12-16 19:56:31,594] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   loss_scale ................... 1.0
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   optimizer_name ............... None
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   optimizer_params ............. None
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   pld_params ................... False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   scheduler_name ............... None
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   scheduler_params ............. None
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   steps_per_print .............. inf
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   train_batch_size ............. 32
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  1
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   world_size ................... 32
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  True
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=100000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=False module_granularity_threshold=0 use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False zeropp_loco_param=None mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2024-12-16 19:56:31,595] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 3
+[2024-12-16 19:56:31,596] [INFO] [config.py:989:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "sub_group_size": 1.000000e+08
+    }, 
+    "gradient_accumulation_steps": 1, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "train_batch_size": 32, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "wall_clock_breakdown": false, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true
+}
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Emitting ninja build file /home/aiscuser/.cache/torch_extensions/py310_cu121/native_z3/build.ninja...
+Building extension module native_z3...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+ninja: no work to do.
+Loading extension module native_z3...
+Time to load native_z3 op: 2.488703489303589 seconds
+Loading extension module native_z3...
+Time to load native_z3 op: 2.5318329334259033 seconds
+Loading extension module native_z3...
+Time to load native_z3 op: 2.5421600341796875 seconds
+Loading extension module native_z3...
+Time to load native_z3 op: 2.562208652496338 seconds
+Loading extension module native_z3...
+Time to load native_z3 op: 2.5695228576660156 seconds
+Loading extension module native_z3...
+Loading extension module native_z3...
+Time to load native_z3 op: 2.5678958892822266 seconds
+Time to load native_z3 op: 2.5751161575317383 seconds
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.1 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu121 as PyTorch extensions root...
+Emitting ninja build file /home/aiscuser/.cache/torch_extensions/py310_cu121/native_z3/build.ninja...
+Building extension module native_z3...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module native_z3...
+Time to load native_z3 op: 2.471567153930664 seconds
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+Opt passes: [(<function schedule_prefetch at 0x7fd3c7726a70>, 0.0), (<function make_selective_gather.<locals>.selective_gather_wrapper at 0x7fd3c719be20>, -1.0)]
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+schedule_prefetch graph_id=140539116437808 max_mem=76488966144.0 available_memory=40560295936 memory_allocated=39782224384 max_allocated=39790617088 total_param_size=2101346304 margin=0.1
+size: 0, avg_duration: 0
+size: 64, avg_duration: 0.00010868909885175526
+size: 128, avg_duration: 0.00010847500379895791
+size: 256, avg_duration: 0.0001082700036931783
+size: 512, avg_duration: 0.00010847659723367542
+size: 1024, avg_duration: 0.000113796500954777
+size: 2048, avg_duration: 0.00011220799933653325
+size: 4096, avg_duration: 0.0001111150995711796
+size: 8192, avg_duration: 0.000112323701614514
+size: 16384, avg_duration: 0.00011164239549543709
+size: 32768, avg_duration: 0.0001099366054404527
+size: 65536, avg_duration: 0.0001944047980941832
+size: 131072, avg_duration: 0.00023436058836523443
+size: 262144, avg_duration: 0.00020709980162791908
+size: 524288, avg_duration: 0.00021063699387013912
+size: 1048576, avg_duration: 0.000246687006438151
+size: 2097152, avg_duration: 0.0003748909221030772
+size: 4194304, avg_duration: 0.000336520723067224
+size: 8388608, avg_duration: 0.00026720608002506196
+size: 16777216, avg_duration: 0.00032193088554777205
+size: 33554432, avg_duration: 0.0004155029891990125
+size: 67108864, avg_duration: 0.0006382049759849906
+size: 134217728, avg_duration: 0.0009822288993746042
+size: 268435456, avg_duration: 0.001745650079101324
+size: 536870912, avg_duration: 0.0030945525504648685
+size: 1073741824, avg_duration: 0.005945222917944193
+size: 2147483648, avg_duration: 0.011473017744719982
+schedule_prefetch graph_id=140539116453456 max_mem=76488966144.0 available_memory=40560295936 memory_allocated=39790617088 max_allocated=39790617600 total_param_size=0 margin=0.1
+schedule_prefetch graph_id=140539116440592 max_mem=76488966144.0 available_memory=40560295936 memory_allocated=39790617088 max_allocated=39791141376 total_param_size=0 margin=0.1
+schedule_prefetch graph_id=140528942041264 max_mem=76488966144.0 available_memory=40560295936 memory_allocated=39788503552 max_allocated=40459635200 total_param_size=136904720384 margin=0.1
+schedule_prefetch graph_id=140531157951648 max_mem=76488966144.0 available_memory=40090533888 memory_allocated=40460509696 max_allocated=40985334272 total_param_size=2101346304 margin=0.1
+schedule_prefetch graph_id=140531157951648 max_mem=76488966144.0 available_memory=40090533888 memory_allocated=40968026112 max_allocated=40976418816 total_param_size=2101346304 margin=0.1
+schedule_prefetch graph_id=140528942041264 max_mem=76488966144.0 available_memory=40354775040 memory_allocated=40451590144 max_allocated=40459978752 total_param_size=136904720384 margin=0.1
+schedule_prefetch graph_id=140539116437808 max_mem=76488966144.0 available_memory=40858091520 memory_allocated=39787972608 max_allocated=39787972608 total_param_size=0 margin=0.1
+selective_gather graph_id=140539116437808 max_mem=41891958784 fwd_max_mem=41891958784 bwd_max_mem=41889318400
+selective_gather graph_id=140539116453456 max_mem=41891958784 fwd_max_mem=39790617600 bwd_max_mem=0
+selective_gather graph_id=140539116440592 max_mem=41891958784 fwd_max_mem=39792189440 bwd_max_mem=0
+selective_gather graph_id=140528942041264 max_mem=46357667328 fwd_max_mem=44873038848 bwd_max_mem=46357667328
+selective_gather graph_id=140531157951648 max_mem=46357667328 fwd_max_mem=42693189632 bwd_max_mem=43594708480
+selective_gather max_mem=46357667328 total_mem=84987740160 MEM_MARGIN=0.1 available_mem=30131298816.0
+Set persistent: 521 size: 16384 persistent_mem: 16384 shape: torch.Size([8192])
+Set persistent: 8 size: 16384 persistent_mem: 32768 shape: torch.Size([8192])
+Set persistent: 576 size: 16384 persistent_mem: 49152 shape: torch.Size([8192])
+Set persistent: 342 size: 16384 persistent_mem: 65536 shape: torch.Size([8192])
+Set persistent: 531 size: 16384 persistent_mem: 81920 shape: torch.Size([8192])
+Set persistent: 540 size: 16384 persistent_mem: 98304 shape: torch.Size([8192])
+Set persistent: 44 size: 16384 persistent_mem: 114688 shape: torch.Size([8192])
+Set persistent: 350 size: 16384 persistent_mem: 131072 shape: torch.Size([8192])
+Set persistent: 513 size: 16384 persistent_mem: 147456 shape: torch.Size([8192])
+Set persistent: 143 size: 16384 persistent_mem: 163840 shape: torch.Size([8192])
+Set persistent: 414 size: 16384 persistent_mem: 180224 shape: torch.Size([8192])
+Set persistent: 135 size: 16384 persistent_mem: 196608 shape: torch.Size([8192])
+Set persistent: 395 size: 16384 persistent_mem: 212992 shape: torch.Size([8192])
+Set persistent: 153 size: 16384 persistent_mem: 229376 shape: torch.Size([8192])
+Set persistent: 288 size: 16384 persistent_mem: 245760 shape: torch.Size([8192])
+Set persistent: 278 size: 16384 persistent_mem: 262144 shape: torch.Size([8192])
+Set persistent: 72 size: 16384 persistent_mem: 278528 shape: torch.Size([8192])
+Set persistent: 26 size: 16384 persistent_mem: 294912 shape: torch.Size([8192])
+Set persistent: 450 size: 16384 persistent_mem: 311296 shape: torch.Size([8192])
+Set persistent: 18 size: 16384 persistent_mem: 327680 shape: torch.Size([8192])
+Set persistent: 63 size: 16384 persistent_mem: 344064 shape: torch.Size([8192])
+Set persistent: 396 size: 16384 persistent_mem: 360448 shape: torch.Size([8192])
+Set persistent: 360 size: 16384 persistent_mem: 376832 shape: torch.Size([8192])
+Set persistent: 468 size: 16384 persistent_mem: 393216 shape: torch.Size([8192])
+Set persistent: 575 size: 16384 persistent_mem: 409600 shape: torch.Size([8192])
+Set persistent: 252 size: 16384 persistent_mem: 425984 shape: torch.Size([8192])
+Set persistent: 152 size: 16384 persistent_mem: 442368 shape: torch.Size([8192])
+Set persistent: 387 size: 16384 persistent_mem: 458752 shape: torch.Size([8192])
+Set persistent: 530 size: 16384 persistent_mem: 475136 shape: torch.Size([8192])
+Set persistent: 242 size: 16384 persistent_mem: 491520 shape: torch.Size([8192])
+Set persistent: 558 size: 16384 persistent_mem: 507904 shape: torch.Size([8192])
+Set persistent: 477 size: 16384 persistent_mem: 524288 shape: torch.Size([8192])
+Set persistent: 323 size: 16384 persistent_mem: 540672 shape: torch.Size([8192])
+Set persistent: 9 size: 16384 persistent_mem: 557056 shape: torch.Size([8192])
+Set persistent: 80 size: 16384 persistent_mem: 573440 shape: torch.Size([8192])
+Set persistent: 341 size: 16384 persistent_mem: 589824 shape: torch.Size([8192])
+Set persistent: 54 size: 16384 persistent_mem: 606208 shape: torch.Size([8192])
+Set persistent: 404 size: 16384 persistent_mem: 622592 shape: torch.Size([8192])
+Set persistent: 62 size: 16384 persistent_mem: 638976 shape: torch.Size([8192])
+Set persistent: 405 size: 16384 persistent_mem: 655360 shape: torch.Size([8192])
+Set persistent: 684 size: 16384 persistent_mem: 671744 shape: torch.Size([8192])
+Set persistent: 107 size: 16384 persistent_mem: 688128 shape: torch.Size([8192])
+Set persistent: 378 size: 16384 persistent_mem: 704512 shape: torch.Size([8192])
+Set persistent: 639 size: 16384 persistent_mem: 720896 shape: torch.Size([8192])
+Set persistent: 287 size: 16384 persistent_mem: 737280 shape: torch.Size([8192])
+Set persistent: 216 size: 16384 persistent_mem: 753664 shape: torch.Size([8192])
+Set persistent: 17 size: 16384 persistent_mem: 770048 shape: torch.Size([8192])
+Set persistent: 314 size: 16384 persistent_mem: 786432 shape: torch.Size([8192])
+Set persistent: 179 size: 16384 persistent_mem: 802816 shape: torch.Size([8192])
+Set persistent: 125 size: 16384 persistent_mem: 819200 shape: torch.Size([8192])
+Set persistent: 297 size: 16384 persistent_mem: 835584 shape: torch.Size([8192])
+Set persistent: 269 size: 16384 persistent_mem: 851968 shape: torch.Size([8192])
+Set persistent: 71 size: 16384 persistent_mem: 868352 shape: torch.Size([8192])
+Set persistent: 324 size: 16384 persistent_mem: 884736 shape: torch.Size([8192])
+Set persistent: 234 size: 16384 persistent_mem: 901120 shape: torch.Size([8192])
+Set persistent: 368 size: 16384 persistent_mem: 917504 shape: torch.Size([8192])
+Set persistent: 657 size: 16384 persistent_mem: 933888 shape: torch.Size([8192])
+Set persistent: 188 size: 16384 persistent_mem: 950272 shape: torch.Size([8192])
+Set persistent: 666 size: 16384 persistent_mem: 966656 shape: torch.Size([8192])
+Set persistent: 539 size: 16384 persistent_mem: 983040 shape: torch.Size([8192])
+Set persistent: 170 size: 16384 persistent_mem: 999424 shape: torch.Size([8192])
+Set persistent: 261 size: 16384 persistent_mem: 1015808 shape: torch.Size([8192])
+Set persistent: 27 size: 16384 persistent_mem: 1032192 shape: torch.Size([8192])
+Set persistent: 225 size: 16384 persistent_mem: 1048576 shape: torch.Size([8192])
+Set persistent: 126 size: 16384 persistent_mem: 1064960 shape: torch.Size([8192])
+Set persistent: 279 size: 16384 persistent_mem: 1081344 shape: torch.Size([8192])
+Set persistent: 351 size: 16384 persistent_mem: 1097728 shape: torch.Size([8192])
+Set persistent: 494 size: 16384 persistent_mem: 1114112 shape: torch.Size([8192])
+Set persistent: 270 size: 16384 persistent_mem: 1130496 shape: torch.Size([8192])
+Set persistent: 441 size: 16384 persistent_mem: 1146880 shape: torch.Size([8192])
+Set persistent: 674 size: 16384 persistent_mem: 1163264 shape: torch.Size([8192])
+Set persistent: 467 size: 16384 persistent_mem: 1179648 shape: torch.Size([8192])
+Set persistent: 459 size: 16384 persistent_mem: 1196032 shape: torch.Size([8192])
+Set persistent: 171 size: 16384 persistent_mem: 1212416 shape: torch.Size([8192])
+Set persistent: 206 size: 16384 persistent_mem: 1228800 shape: torch.Size([8192])
+Set persistent: 413 size: 16384 persistent_mem: 1245184 shape: torch.Size([8192])
+Set persistent: 486 size: 16384 persistent_mem: 1261568 shape: torch.Size([8192])
+Set persistent: 549 size: 16384 persistent_mem: 1277952 shape: torch.Size([8192])
+Set persistent: 557 size: 16384 persistent_mem: 1294336 shape: torch.Size([8192])
+Set persistent: 197 size: 16384 persistent_mem: 1310720 shape: torch.Size([8192])
+Set persistent: 189 size: 16384 persistent_mem: 1327104 shape: torch.Size([8192])
+Set persistent: 612 size: 16384 persistent_mem: 1343488 shape: torch.Size([8192])
+Set persistent: 432 size: 16384 persistent_mem: 1359872 shape: torch.Size([8192])
+Set persistent: 495 size: 16384 persistent_mem: 1376256 shape: torch.Size([8192])
+Set persistent: 377 size: 16384 persistent_mem: 1392640 shape: torch.Size([8192])
+Set persistent: 485 size: 16384 persistent_mem: 1409024 shape: torch.Size([8192])
+Set persistent: 53 size: 16384 persistent_mem: 1425408 shape: torch.Size([8192])
+Set persistent: 144 size: 16384 persistent_mem: 1441792 shape: torch.Size([8192])
+Set persistent: 198 size: 16384 persistent_mem: 1458176 shape: torch.Size([8192])
+Set persistent: 522 size: 16384 persistent_mem: 1474560 shape: torch.Size([8192])
+Set persistent: 116 size: 16384 persistent_mem: 1490944 shape: torch.Size([8192])
+Set persistent: 458 size: 16384 persistent_mem: 1507328 shape: torch.Size([8192])
+Set persistent: 99 size: 16384 persistent_mem: 1523712 shape: torch.Size([8192])
+Set persistent: 593 size: 16384 persistent_mem: 1540096 shape: torch.Size([8192])
+Set persistent: 260 size: 16384 persistent_mem: 1556480 shape: torch.Size([8192])
+Set persistent: 702 size: 16384 persistent_mem: 1572864 shape: torch.Size([8192])
+Set persistent: 162 size: 16384 persistent_mem: 1589248 shape: torch.Size([8192])
+Set persistent: 305 size: 16384 persistent_mem: 1605632 shape: torch.Size([8192])
+Set persistent: 620 size: 16384 persistent_mem: 1622016 shape: torch.Size([8192])
+Set persistent: 243 size: 16384 persistent_mem: 1638400 shape: torch.Size([8192])
+Set persistent: 90 size: 16384 persistent_mem: 1654784 shape: torch.Size([8192])
+Set persistent: 98 size: 16384 persistent_mem: 1671168 shape: torch.Size([8192])
+Set persistent: 566 size: 16384 persistent_mem: 1687552 shape: torch.Size([8192])
+Set persistent: 548 size: 16384 persistent_mem: 1703936 shape: torch.Size([8192])
+Set persistent: 296 size: 16384 persistent_mem: 1720320 shape: torch.Size([8192])
+Set persistent: 36 size: 16384 persistent_mem: 1736704 shape: torch.Size([8192])
+Set persistent: 630 size: 16384 persistent_mem: 1753088 shape: torch.Size([8192])
+Set persistent: 306 size: 16384 persistent_mem: 1769472 shape: torch.Size([8192])
+Set persistent: 251 size: 16384 persistent_mem: 1785856 shape: torch.Size([8192])
+Set persistent: 720 size: 16384 persistent_mem: 1802240 shape: torch.Size([8192])
+Set persistent: 108 size: 16384 persistent_mem: 1818624 shape: torch.Size([8192])
+Set persistent: 476 size: 16384 persistent_mem: 1835008 shape: torch.Size([8192])
+Set persistent: 449 size: 16384 persistent_mem: 1851392 shape: torch.Size([8192])
+Set persistent: 423 size: 16384 persistent_mem: 1867776 shape: torch.Size([8192])
+Set persistent: 207 size: 16384 persistent_mem: 1884160 shape: torch.Size([8192])
+Set persistent: 584 size: 16384 persistent_mem: 1900544 shape: torch.Size([8192])
+Set persistent: 332 size: 16384 persistent_mem: 1916928 shape: torch.Size([8192])
+Set persistent: 359 size: 16384 persistent_mem: 1933312 shape: torch.Size([8192])
+Set persistent: 594 size: 16384 persistent_mem: 1949696 shape: torch.Size([8192])
+Set persistent: 719 size: 16384 persistent_mem: 1966080 shape: torch.Size([8192])
+Set persistent: 656 size: 16384 persistent_mem: 1982464 shape: torch.Size([8192])
+Set persistent: 35 size: 16384 persistent_mem: 1998848 shape: torch.Size([8192])
+Set persistent: 134 size: 16384 persistent_mem: 2015232 shape: torch.Size([8192])
+Set persistent: 315 size: 16384 persistent_mem: 2031616 shape: torch.Size([8192])
+Set persistent: 161 size: 16384 persistent_mem: 2048000 shape: torch.Size([8192])
+Set persistent: 89 size: 16384 persistent_mem: 2064384 shape: torch.Size([8192])
+Set persistent: 224 size: 16384 persistent_mem: 2080768 shape: torch.Size([8192])
+Set persistent: 45 size: 16384 persistent_mem: 2097152 shape: torch.Size([8192])
+Set persistent: 701 size: 16384 persistent_mem: 2113536 shape: torch.Size([8192])
+Set persistent: 180 size: 16384 persistent_mem: 2129920 shape: torch.Size([8192])
+Set persistent: 215 size: 16384 persistent_mem: 2146304 shape: torch.Size([8192])
+Set persistent: 386 size: 16384 persistent_mem: 2162688 shape: torch.Size([8192])
+Set persistent: 504 size: 16384 persistent_mem: 2179072 shape: torch.Size([8192])
+Set persistent: 440 size: 16384 persistent_mem: 2195456 shape: torch.Size([8192])
+Set persistent: 648 size: 16384 persistent_mem: 2211840 shape: torch.Size([8192])
+Set persistent: 567 size: 16384 persistent_mem: 2228224 shape: torch.Size([8192])
+Set persistent: 369 size: 16384 persistent_mem: 2244608 shape: torch.Size([8192])
+Set persistent: 431 size: 16384 persistent_mem: 2260992 shape: torch.Size([8192])
+Set persistent: 602 size: 16384 persistent_mem: 2277376 shape: torch.Size([8192])
+Set persistent: 512 size: 16384 persistent_mem: 2293760 shape: torch.Size([8192])
+Set persistent: 692 size: 16384 persistent_mem: 2310144 shape: torch.Size([8192])
+Set persistent: 629 size: 16384 persistent_mem: 2326528 shape: torch.Size([8192])
+Set persistent: 117 size: 16384 persistent_mem: 2342912 shape: torch.Size([8192])
+Set persistent: 603 size: 16384 persistent_mem: 2359296 shape: torch.Size([8192])
+Set persistent: 611 size: 16384 persistent_mem: 2375680 shape: torch.Size([8192])
+Set persistent: 422 size: 16384 persistent_mem: 2392064 shape: torch.Size([8192])
+Set persistent: 81 size: 16384 persistent_mem: 2408448 shape: torch.Size([8192])
+Set persistent: 683 size: 16384 persistent_mem: 2424832 shape: torch.Size([8192])
+Set persistent: 585 size: 16384 persistent_mem: 2441216 shape: torch.Size([8192])
+Set persistent: 333 size: 16384 persistent_mem: 2457600 shape: torch.Size([8192])
+Set persistent: 638 size: 16384 persistent_mem: 2473984 shape: torch.Size([8192])
+Set persistent: 233 size: 16384 persistent_mem: 2490368 shape: torch.Size([8192])
+Set persistent: 710 size: 16384 persistent_mem: 2506752 shape: torch.Size([8192])
+Set persistent: 647 size: 16384 persistent_mem: 2523136 shape: torch.Size([8192])
+Set persistent: 665 size: 16384 persistent_mem: 2539520 shape: torch.Size([8192])
+Set persistent: 503 size: 16384 persistent_mem: 2555904 shape: torch.Size([8192])
+Set persistent: 621 size: 16384 persistent_mem: 2572288 shape: torch.Size([8192])
+Set persistent: 675 size: 16384 persistent_mem: 2588672 shape: torch.Size([8192])
+Set persistent: 711 size: 16384 persistent_mem: 2605056 shape: torch.Size([8192])
+Set persistent: 693 size: 16384 persistent_mem: 2621440 shape: torch.Size([8192])
+Set persistent: 721 size: 16384 persistent_mem: 2637824 shape: torch.Size([8192])
+Set persistent: 2 size: 16777216 persistent_mem: 19415040 shape: torch.Size([1024, 8192])
+Set persistent: 66 size: 16777216 persistent_mem: 36192256 shape: torch.Size([1024, 8192])
+Set persistent: 218 size: 16777216 persistent_mem: 52969472 shape: torch.Size([1024, 8192])
+Set persistent: 173 size: 16777216 persistent_mem: 69746688 shape: torch.Size([1024, 8192])
+Set persistent: 317 size: 16777216 persistent_mem: 86523904 shape: torch.Size([1024, 8192])
+Set persistent: 399 size: 16777216 persistent_mem: 103301120 shape: torch.Size([1024, 8192])
+Set persistent: 371 size: 16777216 persistent_mem: 120078336 shape: torch.Size([1024, 8192])
+Set persistent: 29 size: 16777216 persistent_mem: 136855552 shape: torch.Size([1024, 8192])
+Set persistent: 47 size: 16777216 persistent_mem: 153632768 shape: torch.Size([1024, 8192])
+Set persistent: 489 size: 16777216 persistent_mem: 170409984 shape: torch.Size([1024, 8192])
+Set persistent: 596 size: 16777216 persistent_mem: 187187200 shape: torch.Size([1024, 8192])
+Set persistent: 92 size: 16777216 persistent_mem: 203964416 shape: torch.Size([1024, 8192])
+Set persistent: 255 size: 16777216 persistent_mem: 220741632 shape: torch.Size([1024, 8192])
+Set persistent: 11 size: 16777216 persistent_mem: 237518848 shape: torch.Size([1024, 8192])
+Set persistent: 443 size: 16777216 persistent_mem: 254296064 shape: torch.Size([1024, 8192])
+Set persistent: 128 size: 16777216 persistent_mem: 271073280 shape: torch.Size([1024, 8192])
+Set persistent: 65 size: 16777216 persistent_mem: 287850496 shape: torch.Size([1024, 8192])
+Set persistent: 38 size: 16777216 persistent_mem: 304627712 shape: torch.Size([1024, 8192])
+Set persistent: 363 size: 16777216 persistent_mem: 321404928 shape: torch.Size([1024, 8192])
+Set persistent: 209 size: 16777216 persistent_mem: 338182144 shape: torch.Size([1024, 8192])
+Set persistent: 425 size: 16777216 persistent_mem: 354959360 shape: torch.Size([1024, 8192])
+Set persistent: 398 size: 16777216 persistent_mem: 371736576 shape: torch.Size([1024, 8192])
+Set persistent: 3 size: 16777216 persistent_mem: 388513792 shape: torch.Size([1024, 8192])
+Set persistent: 12 size: 16777216 persistent_mem: 405291008 shape: torch.Size([1024, 8192])
+Set persistent: 83 size: 16777216 persistent_mem: 422068224 shape: torch.Size([1024, 8192])
+Set persistent: 318 size: 16777216 persistent_mem: 438845440 shape: torch.Size([1024, 8192])
+Set persistent: 543 size: 16777216 persistent_mem: 455622656 shape: torch.Size([1024, 8192])
+Set persistent: 245 size: 16777216 persistent_mem: 472399872 shape: torch.Size([1024, 8192])
+Set persistent: 542 size: 16777216 persistent_mem: 489177088 shape: torch.Size([1024, 8192])
+Set persistent: 102 size: 16777216 persistent_mem: 505954304 shape: torch.Size([1024, 8192])
+Set persistent: 119 size: 16777216 persistent_mem: 522731520 shape: torch.Size([1024, 8192])
+Set persistent: 129 size: 16777216 persistent_mem: 539508736 shape: torch.Size([1024, 8192])
+Set persistent: 20 size: 16777216 persistent_mem: 556285952 shape: torch.Size([1024, 8192])
+Set persistent: 219 size: 16777216 persistent_mem: 573063168 shape: torch.Size([1024, 8192])
+Set persistent: 21 size: 16777216 persistent_mem: 589840384 shape: torch.Size([1024, 8192])
+Set persistent: 174 size: 16777216 persistent_mem: 606617600 shape: torch.Size([1024, 8192])
+Set persistent: 362 size: 16777216 persistent_mem: 623394816 shape: torch.Size([1024, 8192])
+Set persistent: 534 size: 16777216 persistent_mem: 640172032 shape: torch.Size([1024, 8192])
+Set persistent: 48 size: 16777216 persistent_mem: 656949248 shape: torch.Size([1024, 8192])
+Set persistent: 210 size: 16777216 persistent_mem: 673726464 shape: torch.Size([1024, 8192])
+Set persistent: 84 size: 16777216 persistent_mem: 690503680 shape: torch.Size([1024, 8192])
+Set persistent: 110 size: 16777216 persistent_mem: 707280896 shape: torch.Size([1024, 8192])
+Set persistent: 606 size: 16777216 persistent_mem: 724058112 shape: torch.Size([1024, 8192])
+Set persistent: 57 size: 16777216 persistent_mem: 740835328 shape: torch.Size([1024, 8192])
+Set persistent: 533 size: 16777216 persistent_mem: 757612544 shape: torch.Size([1024, 8192])
+Set persistent: 237 size: 16777216 persistent_mem: 774389760 shape: torch.Size([1024, 8192])
+Set persistent: 254 size: 16777216 persistent_mem: 791166976 shape: torch.Size([1024, 8192])
+Set persistent: 516 size: 16777216 persistent_mem: 807944192 shape: torch.Size([1024, 8192])
+Set persistent: 228 size: 16777216 persistent_mem: 824721408 shape: torch.Size([1024, 8192])
+Set persistent: 308 size: 16777216 persistent_mem: 841498624 shape: torch.Size([1024, 8192])
+Set persistent: 381 size: 16777216 persistent_mem: 858275840 shape: torch.Size([1024, 8192])
+Set persistent: 263 size: 16777216 persistent_mem: 875053056 shape: torch.Size([1024, 8192])
+Set persistent: 515 size: 16777216 persistent_mem: 891830272 shape: torch.Size([1024, 8192])
+Set persistent: 372 size: 16777216 persistent_mem: 908607488 shape: torch.Size([1024, 8192])
+Set persistent: 624 size: 16777216 persistent_mem: 925384704 shape: torch.Size([1024, 8192])
+Set persistent: 579 size: 16777216 persistent_mem: 942161920 shape: torch.Size([1024, 8192])
+Set persistent: 507 size: 16777216 persistent_mem: 958939136 shape: torch.Size([1024, 8192])
+Set persistent: 164 size: 16777216 persistent_mem: 975716352 shape: torch.Size([1024, 8192])
+Set persistent: 470 size: 16777216 persistent_mem: 992493568 shape: torch.Size([1024, 8192])
+Set persistent: 444 size: 16777216 persistent_mem: 1009270784 shape: torch.Size([1024, 8192])
+Set persistent: 147 size: 16777216 persistent_mem: 1026048000 shape: torch.Size([1024, 8192])
+Set persistent: 56 size: 16777216 persistent_mem: 1042825216 shape: torch.Size([1024, 8192])
+Set persistent: 552 size: 16777216 persistent_mem: 1059602432 shape: torch.Size([1024, 8192])
+Set persistent: 434 size: 16777216 persistent_mem: 1076379648 shape: torch.Size([1024, 8192])
+Set persistent: 30 size: 16777216 persistent_mem: 1093156864 shape: torch.Size([1024, 8192])
+Set persistent: 326 size: 16777216 persistent_mem: 1109934080 shape: torch.Size([1024, 8192])
+Set persistent: 200 size: 16777216 persistent_mem: 1126711296 shape: torch.Size([1024, 8192])
+Set persistent: 155 size: 16777216 persistent_mem: 1143488512 shape: torch.Size([1024, 8192])
+Set persistent: 344 size: 16777216 persistent_mem: 1160265728 shape: torch.Size([1024, 8192])
+Set persistent: 182 size: 16777216 persistent_mem: 1177042944 shape: torch.Size([1024, 8192])
+Set persistent: 614 size: 16777216 persistent_mem: 1193820160 shape: torch.Size([1024, 8192])
+Set persistent: 453 size: 16777216 persistent_mem: 1210597376 shape: torch.Size([1024, 8192])
+Set persistent: 192 size: 16777216 persistent_mem: 1227374592 shape: torch.Size([1024, 8192])
+Set persistent: 695 size: 16777216 persistent_mem: 1244151808 shape: torch.Size([1024, 8192])
+Set persistent: 632 size: 16777216 persistent_mem: 1260929024 shape: torch.Size([1024, 8192])
+Set persistent: 183 size: 16777216 persistent_mem: 1277706240 shape: torch.Size([1024, 8192])
+Set persistent: 201 size: 16777216 persistent_mem: 1294483456 shape: torch.Size([1024, 8192])
+Set persistent: 101 size: 16777216 persistent_mem: 1311260672 shape: torch.Size([1024, 8192])
+Set persistent: 345 size: 16777216 persistent_mem: 1328037888 shape: torch.Size([1024, 8192])
+Set persistent: 390 size: 16777216 persistent_mem: 1344815104 shape: torch.Size([1024, 8192])
+Set persistent: 578 size: 16777216 persistent_mem: 1361592320 shape: torch.Size([1024, 8192])
+Set persistent: 570 size: 16777216 persistent_mem: 1378369536 shape: torch.Size([1024, 8192])
+Set persistent: 111 size: 16777216 persistent_mem: 1395146752 shape: torch.Size([1024, 8192])
+Set persistent: 191 size: 16777216 persistent_mem: 1411923968 shape: torch.Size([1024, 8192])
+Set persistent: 615 size: 16777216 persistent_mem: 1428701184 shape: torch.Size([1024, 8192])
+Set persistent: 525 size: 16777216 persistent_mem: 1445478400 shape: torch.Size([1024, 8192])
+Set persistent: 75 size: 16777216 persistent_mem: 1462255616 shape: torch.Size([1024, 8192])
+Set persistent: 686 size: 16777216 persistent_mem: 1479032832 shape: torch.Size([1024, 8192])
+Set persistent: 120 size: 16777216 persistent_mem: 1495810048 shape: torch.Size([1024, 8192])
+Set persistent: 498 size: 16777216 persistent_mem: 1512587264 shape: torch.Size([1024, 8192])
+Set persistent: 506 size: 16777216 persistent_mem: 1529364480 shape: torch.Size([1024, 8192])
+Set persistent: 354 size: 16777216 persistent_mem: 1546141696 shape: torch.Size([1024, 8192])
+Set persistent: 389 size: 16777216 persistent_mem: 1562918912 shape: torch.Size([1024, 8192])
+Set persistent: 426 size: 16777216 persistent_mem: 1579696128 shape: torch.Size([1024, 8192])
+Set persistent: 299 size: 16777216 persistent_mem: 1596473344 shape: torch.Size([1024, 8192])
+Set persistent: 713 size: 16777216 persistent_mem: 1613250560 shape: torch.Size([1024, 8192])
+Set persistent: 74 size: 16777216 persistent_mem: 1630027776 shape: torch.Size([1024, 8192])
+Set persistent: 435 size: 16777216 persistent_mem: 1646804992 shape: torch.Size([1024, 8192])
+Set persistent: 246 size: 16777216 persistent_mem: 1663582208 shape: torch.Size([1024, 8192])
+Set persistent: 480 size: 16777216 persistent_mem: 1680359424 shape: torch.Size([1024, 8192])
+Set persistent: 407 size: 16777216 persistent_mem: 1697136640 shape: torch.Size([1024, 8192])
+Set persistent: 380 size: 16777216 persistent_mem: 1713913856 shape: torch.Size([1024, 8192])
+Set persistent: 281 size: 16777216 persistent_mem: 1730691072 shape: torch.Size([1024, 8192])
+Set persistent: 353 size: 16777216 persistent_mem: 1747468288 shape: torch.Size([1024, 8192])
+Set persistent: 462 size: 16777216 persistent_mem: 1764245504 shape: torch.Size([1024, 8192])
+Set persistent: 273 size: 16777216 persistent_mem: 1781022720 shape: torch.Size([1024, 8192])
+Set persistent: 417 size: 16777216 persistent_mem: 1797799936 shape: torch.Size([1024, 8192])
+Set persistent: 282 size: 16777216 persistent_mem: 1814577152 shape: torch.Size([1024, 8192])
+Set persistent: 272 size: 16777216 persistent_mem: 1831354368 shape: torch.Size([1024, 8192])
+Set persistent: 138 size: 16777216 persistent_mem: 1848131584 shape: torch.Size([1024, 8192])
+Set persistent: 452 size: 16777216 persistent_mem: 1864908800 shape: torch.Size([1024, 8192])
+Set persistent: 290 size: 16777216 persistent_mem: 1881686016 shape: torch.Size([1024, 8192])
+Set persistent: 291 size: 16777216 persistent_mem: 1898463232 shape: torch.Size([1024, 8192])
+Set persistent: 524 size: 16777216 persistent_mem: 1915240448 shape: torch.Size([1024, 8192])
+Set persistent: 597 size: 16777216 persistent_mem: 1932017664 shape: torch.Size([1024, 8192])
+Set persistent: 560 size: 16777216 persistent_mem: 1948794880 shape: torch.Size([1024, 8192])
+Set persistent: 336 size: 16777216 persistent_mem: 1965572096 shape: torch.Size([1024, 8192])
+Set persistent: 39 size: 16777216 persistent_mem: 1982349312 shape: torch.Size([1024, 8192])
+Set persistent: 569 size: 16777216 persistent_mem: 1999126528 shape: torch.Size([1024, 8192])
+Set persistent: 588 size: 16777216 persistent_mem: 2015903744 shape: torch.Size([1024, 8192])
+Set persistent: 300 size: 16777216 persistent_mem: 2032680960 shape: torch.Size([1024, 8192])
+Set persistent: 93 size: 16777216 persistent_mem: 2049458176 shape: torch.Size([1024, 8192])
+Set persistent: 605 size: 16777216 persistent_mem: 2066235392 shape: torch.Size([1024, 8192])
+Set persistent: 677 size: 16777216 persistent_mem: 2083012608 shape: torch.Size([1024, 8192])
+Set persistent: 704 size: 16777216 persistent_mem: 2099789824 shape: torch.Size([1024, 8192])
+Set persistent: 156 size: 16777216 persistent_mem: 2116567040 shape: torch.Size([1024, 8192])
+Set persistent: 561 size: 16777216 persistent_mem: 2133344256 shape: torch.Size([1024, 8192])
+Set persistent: 687 size: 16777216 persistent_mem: 2150121472 shape: torch.Size([1024, 8192])
+Set persistent: 146 size: 16777216 persistent_mem: 2166898688 shape: torch.Size([1024, 8192])
+Set persistent: 641 size: 16777216 persistent_mem: 2183675904 shape: torch.Size([1024, 8192])
+Set persistent: 137 size: 16777216 persistent_mem: 2200453120 shape: torch.Size([1024, 8192])
+Set persistent: 264 size: 16777216 persistent_mem: 2217230336 shape: torch.Size([1024, 8192])
+Set persistent: 236 size: 16777216 persistent_mem: 2234007552 shape: torch.Size([1024, 8192])
+Set persistent: 165 size: 16777216 persistent_mem: 2250784768 shape: torch.Size([1024, 8192])
+Set persistent: 461 size: 16777216 persistent_mem: 2267561984 shape: torch.Size([1024, 8192])
+Set persistent: 623 size: 16777216 persistent_mem: 2284339200 shape: torch.Size([1024, 8192])
+Set persistent: 497 size: 16777216 persistent_mem: 2301116416 shape: torch.Size([1024, 8192])
+Set persistent: 227 size: 16777216 persistent_mem: 2317893632 shape: torch.Size([1024, 8192])
+Set persistent: 660 size: 16777216 persistent_mem: 2334670848 shape: torch.Size([1024, 8192])
+Set persistent: 471 size: 16777216 persistent_mem: 2351448064 shape: torch.Size([1024, 8192])
+Set persistent: 309 size: 16777216 persistent_mem: 2368225280 shape: torch.Size([1024, 8192])
+Set persistent: 650 size: 16777216 persistent_mem: 2385002496 shape: torch.Size([1024, 8192])
+Set persistent: 327 size: 16777216 persistent_mem: 2401779712 shape: torch.Size([1024, 8192])
+Set persistent: 678 size: 16777216 persistent_mem: 2418556928 shape: torch.Size([1024, 8192])
+Set persistent: 551 size: 16777216 persistent_mem: 2435334144 shape: torch.Size([1024, 8192])
+Set persistent: 335 size: 16777216 persistent_mem: 2452111360 shape: torch.Size([1024, 8192])
+Set persistent: 587 size: 16777216 persistent_mem: 2468888576 shape: torch.Size([1024, 8192])
+Set persistent: 668 size: 16777216 persistent_mem: 2485665792 shape: torch.Size([1024, 8192])
+Set persistent: 408 size: 16777216 persistent_mem: 2502443008 shape: torch.Size([1024, 8192])
+Set persistent: 479 size: 16777216 persistent_mem: 2519220224 shape: torch.Size([1024, 8192])
+Set persistent: 696 size: 16777216 persistent_mem: 2535997440 shape: torch.Size([1024, 8192])
+Set persistent: 633 size: 16777216 persistent_mem: 2552774656 shape: torch.Size([1024, 8192])
+Set persistent: 488 size: 16777216 persistent_mem: 2569551872 shape: torch.Size([1024, 8192])
+Set persistent: 416 size: 16777216 persistent_mem: 2586329088 shape: torch.Size([1024, 8192])
+Set persistent: 659 size: 16777216 persistent_mem: 2603106304 shape: torch.Size([1024, 8192])
+Set persistent: 714 size: 16777216 persistent_mem: 2619883520 shape: torch.Size([1024, 8192])
+Set persistent: 651 size: 16777216 persistent_mem: 2636660736 shape: torch.Size([1024, 8192])
+Set persistent: 705 size: 16777216 persistent_mem: 2653437952 shape: torch.Size([1024, 8192])
+Set persistent: 642 size: 16777216 persistent_mem: 2670215168 shape: torch.Size([1024, 8192])
+Set persistent: 669 size: 16777216 persistent_mem: 2686992384 shape: torch.Size([1024, 8192])
+Set persistent: 13 size: 134217728 persistent_mem: 2821210112 shape: torch.Size([8192, 8192])
+Set persistent: 265 size: 134217728 persistent_mem: 2955427840 shape: torch.Size([8192, 8192])
+Set persistent: 337 size: 134217728 persistent_mem: 3089645568 shape: torch.Size([8192, 8192])
+Set persistent: 1 size: 134217728 persistent_mem: 3223863296 shape: torch.Size([8192, 8192])
+Set persistent: 130 size: 134217728 persistent_mem: 3358081024 shape: torch.Size([8192, 8192])
+Set persistent: 409 size: 134217728 persistent_mem: 3492298752 shape: torch.Size([8192, 8192])
+Set persistent: 316 size: 134217728 persistent_mem: 3626516480 shape: torch.Size([8192, 8192])
+Set persistent: 49 size: 134217728 persistent_mem: 3760734208 shape: torch.Size([8192, 8192])
+Set persistent: 694 size: 134217728 persistent_mem: 3894951936 shape: torch.Size([8192, 8192])
+Set persistent: 307 size: 134217728 persistent_mem: 4029169664 shape: torch.Size([8192, 8192])
+Set persistent: 10 size: 134217728 persistent_mem: 4163387392 shape: torch.Size([8192, 8192])
+Set persistent: 64 size: 134217728 persistent_mem: 4297605120 shape: torch.Size([8192, 8192])
+Set persistent: 289 size: 134217728 persistent_mem: 4431822848 shape: torch.Size([8192, 8192])
+Set persistent: 91 size: 134217728 persistent_mem: 4566040576 shape: torch.Size([8192, 8192])
+Set persistent: 208 size: 134217728 persistent_mem: 4700258304 shape: torch.Size([8192, 8192])
+Set persistent: 400 size: 134217728 persistent_mem: 4834476032 shape: torch.Size([8192, 8192])
+Set persistent: 442 size: 134217728 persistent_mem: 4968693760 shape: torch.Size([8192, 8192])
+Set persistent: 31 size: 134217728 persistent_mem: 5102911488 shape: torch.Size([8192, 8192])
+Set persistent: 253 size: 134217728 persistent_mem: 5237129216 shape: torch.Size([8192, 8192])
+Set persistent: 103 size: 134217728 persistent_mem: 5371346944 shape: torch.Size([8192, 8192])
+Set persistent: 55 size: 134217728 persistent_mem: 5505564672 shape: torch.Size([8192, 8192])
+Set persistent: 229 size: 134217728 persistent_mem: 5639782400 shape: torch.Size([8192, 8192])
+Set persistent: 4 size: 134217728 persistent_mem: 5774000128 shape: torch.Size([8192, 8192])
+Set persistent: 280 size: 134217728 persistent_mem: 5908217856 shape: torch.Size([8192, 8192])
+Set persistent: 193 size: 134217728 persistent_mem: 6042435584 shape: torch.Size([8192, 8192])
+Set persistent: 397 size: 134217728 persistent_mem: 6176653312 shape: torch.Size([8192, 8192])
+Set persistent: 22 size: 134217728 persistent_mem: 6310871040 shape: torch.Size([8192, 8192])
+Set persistent: 19 size: 134217728 persistent_mem: 6445088768 shape: torch.Size([8192, 8192])
+Set persistent: 352 size: 134217728 persistent_mem: 6579306496 shape: torch.Size([8192, 8192])
+Set persistent: 580 size: 134217728 persistent_mem: 6713524224 shape: torch.Size([8192, 8192])
+Set persistent: 58 size: 134217728 persistent_mem: 6847741952 shape: torch.Size([8192, 8192])
+Set persistent: 100 size: 134217728 persistent_mem: 6981959680 shape: torch.Size([8192, 8192])
+Set persistent: 220 size: 134217728 persistent_mem: 7116177408 shape: torch.Size([8192, 8192])
+Set persistent: 346 size: 134217728 persistent_mem: 7250395136 shape: torch.Size([8192, 8192])
+Set persistent: 532 size: 134217728 persistent_mem: 7384612864 shape: torch.Size([8192, 8192])
+Set persistent: 37 size: 134217728 persistent_mem: 7518830592 shape: torch.Size([8192, 8192])
+Set persistent: 406 size: 134217728 persistent_mem: 7653048320 shape: torch.Size([8192, 8192])
+Set persistent: 211 size: 134217728 persistent_mem: 7787266048 shape: torch.Size([8192, 8192])
+Set persistent: 217 size: 134217728 persistent_mem: 7921483776 shape: torch.Size([8192, 8192])
+Set persistent: 40 size: 134217728 persistent_mem: 8055701504 shape: torch.Size([8192, 8192])
+Set persistent: 577 size: 134217728 persistent_mem: 8189919232 shape: torch.Size([8192, 8192])
+Set persistent: 76 size: 134217728 persistent_mem: 8324136960 shape: torch.Size([8192, 8192])
+Set persistent: 472 size: 134217728 persistent_mem: 8458354688 shape: torch.Size([8192, 8192])
+Set persistent: 127 size: 134217728 persistent_mem: 8592572416 shape: torch.Size([8192, 8192])
+Set persistent: 424 size: 134217728 persistent_mem: 8726790144 shape: torch.Size([8192, 8192])
+Set persistent: 676 size: 134217728 persistent_mem: 8861007872 shape: torch.Size([8192, 8192])
+Set persistent: 148 size: 134217728 persistent_mem: 8995225600 shape: torch.Size([8192, 8192])
+Set persistent: 517 size: 134217728 persistent_mem: 9129443328 shape: torch.Size([8192, 8192])
+Set persistent: 67 size: 134217728 persistent_mem: 9263661056 shape: torch.Size([8192, 8192])
+Set persistent: 703 size: 134217728 persistent_mem: 9397878784 shape: torch.Size([8192, 8192])
+Set persistent: 256 size: 134217728 persistent_mem: 9532096512 shape: torch.Size([8192, 8192])
+Set persistent: 382 size: 134217728 persistent_mem: 9666314240 shape: torch.Size([8192, 8192])
+Set persistent: 559 size: 134217728 persistent_mem: 9800531968 shape: torch.Size([8192, 8192])
+Set persistent: 361 size: 134217728 persistent_mem: 9934749696 shape: torch.Size([8192, 8192])
+Set persistent: 136 size: 134217728 persistent_mem: 10068967424 shape: torch.Size([8192, 8192])
+Set persistent: 82 size: 134217728 persistent_mem: 10203185152 shape: torch.Size([8192, 8192])
+Set persistent: 172 size: 134217728 persistent_mem: 10337402880 shape: torch.Size([8192, 8192])
+Set persistent: 415 size: 134217728 persistent_mem: 10471620608 shape: torch.Size([8192, 8192])
+Set persistent: 379 size: 134217728 persistent_mem: 10605838336 shape: torch.Size([8192, 8192])
+Set persistent: 355 size: 134217728 persistent_mem: 10740056064 shape: torch.Size([8192, 8192])
+Set persistent: 298 size: 134217728 persistent_mem: 10874273792 shape: torch.Size([8192, 8192])
+Set persistent: 301 size: 134217728 persistent_mem: 11008491520 shape: torch.Size([8192, 8192])
+Set persistent: 370 size: 134217728 persistent_mem: 11142709248 shape: torch.Size([8192, 8192])
+Set persistent: 598 size: 134217728 persistent_mem: 11276926976 shape: torch.Size([8192, 8192])
+Set persistent: 661 size: 134217728 persistent_mem: 11411144704 shape: torch.Size([8192, 8192])
+Set persistent: 118 size: 134217728 persistent_mem: 11545362432 shape: torch.Size([8192, 8192])
+Set persistent: 190 size: 134217728 persistent_mem: 11679580160 shape: torch.Size([8192, 8192])
+Set persistent: 436 size: 134217728 persistent_mem: 11813797888 shape: torch.Size([8192, 8192])
+Set persistent: 589 size: 134217728 persistent_mem: 11948015616 shape: torch.Size([8192, 8192])
+Set persistent: 715 size: 134217728 persistent_mem: 12082233344 shape: torch.Size([8192, 8192])
+Set persistent: 490 size: 134217728 persistent_mem: 12216451072 shape: torch.Size([8192, 8192])
+Set persistent: 568 size: 134217728 persistent_mem: 12350668800 shape: torch.Size([8192, 8192])
+Set persistent: 235 size: 134217728 persistent_mem: 12484886528 shape: torch.Size([8192, 8192])
+Set persistent: 418 size: 134217728 persistent_mem: 12619104256 shape: torch.Size([8192, 8192])
+Set persistent: 553 size: 134217728 persistent_mem: 12753321984 shape: torch.Size([8192, 8192])
+Set persistent: 283 size: 134217728 persistent_mem: 12887539712 shape: torch.Size([8192, 8192])
+Set persistent: 550 size: 134217728 persistent_mem: 13021757440 shape: torch.Size([8192, 8192])
+Set persistent: 46 size: 134217728 persistent_mem: 13155975168 shape: torch.Size([8192, 8192])
+Set persistent: 481 size: 134217728 persistent_mem: 13290192896 shape: torch.Size([8192, 8192])
+Set persistent: 319 size: 134217728 persistent_mem: 13424410624 shape: torch.Size([8192, 8192])
+Set persistent: 109 size: 134217728 persistent_mem: 13558628352 shape: torch.Size([8192, 8192])
+Set persistent: 535 size: 134217728 persistent_mem: 13692846080 shape: torch.Size([8192, 8192])
+Set persistent: 712 size: 134217728 persistent_mem: 13827063808 shape: torch.Size([8192, 8192])
+Set persistent: 478 size: 134217728 persistent_mem: 13961281536 shape: torch.Size([8192, 8192])
+Set persistent: 391 size: 134217728 persistent_mem: 14095499264 shape: torch.Size([8192, 8192])
+Set persistent: 604 size: 134217728 persistent_mem: 14229716992 shape: torch.Size([8192, 8192])
+Set persistent: 679 size: 134217728 persistent_mem: 14363934720 shape: torch.Size([8192, 8192])
+Set persistent: 292 size: 134217728 persistent_mem: 14498152448 shape: torch.Size([8192, 8192])
+Set persistent: 28 size: 134217728 persistent_mem: 14632370176 shape: torch.Size([8192, 8192])
+Set persistent: 85 size: 134217728 persistent_mem: 14766587904 shape: torch.Size([8192, 8192])
+Set persistent: 670 size: 134217728 persistent_mem: 14900805632 shape: torch.Size([8192, 8192])
+Set persistent: 343 size: 134217728 persistent_mem: 15035023360 shape: torch.Size([8192, 8192])
+Set persistent: 469 size: 134217728 persistent_mem: 15169241088 shape: torch.Size([8192, 8192])
+Set persistent: 496 size: 134217728 persistent_mem: 15303458816 shape: torch.Size([8192, 8192])
+Set persistent: 310 size: 134217728 persistent_mem: 15437676544 shape: torch.Size([8192, 8192])
+Set persistent: 271 size: 134217728 persistent_mem: 15571894272 shape: torch.Size([8192, 8192])
+Set persistent: 226 size: 134217728 persistent_mem: 15706112000 shape: torch.Size([8192, 8192])
+Set persistent: 334 size: 134217728 persistent_mem: 15840329728 shape: torch.Size([8192, 8192])
+Set persistent: 181 size: 134217728 persistent_mem: 15974547456 shape: torch.Size([8192, 8192])
+Set persistent: 388 size: 134217728 persistent_mem: 16108765184 shape: torch.Size([8192, 8192])
+Set persistent: 505 size: 134217728 persistent_mem: 16242982912 shape: torch.Size([8192, 8192])
+Set persistent: 451 size: 134217728 persistent_mem: 16377200640 shape: torch.Size([8192, 8192])
+Set persistent: 454 size: 134217728 persistent_mem: 16511418368 shape: torch.Size([8192, 8192])
+Set persistent: 112 size: 134217728 persistent_mem: 16645636096 shape: torch.Size([8192, 8192])
+Set persistent: 625 size: 134217728 persistent_mem: 16779853824 shape: torch.Size([8192, 8192])
+Set persistent: 94 size: 134217728 persistent_mem: 16914071552 shape: torch.Size([8192, 8192])
+Set persistent: 433 size: 134217728 persistent_mem: 17048289280 shape: torch.Size([8192, 8192])
+Set persistent: 274 size: 134217728 persistent_mem: 17182507008 shape: torch.Size([8192, 8192])
+Set persistent: 139 size: 134217728 persistent_mem: 17316724736 shape: torch.Size([8192, 8192])
+Set persistent: 163 size: 134217728 persistent_mem: 17450942464 shape: torch.Size([8192, 8192])
+Set persistent: 688 size: 134217728 persistent_mem: 17585160192 shape: torch.Size([8192, 8192])
+Set persistent: 541 size: 134217728 persistent_mem: 17719377920 shape: torch.Size([8192, 8192])
+Set persistent: 145 size: 134217728 persistent_mem: 17853595648 shape: torch.Size([8192, 8192])
+Set persistent: 166 size: 134217728 persistent_mem: 17987813376 shape: torch.Size([8192, 8192])
+Set persistent: 595 size: 134217728 persistent_mem: 18122031104 shape: torch.Size([8192, 8192])
+Set persistent: 445 size: 134217728 persistent_mem: 18256248832 shape: torch.Size([8192, 8192])
+Set persistent: 658 size: 134217728 persistent_mem: 18390466560 shape: torch.Size([8192, 8192])
+Set persistent: 121 size: 134217728 persistent_mem: 18524684288 shape: torch.Size([8192, 8192])
+Set persistent: 157 size: 134217728 persistent_mem: 18658902016 shape: torch.Size([8192, 8192])
+Set persistent: 463 size: 134217728 persistent_mem: 18793119744 shape: torch.Size([8192, 8192])
+Set persistent: 175 size: 134217728 persistent_mem: 18927337472 shape: torch.Size([8192, 8192])
+Set persistent: 73 size: 134217728 persistent_mem: 19061555200 shape: torch.Size([8192, 8192])
+Set persistent: 640 size: 134217728 persistent_mem: 19195772928 shape: torch.Size([8192, 8192])
+Set persistent: 202 size: 134217728 persistent_mem: 19329990656 shape: torch.Size([8192, 8192])
+Set persistent: 616 size: 134217728 persistent_mem: 19464208384 shape: torch.Size([8192, 8192])
+Set persistent: 643 size: 134217728 persistent_mem: 19598426112 shape: torch.Size([8192, 8192])
+Set persistent: 526 size: 134217728 persistent_mem: 19732643840 shape: torch.Size([8192, 8192])
+Set persistent: 685 size: 134217728 persistent_mem: 19866861568 shape: torch.Size([8192, 8192])
+Set persistent: 238 size: 134217728 persistent_mem: 20001079296 shape: torch.Size([8192, 8192])
+Set persistent: 523 size: 134217728 persistent_mem: 20135297024 shape: torch.Size([8192, 8192])
+Set persistent: 364 size: 134217728 persistent_mem: 20269514752 shape: torch.Size([8192, 8192])
+Set persistent: 487 size: 134217728 persistent_mem: 20403732480 shape: torch.Size([8192, 8192])
+Set persistent: 184 size: 134217728 persistent_mem: 20537950208 shape: torch.Size([8192, 8192])
+Set persistent: 544 size: 134217728 persistent_mem: 20672167936 shape: torch.Size([8192, 8192])
+Set persistent: 562 size: 134217728 persistent_mem: 20806385664 shape: torch.Size([8192, 8192])
+Set persistent: 328 size: 134217728 persistent_mem: 20940603392 shape: torch.Size([8192, 8192])
+Set persistent: 244 size: 134217728 persistent_mem: 21074821120 shape: torch.Size([8192, 8192])
+Set persistent: 508 size: 134217728 persistent_mem: 21209038848 shape: torch.Size([8192, 8192])
+Set persistent: 154 size: 134217728 persistent_mem: 21343256576 shape: torch.Size([8192, 8192])
+Set persistent: 373 size: 134217728 persistent_mem: 21477474304 shape: torch.Size([8192, 8192])
+Set persistent: 706 size: 134217728 persistent_mem: 21611692032 shape: torch.Size([8192, 8192])
+Set persistent: 571 size: 134217728 persistent_mem: 21745909760 shape: torch.Size([8192, 8192])
+Set persistent: 514 size: 134217728 persistent_mem: 21880127488 shape: torch.Size([8192, 8192])
+Set persistent: 586 size: 134217728 persistent_mem: 22014345216 shape: torch.Size([8192, 8192])
+Set persistent: 247 size: 134217728 persistent_mem: 22148562944 shape: torch.Size([8192, 8192])
+Set persistent: 460 size: 134217728 persistent_mem: 22282780672 shape: torch.Size([8192, 8192])
+Set persistent: 631 size: 134217728 persistent_mem: 22416998400 shape: torch.Size([8192, 8192])
+Set persistent: 262 size: 134217728 persistent_mem: 22551216128 shape: torch.Size([8192, 8192])
+Set persistent: 325 size: 134217728 persistent_mem: 22685433856 shape: torch.Size([8192, 8192])
+Set persistent: 199 size: 134217728 persistent_mem: 22819651584 shape: torch.Size([8192, 8192])
+Set persistent: 667 size: 134217728 persistent_mem: 22953869312 shape: torch.Size([8192, 8192])
+Set persistent: 613 size: 134217728 persistent_mem: 23088087040 shape: torch.Size([8192, 8192])
+Set persistent: 622 size: 134217728 persistent_mem: 23222304768 shape: torch.Size([8192, 8192])
+Set persistent: 697 size: 134217728 persistent_mem: 23356522496 shape: torch.Size([8192, 8192])
+Set persistent: 427 size: 134217728 persistent_mem: 23490740224 shape: torch.Size([8192, 8192])
+Set persistent: 499 size: 134217728 persistent_mem: 23624957952 shape: torch.Size([8192, 8192])
+Set persistent: 649 size: 134217728 persistent_mem: 23759175680 shape: torch.Size([8192, 8192])
+Set persistent: 607 size: 134217728 persistent_mem: 23893393408 shape: torch.Size([8192, 8192])
+Set persistent: 652 size: 134217728 persistent_mem: 24027611136 shape: torch.Size([8192, 8192])
+Set persistent: 634 size: 134217728 persistent_mem: 24161828864 shape: torch.Size([8192, 8192])
+Set persistent: 582 size: 469762048 persistent_mem: 24631590912 shape: torch.Size([28672, 8192])
+Set persistent: 430 size: 469762048 persistent_mem: 25101352960 shape: torch.Size([8192, 28672])
+Set persistent: 591 size: 469762048 persistent_mem: 25571115008 shape: torch.Size([28672, 8192])
+Set persistent: 213 size: 469762048 persistent_mem: 26040877056 shape: torch.Size([28672, 8192])
+Set persistent: 321 size: 469762048 persistent_mem: 26510639104 shape: torch.Size([28672, 8192])
+Set persistent: 115 size: 469762048 persistent_mem: 26980401152 shape: torch.Size([8192, 28672])
+Set persistent: 105 size: 469762048 persistent_mem: 27450163200 shape: torch.Size([28672, 8192])
+Set persistent: 637 size: 469762048 persistent_mem: 27919925248 shape: torch.Size([8192, 28672])
+Set persistent: 689 size: 469762048 persistent_mem: 28389687296 shape: torch.Size([28672, 8192])
+Set persistent: 385 size: 469762048 persistent_mem: 28859449344 shape: torch.Size([8192, 28672])
+Set persistent: 419 size: 469762048 persistent_mem: 29329211392 shape: torch.Size([28672, 8192])
+Set persistent: 113 size: 469762048 persistent_mem: 29798973440 shape: torch.Size([28672, 8192])
+Epoch 1, Step 10, Loss: 0.37078380584716797 sync: True time: 3.6908907890319824 alloc_mem: 69581197312 peak_mem: 76465276416
+Epoch 1, Step 20, Loss: 0.11228372156620026 sync: True time: 3.661207914352417 alloc_mem: 69581197312 peak_mem: 76465276416
+Epoch 1, Step 30, Loss: 0.15506918728351593 sync: True time: 3.6535046100616455 alloc_mem: 69581197312 peak_mem: 76465276416
+meta-llama/Meta-Llama-3-70B-Instruct ds=True np=32 batch_size=1 seq=512 zero_stage=3 acc=1 ac=True compile=True schedule=True passes=prefetch,selective_gather compile_time=461.6977801322937 iteration time: 3.6551 alloc_mem: 69581197312 peak_mem: 76465276416

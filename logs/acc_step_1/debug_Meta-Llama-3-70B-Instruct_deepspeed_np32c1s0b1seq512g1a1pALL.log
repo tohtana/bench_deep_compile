@@ -1,0 +1,393 @@
+HOST_IP: 10.8.32.150
+NUM_NODES: 4
+NUM_PROCESSES: 32
+BACKEND: deepspeed
+ZERO_STAGE: 3
+MODEL: meta-llama/Meta-Llama-3-70B-Instruct
+EXTRA_OPTS: --batch_size 1 --seq_length 512 --activation_checkpointing --profile --profile_dir /mnt/post-training-ppo/projects/z3n/prof_osdi2025_repro --compile
+[2024-12-16 19:41:36,449] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:37,350] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+W1216 19:41:39.912000 3448764 torch/distributed/run.py:793] 
+W1216 19:41:39.912000 3448764 torch/distributed/run.py:793] *****************************************
+W1216 19:41:39.912000 3448764 torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1216 19:41:39.912000 3448764 torch/distributed/run.py:793] *****************************************
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+[2024-12-16 19:41:44,697] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:44,839] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:44,921] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:44,943] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:44,958] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:45,019] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:45,033] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:45,048] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:45,606] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:45,799] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:45,982] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:46,005] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:46,021] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:46,035] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:46,062] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:46,071] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-16 19:41:48,035] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:41:48,231] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:41:48,395] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:41:48,516] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:41:48,534] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:41:48,542] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:41:48,542] [INFO] [comm.py:694:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-12-16 19:41:48,578] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-16 19:41:48,618] [INFO] [comm.py:663:init_distributed] cdb=None
+Running on device: cuda:5 is_deepspeed: True
+[2024-12-16 19:41:49,583] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Running on device: cuda:1 is_deepspeed: True
+Running on device: cuda:0 is_deepspeed: True
+Loading model and tokenizer...
+[2024-12-16 19:41:50,204] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Running on device: cuda:7 is_deepspeed: True
+Running on device: cuda:4 is_deepspeed: True
+Running on device: cuda:2 is_deepspeed: True
+[2024-12-16 19:41:50,373] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Running on device: cuda:6 is_deepspeed: True
+Running on device: cuda:3 is_deepspeed: True
+[2024-12-16 19:41:50,430] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:41:50,500] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:41:50,516] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:41:50,546] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:41:50,551] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+NCCL version 2.21.5+cuda12.4
+[2024-12-16 19:41:55,701] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 723, num_elems = 70.55B
+Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.61it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.59it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.56it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.55it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.45it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:12,  2.38it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:12,  2.40it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:22,  1.22it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:22,  1.22it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:22,  1.22it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:22,  1.22it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:22,  1.22it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:23,  1.20it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:23,  1.18it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:01<00:54,  1.87s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:27,  1.02s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:27,  1.03s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:27,  1.03s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:27,  1.04s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:28,  1.04s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:28,  1.04s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:28,  1.05s/it]Loading checkpoint shards:   7%|▋         | 2/30 [00:02<00:39,  1.41s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.00it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:26,  1.01s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:26,  1.01s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:26,  1.01s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:26,  1.01s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:26,  1.01s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:26,  1.01s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:04<00:34,  1.26s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.02s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.02s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.02s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.02s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.03s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.03s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.03s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:05<00:31,  1.22s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.07s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.07s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.06s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.07s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.07s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:06<00:25,  1.07s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:06<00:25,  1.08s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:06<00:29,  1.17s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:07<00:25,  1.10s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:07<00:25,  1.10s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:07<00:25,  1.10s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:07<00:25,  1.11s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:07<00:25,  1.11s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:07<00:25,  1.10s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:07<00:25,  1.11s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:07<00:27,  1.15s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.11s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.11s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.11s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.11s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:08<00:25,  1.10s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.05s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.05s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:21,  1.05s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.05s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.05s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.05s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:09<00:24,  1.10s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.05s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:21,  1.05s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:21,  1.05s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:21,  1.06s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:10<00:22,  1.09s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:19,  1.05s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.05s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:19,  1.05s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:19,  1.05s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.05s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:11<00:21,  1.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:18,  1.05s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:18,  1.05s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:18,  1.05s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:18,  1.05s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:18,  1.05s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:18,  1.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:12<00:19,  1.04s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:17,  1.06s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:17,  1.06s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:17,  1.06s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:17,  1.06s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:17,  1.06s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.06s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:13<00:18,  1.04s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.02s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.02s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.02s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.02s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.04s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:14<00:17,  1.05s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.02s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.02s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.03s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.03s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.03s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.03s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:15<00:17,  1.07s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.07s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.07s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.07s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:15,  1.07s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.07s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:15,  1.08s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:15,  1.08s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:16<00:16,  1.09s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:14,  1.10s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:14,  1.10s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:14,  1.10s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:14,  1.10s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:14,  1.10s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:14,  1.11s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:14,  1.10s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:18<00:15,  1.10s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.12s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.13s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.12s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.13s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.13s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.13s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.13s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:19<00:14,  1.10s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.09s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.09s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.08s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.09s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.09s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.08s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.09s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:20<00:13,  1.10s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.08s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.08s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.08s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:21<00:10,  1.08s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:21<00:10,  1.08s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:21<00:10,  1.09s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:21<00:10,  1.08s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:21<00:12,  1.11s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.09s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.09s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.10s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.10s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:22<00:10,  1.10s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.10s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.09s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.10s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.10s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.10s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.11s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.11s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:23<00:09,  1.09s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.11s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.11s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:24<00:08,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.08s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.09s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:25<00:07,  1.09s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.07s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.06s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.07s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.15s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:26<00:06,  1.09s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.07s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.07s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.07s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.07s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.07s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.08s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.12s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:27<00:05,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.08s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.10s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:28<00:04,  1.07s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:29<00:02,  1.11s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:29<00:02,  1.11s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:29<00:02,  1.10s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:29<00:02,  1.11s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:29<00:02,  1.11s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:29<00:02,  1.12s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:29<00:02,  1.09s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:29<00:03,  1.08s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:30<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:30<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:30<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:30<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:30<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:30<00:01,  1.10s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:30<00:01,  1.08s/it]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.03s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.04s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.04s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.04s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.04s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.04s/it]
+Loading checkpoint shards:  93%|█████████▎| 28/30 [00:31<00:02,  1.10s/it]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.22it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.04s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading checkpoint shards:  97%|█████████▋| 29/30 [00:32<00:01,  1.09s/it]Loading checkpoint shards: 100%|██████████| 30/30 [00:32<00:00,  1.08it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:32<00:00,  1.09s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading dataset...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-12-16 19:42:31,362] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:42:31,362] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:42:31,362] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:42:31,382] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:42:31,383] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-12-16 19:42:31,443] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:42:31,545] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[2024-12-16 19:42:32,996] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.16.2+30504941, git-hash=30504941, git-branch=osdi_repro
+[2024-12-16 19:42:32,996] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-16 19:42:33,016] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-12-16 19:42:33,018] [INFO] [logging.py:128:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2024-12-16 19:42:33,018] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2024-12-16 19:42:33,087] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2024-12-16 19:42:33,087] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2024-12-16 19:42:33,087] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2024-12-16 19:42:33,087] [INFO] [logging.py:128:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2024-12-16 19:42:33,323] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2024-12-16 19:42:33,325] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 9.92 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:42:33,325] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.46 GB, percent = 5.3%
+[2024-12-16 19:42:33,328] [INFO] [stage3.py:168:__init__] Reduce bucket size 500000000
+[2024-12-16 19:42:33,328] [INFO] [stage3.py:169:__init__] Prefetch bucket size 50000000
+[2024-12-16 19:42:33,535] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-12-16 19:42:33,536] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:42:33,536] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.46 GB, percent = 5.3%
+Parameter Offload: Total persistent parameters: 1318912 in 161 params
+[2024-12-16 19:42:33,813] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-12-16 19:42:33,814] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:42:33,814] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.46 GB, percent = 5.3%
+[2024-12-16 19:42:34,029] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2024-12-16 19:42:34,030] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-16 19:42:34,030] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.46 GB, percent = 5.3%
+[2024-12-16 19:42:36,855] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 21
+[2024-12-16 19:42:36,856] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 4.11 GB         Max_CA 12 GB 
+[2024-12-16 19:42:36,856] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 110.89 GB, percent = 6.3%
+[2024-12-16 19:42:37,067] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2024-12-16 19:42:37,068] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 4.11 GB         Max_CA 4 GB 
+[2024-12-16 19:42:37,068] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.45 GB, percent = 5.3%
+[2024-12-16 19:42:37,315] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2024-12-16 19:42:37,316] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.45 GB         CA 12.76 GB         Max_CA 13 GB 
+[2024-12-16 19:42:37,316] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.45 GB, percent = 5.3%
+[2024-12-16 19:42:38,353] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2024-12-16 19:42:38,354] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.32 GB         CA 12.76 GB         Max_CA 13 GB 
+[2024-12-16 19:42:38,354] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.45 GB, percent = 5.3%
+[2024-12-16 19:42:38,569] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2024-12-16 19:42:38,570] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.72 GB         CA 13.16 GB         Max_CA 13 GB 
+[2024-12-16 19:42:38,570] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 94.44 GB, percent = 5.3%
+[2024-12-16 19:42:38,571] [INFO] [stage3.py:528:_setup_for_real_optimizer] optimizer state initialized
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Compiling with fast_free
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Compiling with fast_free
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Compiling with fast_free
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Compiling with fast_free
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Compiling with fast_free
+Compiling with fast_free
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Compiling with fast_free
+[2024-12-16 19:42:39,999] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2024-12-16 19:42:40,000] [INFO] [utils.py:782:see_memory_usage] MA 17.36 GB         Max_MA 21.28 GB         CA 22.11 GB         Max_CA 22 GB 
+[2024-12-16 19:42:40,001] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 95.1 GB, percent = 5.4%
+[2024-12-16 19:42:40,001] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2024-12-16 19:42:40,001] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2024-12-16 19:42:40,001] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2024-12-16 19:42:40,001] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[2e-05], mom=[(0.9, 0.999)]
+[2024-12-16 19:42:40,004] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2024-12-16 19:42:40,004] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-12-16 19:42:40,004] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2024-12-16 19:42:40,004] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2024-12-16 19:42:40,004] [INFO] [config.py:1003:print]   amp_params ................... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   bfloat16_enabled ............. True
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f1837924310>
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   dump_state ................... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... None
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   fp16_auto_cast ............... None
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   fp16_enabled ................. False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2024-12-16 19:42:40,005] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 1
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   loss_scale ................... 1.0
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   optimizer_name ............... None
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   optimizer_params ............. None
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   pld_params ................... False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   scheduler_name ............... None
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   scheduler_params ............. None
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   steps_per_print .............. inf
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   train_batch_size ............. 32
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  1
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2024-12-16 19:42:40,006] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2024-12-16 19:42:40,007] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2024-12-16 19:42:40,007] [INFO] [config.py:1003:print]   world_size ................... 32
+[2024-12-16 19:42:40,007] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  True
+[2024-12-16 19:42:40,007] [INFO] [config.py:1003:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=100000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=False module_granularity_threshold=0 use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False zeropp_loco_param=None mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-12-16 19:42:40,007] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2024-12-16 19:42:40,007] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2024-12-16 19:42:40,007] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 3
+[2024-12-16 19:42:40,007] [INFO] [config.py:989:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "sub_group_size": 1.000000e+08
+    }, 
+    "gradient_accumulation_steps": 1, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "train_batch_size": 32, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "wall_clock_breakdown": false, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true
+}
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Compiling with fast_free
+[rank2]:W1216 19:42:55.191000 3448942 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank2]:W1216 19:42:55.191000 3448942 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank2]:W1216 19:42:55.191000 3448942 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 93953582068880)                  
+[rank2]:W1216 19:42:55.191000 3448942 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank2]:W1216 19:42:55.191000 3448942 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank7]:W1216 19:42:55.193000 3448947 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank7]:W1216 19:42:55.193000 3448947 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank7]:W1216 19:42:55.193000 3448947 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 94105944506144)                  
+[rank7]:W1216 19:42:55.193000 3448947 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank7]:W1216 19:42:55.193000 3448947 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank4]:W1216 19:42:55.193000 3448944 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank4]:W1216 19:42:55.193000 3448944 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank4]:W1216 19:42:55.193000 3448944 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 94910868175776)                  
+[rank4]:W1216 19:42:55.193000 3448944 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank4]:W1216 19:42:55.193000 3448944 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank2]:W1216 19:42:55.193000 3448942 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank2]:W1216 19:42:55.193000 3448942 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank2]:W1216 19:42:55.193000 3448942 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 93953270226368)            
+[rank2]:W1216 19:42:55.193000 3448942 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank2]:W1216 19:42:55.193000 3448942 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank7]:W1216 19:42:55.195000 3448947 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank7]:W1216 19:42:55.195000 3448947 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank7]:W1216 19:42:55.195000 3448947 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 94105767390320)            
+[rank7]:W1216 19:42:55.195000 3448947 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank7]:W1216 19:42:55.195000 3448947 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank4]:W1216 19:42:55.195000 3448944 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank4]:W1216 19:42:55.195000 3448944 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank4]:W1216 19:42:55.195000 3448944 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 94910670322816)            
+[rank4]:W1216 19:42:55.195000 3448944 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank4]:W1216 19:42:55.195000 3448944 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank5]:W1216 19:42:55.196000 3448945 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank5]:W1216 19:42:55.196000 3448945 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank5]:W1216 19:42:55.196000 3448945 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 94238511026400)                  
+[rank5]:W1216 19:42:55.196000 3448945 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank5]:W1216 19:42:55.196000 3448945 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank0]:W1216 19:42:55.198000 3448940 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank0]:W1216 19:42:55.198000 3448940 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank0]:W1216 19:42:55.198000 3448940 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 94467373629584)                  
+[rank0]:W1216 19:42:55.198000 3448940 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank0]:W1216 19:42:55.198000 3448940 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank3]:W1216 19:42:55.198000 3448943 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank3]:W1216 19:42:55.198000 3448943 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank3]:W1216 19:42:55.198000 3448943 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 94145076484224)                  
+[rank3]:W1216 19:42:55.198000 3448943 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank3]:W1216 19:42:55.198000 3448943 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank5]:W1216 19:42:55.199000 3448945 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank5]:W1216 19:42:55.199000 3448945 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank5]:W1216 19:42:55.199000 3448945 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 94238336428624)            
+[rank5]:W1216 19:42:55.199000 3448945 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank5]:W1216 19:42:55.199000 3448945 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank0]:W1216 19:42:55.200000 3448940 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank0]:W1216 19:42:55.200000 3448940 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank0]:W1216 19:42:55.200000 3448940 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 94467169959024)            
+[rank0]:W1216 19:42:55.200000 3448940 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank0]:W1216 19:42:55.200000 3448940 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank3]:W1216 19:42:55.200000 3448943 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank3]:W1216 19:42:55.200000 3448943 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank3]:W1216 19:42:55.200000 3448943 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 94144916204672)            
+[rank3]:W1216 19:42:55.200000 3448943 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank3]:W1216 19:42:55.200000 3448943 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank6]:W1216 19:42:55.204000 3448946 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank6]:W1216 19:42:55.204000 3448946 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank6]:W1216 19:42:55.204000 3448946 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 94811272744256)                  
+[rank6]:W1216 19:42:55.204000 3448946 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank6]:W1216 19:42:55.204000 3448946 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank6]:W1216 19:42:55.206000 3448946 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank6]:W1216 19:42:55.206000 3448946 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank6]:W1216 19:42:55.206000 3448946 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 94811106371216)            
+[rank6]:W1216 19:42:55.206000 3448946 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank6]:W1216 19:42:55.206000 3448946 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank1]:W1216 19:42:55.211000 3448941 torch/_dynamo/convert_frame.py:844] [14/8] torch._dynamo hit config.cache_size_limit (8)
+[rank1]:W1216 19:42:55.211000 3448941 torch/_dynamo/convert_frame.py:844] [14/8]    function: 'forward' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/parameter_offload.py:355)
+[rank1]:W1216 19:42:55.211000 3448941 torch/_dynamo/convert_frame.py:844] [14/8]    last reason: 14/0: ___check_type_id(L['ctx'], 94740852532336)                  
+[rank1]:W1216 19:42:55.211000 3448941 torch/_dynamo/convert_frame.py:844] [14/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank1]:W1216 19:42:55.211000 3448941 torch/_dynamo/convert_frame.py:844] [14/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank1]:W1216 19:42:55.215000 3448941 torch/_dynamo/convert_frame.py:844] [6/8] torch._dynamo hit config.cache_size_limit (8)
+[rank1]:W1216 19:42:55.215000 3448941 torch/_dynamo/convert_frame.py:844] [6/8]    function: 'release_sub_module' (/scratch/amlt_code/DeepSpeed.osdi/deepspeed/runtime/zero/partitioned_param_coordinator.py:408)
+[rank1]:W1216 19:42:55.215000 3448941 torch/_dynamo/convert_frame.py:844] [6/8]    last reason: 6/0: ___check_type_id(L['submodule'], 94740649454704)            
+[rank1]:W1216 19:42:55.215000 3448941 torch/_dynamo/convert_frame.py:844] [6/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank1]:W1216 19:42:55.215000 3448941 torch/_dynamo/convert_frame.py:844] [6/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+Epoch 1, Step 10, Loss: 0.3670392334461212 sync: True time: 3.9555130004882812 alloc_mem: 36570951680 peak_mem: 41869317632
+Epoch 1, Step 20, Loss: 0.15027554333209991 sync: True time: 3.9239253997802734 alloc_mem: 36570951680 peak_mem: 41869317632
+Epoch 1, Step 30, Loss: 0.15192653238773346 sync: True time: 3.9194376468658447 alloc_mem: 36570951680 peak_mem: 41869317632
+meta-llama/Meta-Llama-3-70B-Instruct ds=True np=32 batch_size=1 seq=512 zero_stage=3 acc=1 ac=True compile=True schedule=False passes=None compile_time=0 iteration time: 3.9227 alloc_mem: 36570951680 peak_mem: 41869317632

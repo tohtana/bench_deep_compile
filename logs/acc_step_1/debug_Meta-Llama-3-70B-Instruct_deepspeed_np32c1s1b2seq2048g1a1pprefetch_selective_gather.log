@@ -1,0 +1,846 @@
+HOST_IP: 10.8.32.99
+NUM_NODES: 4
+NUM_PROCESSES: 32
+BACKEND: deepspeed
+ZERO_STAGE: 3
+MODEL: meta-llama/Meta-Llama-3-70B-Instruct
+EXTRA_OPTS: --batch_size 2 --seq_length 2048 --activation_checkpointing --profile --profile_dir /mnt/post-training-ppo/projects/z3n/prof_osdi2025_repro --compile --schedule --passes prefetch,selective_gather
+[2024-12-17 01:50:14,655] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:15,538] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+W1217 01:50:18.164000 55989 torch/distributed/run.py:793] 
+W1217 01:50:18.164000 55989 torch/distributed/run.py:793] *****************************************
+W1217 01:50:18.164000 55989 torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1217 01:50:18.164000 55989 torch/distributed/run.py:793] *****************************************
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/deepspeed.py:23: FutureWarning: transformers.deepspeed module is deprecated and will be removed in a future version. Please import deepspeed modules directly from transformers.integrations
+  warnings.warn(
+[2024-12-17 01:50:22,648] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,000] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,017] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,036] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,092] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,112] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,130] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,145] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,541] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:23,989] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:24,052] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:24,063] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:24,112] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:24,128] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:24,137] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:24,149] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-12-17 01:50:25,864] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-17 01:50:25,864] [INFO] [comm.py:694:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-12-17 01:50:26,360] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-17 01:50:26,482] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-17 01:50:26,578] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-17 01:50:26,593] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-17 01:50:26,634] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-17 01:50:26,647] [INFO] [comm.py:663:init_distributed] cdb=None
+[2024-12-17 01:50:26,691] [INFO] [comm.py:663:init_distributed] cdb=None
+Running on device: cuda:0 is_deepspeed: True
+Loading model and tokenizer...
+[2024-12-17 01:50:27,160] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+NCCL version 2.21.5+cuda12.4
+Running on device: cuda:2 is_deepspeed: True
+Running on device: cuda:1 is_deepspeed: True
+Running on device: cuda:6 is_deepspeed: True
+Running on device: cuda:3 is_deepspeed: True
+Running on device: cuda:5 is_deepspeed: True
+Running on device: cuda:7 is_deepspeed: True
+Running on device: cuda:4 is_deepspeed: True
+[2024-12-17 01:50:28,631] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:50:28,699] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:50:28,745] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:50:28,779] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:50:28,782] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:50:28,785] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:50:28,821] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:50:33,680] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 723, num_elems = 70.55B
+Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/30 [00:00<?, ?it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.59it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.57it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.63it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.59it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.55it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.46it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:00<00:11,  2.46it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:20,  1.38it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:20,  1.38it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:20,  1.37it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:20,  1.37it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:20,  1.36it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:20,  1.36it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:01<00:20,  1.35it/s]Loading checkpoint shards:   3%|▎         | 1/30 [00:01<00:47,  1.64s/it]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:25,  1.06it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:25,  1.06it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:25,  1.06it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:25,  1.06it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:25,  1.05it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:25,  1.05it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:02<00:25,  1.04it/s]Loading checkpoint shards:   7%|▋         | 2/30 [00:02<00:37,  1.33s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.03it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.02it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.02it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.02it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.02it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.02it/s]Loading checkpoint shards:  13%|█▎        | 4/30 [00:03<00:25,  1.01it/s]Loading checkpoint shards:  10%|█         | 3/30 [00:03<00:33,  1.24s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.00s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.00s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:24,  1.00it/s]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.00s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.00s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.00s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:04<00:25,  1.01s/it]Loading checkpoint shards:  13%|█▎        | 4/30 [00:04<00:30,  1.18s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.05s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.04s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.04s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.05s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.05s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.05s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:05<00:25,  1.06s/it]Loading checkpoint shards:  17%|█▋        | 5/30 [00:06<00:28,  1.15s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:24,  1.08s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:24,  1.07s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:24,  1.08s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:24,  1.07s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:24,  1.07s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:24,  1.08s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:06<00:24,  1.08s/it]Loading checkpoint shards:  20%|██        | 6/30 [00:07<00:26,  1.12s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.10s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:08<00:24,  1.11s/it]Loading checkpoint shards:  23%|██▎       | 7/30 [00:08<00:25,  1.11s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:09<00:22,  1.06s/it]Loading checkpoint shards:  27%|██▋       | 8/30 [00:09<00:24,  1.09s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.03s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:20,  1.04s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:10<00:22,  1.11s/it]Loading checkpoint shards:  30%|███       | 9/30 [00:10<00:22,  1.09s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.06s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:11<00:20,  1.08s/it]Loading checkpoint shards:  33%|███▎      | 10/30 [00:11<00:21,  1.07s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.07s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.06s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.08s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:12<00:19,  1.09s/it]Loading checkpoint shards:  37%|███▋      | 11/30 [00:12<00:20,  1.05s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.07s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.07s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.07s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.07s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.08s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.08s/it]Loading checkpoint shards:  40%|████      | 12/30 [00:13<00:18,  1.04s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:13<00:18,  1.08s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.03s/it]Loading checkpoint shards:  47%|████▋     | 14/30 [00:14<00:16,  1.04s/it]Loading checkpoint shards:  43%|████▎     | 13/30 [00:14<00:17,  1.05s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.01s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.02s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.01s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.02s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.02s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:15,  1.02s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:15<00:14,  1.00it/s]Loading checkpoint shards:  47%|████▋     | 14/30 [00:15<00:16,  1.06s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.04s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.04s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.05s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.05s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.05s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.05s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:16<00:14,  1.04s/it]Loading checkpoint shards:  50%|█████     | 15/30 [00:16<00:15,  1.05s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:13,  1.06s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:13,  1.05s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:13,  1.06s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:13,  1.06s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:13,  1.06s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:13,  1.07s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:17<00:13,  1.05s/it]Loading checkpoint shards:  53%|█████▎    | 16/30 [00:17<00:14,  1.04s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:12,  1.07s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:12,  1.08s/it]Loading checkpoint shards:  57%|█████▋    | 17/30 [00:18<00:13,  1.04s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:18<00:13,  1.09s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.03s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.03s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.03s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.03s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.04s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.04s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:19<00:11,  1.02s/it]Loading checkpoint shards:  60%|██████    | 18/30 [00:19<00:12,  1.05s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.02s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.02s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.02s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.02s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.02s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.03s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:20<00:10,  1.01s/it]Loading checkpoint shards:  63%|██████▎   | 19/30 [00:20<00:11,  1.05s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:21<00:09,  1.03s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:21<00:09,  1.04s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:21<00:09,  1.04s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:21<00:09,  1.04s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:21<00:09,  1.04s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:21<00:09,  1.04s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:21<00:09,  1.03s/it]Loading checkpoint shards:  67%|██████▋   | 20/30 [00:21<00:10,  1.04s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:22<00:08,  1.05s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:22<00:08,  1.05s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:22<00:08,  1.05s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:22<00:08,  1.05s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:22<00:08,  1.05s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:22<00:08,  1.05s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:22<00:08,  1.03s/it]Loading checkpoint shards:  70%|███████   | 21/30 [00:22<00:09,  1.03s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:23<00:07,  1.04s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:23<00:07,  1.06s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:23<00:07,  1.06s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:23<00:07,  1.06s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:23<00:07,  1.06s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:23<00:07,  1.06s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:23<00:07,  1.06s/it]Loading checkpoint shards:  73%|███████▎  | 22/30 [00:23<00:08,  1.03s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:24<00:06,  1.01s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:24<00:06,  1.03s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:24<00:06,  1.03s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:24<00:06,  1.03s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:24<00:06,  1.03s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:24<00:06,  1.03s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:24<00:06,  1.04s/it]Loading checkpoint shards:  77%|███████▋  | 23/30 [00:24<00:07,  1.04s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:25<00:05,  1.01s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:25<00:05,  1.00s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:25<00:05,  1.01s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:25<00:05,  1.01s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:25<00:05,  1.02s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:25<00:05,  1.01s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:25<00:05,  1.01s/it]Loading checkpoint shards:  80%|████████  | 24/30 [00:25<00:06,  1.04s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:26<00:04,  1.03s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:26<00:04,  1.03s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:26<00:04,  1.03s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:26<00:04,  1.03s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:26<00:04,  1.03s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:26<00:04,  1.03s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:26<00:04,  1.04s/it]Loading checkpoint shards:  83%|████████▎ | 25/30 [00:26<00:05,  1.03s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.03s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.04s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.04s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.04s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.04s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.04s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:27<00:03,  1.04s/it]Loading checkpoint shards:  87%|████████▋ | 26/30 [00:27<00:04,  1.02s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.04s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.04s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.05s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.05s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.05s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.05s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:28<00:02,  1.05s/it]Loading checkpoint shards:  90%|█████████ | 27/30 [00:28<00:03,  1.02s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.04s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.04s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.04s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.04s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.05s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.04s/it]Loading checkpoint shards:  97%|█████████▋| 29/30 [00:29<00:01,  1.05s/it]Loading checkpoint shards:  93%|█████████▎| 28/30 [00:30<00:02,  1.04s/it]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.00s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.00s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.00s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.00s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.00s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.00s/it]
+Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:30<00:00,  1.00s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading checkpoint shards:  97%|█████████▋| 29/30 [00:31<00:01,  1.04s/it]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.13it/s]Loading checkpoint shards: 100%|██████████| 30/30 [00:31<00:00,  1.05s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Loading dataset...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Map:   1%|          | 1000/120000 [00:00<01:30, 1310.86 examples/s]Map:   1%|          | 1000/120000 [00:00<01:30, 1310.53 examples/s]Map:   1%|          | 1000/120000 [00:00<01:37, 1220.11 examples/s]Map:   1%|          | 1000/120000 [00:00<01:35, 1250.52 examples/s]Map:   1%|          | 1000/120000 [00:00<01:29, 1325.51 examples/s]Map:   1%|          | 1000/120000 [00:00<01:32, 1283.69 examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:14, 1593.22 examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:18, 1496.62 examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:22, 1427.78 examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:18, 1500.62 examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:13, 1594.89 examples/s]Map:   1%|          | 1000/120000 [00:00<01:35, 1251.10 examples/s]Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Map:   0%|          | 0/120000 [00:00<?, ? examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:16, 1543.12 examples/s]Map:   2%|▎         | 3000/120000 [00:01<01:09, 1684.61 examples/s]Map:   2%|▎         | 3000/120000 [00:01<01:13, 1588.75 examples/s]Map:   2%|▎         | 3000/120000 [00:01<01:11, 1625.58 examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:17, 1529.94 examples/s]Map:   2%|▎         | 3000/120000 [00:01<01:10, 1669.24 examples/s]Map:   2%|▎         | 3000/120000 [00:02<01:19, 1475.42 examples/s]Map:   2%|▎         | 3000/120000 [00:01<01:11, 1643.92 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:07, 1730.78 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:08, 1696.71 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:08, 1687.43 examples/s]Map:   1%|          | 1000/120000 [00:00<01:37, 1215.41 examples/s]Map:   2%|▎         | 3000/120000 [00:01<01:11, 1638.07 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:07, 1723.94 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:12, 1590.73 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:08, 1705.47 examples/s]Map:   4%|▍         | 5000/120000 [00:02<01:05, 1757.15 examples/s]Map:   4%|▍         | 5000/120000 [00:03<01:06, 1724.59 examples/s]Map:   4%|▍         | 5000/120000 [00:03<01:07, 1693.08 examples/s]Map:   2%|▏         | 2000/120000 [00:01<01:17, 1521.50 examples/s]Map:   4%|▍         | 5000/120000 [00:02<01:05, 1763.55 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:09, 1661.08 examples/s]Map:   4%|▍         | 5000/120000 [00:03<01:10, 1626.24 examples/s]Map:   4%|▍         | 5000/120000 [00:03<01:06, 1739.34 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:09, 1646.53 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:05, 1732.83 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:06, 1704.32 examples/s]Map:   2%|▎         | 3000/120000 [00:01<01:10, 1658.54 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:04, 1764.84 examples/s]Map:   4%|▍         | 5000/120000 [00:03<01:07, 1707.55 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:08, 1670.75 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:04, 1755.42 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:05, 1726.71 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:03, 1772.43 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:04, 1759.37 examples/s]Map:   3%|▎         | 4000/120000 [00:02<01:06, 1742.29 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:02, 1802.37 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:08, 1674.70 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:06, 1707.07 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:03, 1780.86 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:03, 1767.07 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:02, 1794.79 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:02, 1797.21 examples/s]Map:   4%|▍         | 5000/120000 [00:02<01:04, 1772.10 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:01, 1810.70 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:06, 1698.62 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:05, 1701.99 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:04, 1749.47 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:01, 1790.67 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:02, 1781.59 examples/s]Map:   5%|▌         | 6000/120000 [00:03<01:04, 1765.24 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:03, 1736.22 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:01, 1805.15 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:04, 1740.89 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:03, 1740.01 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:02, 1763.38 examples/s]Map:   8%|▊         | 10000/120000 [00:05<01:00, 1808.12 examples/s]Map:   6%|▌         | 7000/120000 [00:04<01:02, 1802.72 examples/s]Map:   8%|▊         | 10000/120000 [00:05<01:02, 1772.41 examples/s]Map:   8%|▊         | 10000/120000 [00:05<01:05, 1674.80 examples/s]Map:   8%|▊         | 10000/120000 [00:05<01:04, 1692.98 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:03, 1753.46 examples/s]Map:   8%|▊         | 10000/120000 [00:06<01:02, 1770.94 examples/s]Map:   8%|▊         | 10000/120000 [00:05<01:01, 1780.43 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:00, 1806.43 examples/s]Map:   7%|▋         | 8000/120000 [00:04<01:01, 1826.15 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:00, 1793.98 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:03, 1714.33 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:02, 1737.32 examples/s]Map:   8%|▊         | 10000/120000 [00:05<01:01, 1781.71 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:01, 1773.47 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:00, 1790.43 examples/s]Map:  10%|█         | 12000/120000 [00:06<01:00, 1788.95 examples/s]Map:   8%|▊         | 9000/120000 [00:05<01:00, 1830.24 examples/s]Map:  10%|█         | 12000/120000 [00:06<01:00, 1799.75 examples/s]Map:  10%|█         | 12000/120000 [00:07<01:01, 1754.68 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:00, 1790.30 examples/s]Map:  10%|█         | 12000/120000 [00:06<01:02, 1740.90 examples/s]Map:  10%|█         | 12000/120000 [00:07<01:00, 1770.66 examples/s]Map:  10%|█         | 12000/120000 [00:06<01:00, 1794.70 examples/s]Map:  11%|█         | 13000/120000 [00:07<00:59, 1810.69 examples/s]Map:  11%|█         | 13000/120000 [00:07<01:00, 1780.90 examples/s]Map:  11%|█         | 13000/120000 [00:07<01:00, 1777.23 examples/s]Map:   8%|▊         | 10000/120000 [00:05<01:05, 1680.72 examples/s]Map:  10%|█         | 12000/120000 [00:07<01:00, 1787.98 examples/s]Map:  11%|█         | 13000/120000 [00:07<00:59, 1790.50 examples/s]Map:  11%|█         | 13000/120000 [00:07<01:04, 1660.83 examples/s]Map:  12%|█▏        | 14000/120000 [00:08<01:00, 1756.86 examples/s]Map:  12%|█▏        | 14000/120000 [00:08<00:58, 1816.99 examples/s]Map:  12%|█▏        | 14000/120000 [00:08<01:00, 1758.92 examples/s]Map:   9%|▉         | 11000/120000 [00:06<01:03, 1717.54 examples/s]Map:  11%|█         | 13000/120000 [00:07<00:59, 1798.56 examples/s]Map:  12%|█▏        | 14000/120000 [00:08<00:58, 1800.58 examples/s]Map:  12%|█▏        | 14000/120000 [00:08<01:02, 1697.99 examples/s]Map:  12%|█▎        | 15000/120000 [00:08<00:59, 1761.57 examples/s]Map:  11%|█         | 13000/120000 [00:08<01:31, 1172.60 examples/s]Map:  12%|█▎        | 15000/120000 [00:08<00:59, 1761.21 examples/s]Map:  10%|█         | 12000/120000 [00:06<01:02, 1726.23 examples/s]Map:  12%|█▏        | 14000/120000 [00:08<00:58, 1805.93 examples/s]Map:  12%|█▎        | 15000/120000 [00:08<01:04, 1619.49 examples/s]Map:  12%|█▎        | 15000/120000 [00:08<00:58, 1792.28 examples/s]Map:  12%|█▎        | 15000/120000 [00:08<01:00, 1733.37 examples/s]Map:  13%|█▎        | 16000/120000 [00:09<00:58, 1776.55 examples/s]Map:  13%|█▎        | 16000/120000 [00:09<00:58, 1774.44 examples/s]Map:  12%|█▎        | 15000/120000 [00:08<00:57, 1820.45 examples/s]Map:  13%|█▎        | 16000/120000 [00:09<01:01, 1684.79 examples/s]Map:  11%|█         | 13000/120000 [00:07<01:03, 1681.27 examples/s]Map:  12%|█▏        | 14000/120000 [00:09<01:32, 1150.96 examples/s]Map:  13%|█▎        | 16000/120000 [00:09<00:57, 1802.94 examples/s]Map:  13%|█▎        | 16000/120000 [00:09<00:59, 1746.11 examples/s]Map:  14%|█▍        | 17000/120000 [00:09<00:58, 1771.49 examples/s]Map:  14%|█▍        | 17000/120000 [00:09<00:57, 1784.27 examples/s]Map:  13%|█▎        | 16000/120000 [00:09<00:56, 1835.73 examples/s]Map:  12%|█▏        | 14000/120000 [00:08<01:01, 1722.54 examples/s]Map:  14%|█▍        | 17000/120000 [00:10<01:01, 1663.63 examples/s]Map:  12%|█▎        | 15000/120000 [00:09<01:21, 1289.03 examples/s]Map:  14%|█▍        | 17000/120000 [00:09<00:57, 1800.09 examples/s]Map:  14%|█▍        | 17000/120000 [00:10<00:59, 1735.03 examples/s]Map:  15%|█▌        | 18000/120000 [00:10<00:57, 1782.25 examples/s]Map:  14%|█▍        | 17000/120000 [00:09<00:55, 1851.54 examples/s]Map:  15%|█▌        | 18000/120000 [00:10<00:57, 1776.10 examples/s]Map:  12%|█▎        | 15000/120000 [00:08<01:00, 1743.34 examples/s]Map:  15%|█▌        | 18000/120000 [00:10<00:59, 1721.04 examples/s]Map:  15%|█▌        | 18000/120000 [00:10<00:56, 1810.04 examples/s]Map:  15%|█▌        | 18000/120000 [00:10<00:58, 1758.00 examples/s]Map:  16%|█▌        | 19000/120000 [00:10<00:56, 1776.83 examples/s]Map:  15%|█▌        | 18000/120000 [00:10<00:55, 1839.59 examples/s]Map:  16%|█▌        | 19000/120000 [00:10<00:57, 1762.11 examples/s]Map:  16%|█▌        | 19000/120000 [00:11<00:57, 1768.62 examples/s]Map:  13%|█▎        | 16000/120000 [00:09<00:59, 1761.67 examples/s]Map:  13%|█▎        | 16000/120000 [00:10<01:26, 1203.10 examples/s]Map:  16%|█▌        | 19000/120000 [00:10<00:55, 1827.21 examples/s]Map:  16%|█▌        | 19000/120000 [00:11<00:57, 1751.82 examples/s]Map:  16%|█▌        | 19000/120000 [00:10<00:55, 1814.97 examples/s]Map:  17%|█▋        | 20000/120000 [00:11<00:55, 1790.38 examples/s]Map:  14%|█▍        | 17000/120000 [00:09<00:58, 1767.51 examples/s]Map:  17%|█▋        | 20000/120000 [00:11<00:57, 1739.37 examples/s]Map:  14%|█▍        | 17000/120000 [00:11<01:18, 1314.60 examples/s]Map:  17%|█▋        | 20000/120000 [00:11<00:54, 1824.68 examples/s]Map:  17%|█▋        | 20000/120000 [00:11<00:56, 1768.48 examples/s]Map:  17%|█▋        | 20000/120000 [00:11<00:54, 1821.26 examples/s]Map:  18%|█▊        | 21000/120000 [00:12<00:55, 1791.36 examples/s]Map:  15%|█▌        | 18000/120000 [00:10<00:58, 1743.55 examples/s]Map:  15%|█▌        | 18000/120000 [00:12<01:11, 1430.95 examples/s]Map:  18%|█▊        | 21000/120000 [00:12<00:56, 1740.05 examples/s]Map:  17%|█▋        | 20000/120000 [00:12<01:23, 1196.66 examples/s]Map:  18%|█▊        | 21000/120000 [00:11<00:54, 1819.13 examples/s]Map:  18%|█▊        | 21000/120000 [00:12<00:58, 1693.70 examples/s]Map:  18%|█▊        | 21000/120000 [00:11<00:54, 1818.27 examples/s]Map:  18%|█▊        | 22000/120000 [00:12<00:54, 1802.13 examples/s]Map:  18%|█▊        | 22000/120000 [00:12<00:55, 1780.42 examples/s]Map:  16%|█▌        | 19000/120000 [00:10<00:57, 1761.57 examples/s]Map:  16%|█▌        | 19000/120000 [00:12<01:06, 1527.80 examples/s]Map:  18%|█▊        | 21000/120000 [00:12<01:15, 1316.16 examples/s]Map:  18%|█▊        | 22000/120000 [00:12<00:53, 1819.36 examples/s]Map:  18%|█▊        | 22000/120000 [00:12<00:56, 1741.44 examples/s]Map:  18%|█▊        | 22000/120000 [00:12<00:53, 1838.92 examples/s]Map:  19%|█▉        | 23000/120000 [00:13<00:53, 1812.75 examples/s]Map:  19%|█▉        | 23000/120000 [00:13<00:53, 1813.19 examples/s]Map:  17%|█▋        | 20000/120000 [00:11<00:56, 1773.63 examples/s]Map:  17%|█▋        | 20000/120000 [00:13<01:02, 1587.70 examples/s]Map:  18%|█▊        | 22000/120000 [00:13<01:07, 1446.41 examples/s]Map:  19%|█▉        | 23000/120000 [00:12<00:53, 1820.96 examples/s]Map:  19%|█▉        | 23000/120000 [00:13<00:55, 1761.47 examples/s]Map:  19%|█▉        | 23000/120000 [00:12<00:52, 1851.46 examples/s]Map:  20%|██        | 24000/120000 [00:13<00:53, 1781.91 examples/s]Map:  20%|██        | 24000/120000 [00:13<00:53, 1804.94 examples/s]Map:  18%|█▊        | 21000/120000 [00:12<00:55, 1778.57 examples/s]Map:  18%|█▊        | 21000/120000 [00:13<01:00, 1643.54 examples/s]Map:  19%|█▉        | 23000/120000 [00:13<01:02, 1549.89 examples/s]Map:  20%|██        | 24000/120000 [00:13<00:52, 1824.08 examples/s]Map:  20%|██        | 24000/120000 [00:14<00:54, 1769.73 examples/s]Map:  20%|██        | 24000/120000 [00:13<00:52, 1831.48 examples/s]Map:  21%|██        | 25000/120000 [00:14<00:52, 1794.20 examples/s]Map:  21%|██        | 25000/120000 [00:14<00:51, 1854.73 examples/s]Map:  18%|█▊        | 22000/120000 [00:12<00:54, 1804.27 examples/s]Map:  18%|█▊        | 22000/120000 [00:14<00:57, 1707.23 examples/s]Map:  20%|██        | 24000/120000 [00:14<00:59, 1616.03 examples/s]Map:  21%|██        | 25000/120000 [00:14<00:51, 1832.03 examples/s]Map:  21%|██        | 25000/120000 [00:14<00:53, 1787.80 examples/s]Map:  21%|██        | 25000/120000 [00:14<00:52, 1795.93 examples/s]Map:  22%|██▏       | 26000/120000 [00:14<00:51, 1812.38 examples/s]Map:  22%|██▏       | 26000/120000 [00:14<00:50, 1871.08 examples/s]Map:  19%|█▉        | 23000/120000 [00:13<00:53, 1808.65 examples/s]Map:  19%|█▉        | 23000/120000 [00:14<00:55, 1740.77 examples/s]Map:  21%|██        | 25000/120000 [00:15<00:56, 1691.78 examples/s]Map:  22%|██▏       | 26000/120000 [00:14<00:51, 1822.62 examples/s]Map:  22%|██▏       | 26000/120000 [00:15<00:52, 1792.64 examples/s]Map:  22%|██▏       | 26000/120000 [00:14<00:51, 1820.28 examples/s]Map:  22%|██▎       | 27000/120000 [00:15<00:49, 1865.76 examples/s]Map:  22%|██▎       | 27000/120000 [00:15<00:51, 1797.91 examples/s]Map:  20%|██        | 24000/120000 [00:13<00:52, 1821.05 examples/s]Map:  20%|██        | 24000/120000 [00:15<00:54, 1761.10 examples/s]Map:  22%|██▏       | 26000/120000 [00:15<00:54, 1731.41 examples/s]Map:  22%|██▎       | 27000/120000 [00:15<00:51, 1807.18 examples/s]Map:  22%|██▎       | 27000/120000 [00:15<00:51, 1810.49 examples/s]Map:  22%|██▎       | 27000/120000 [00:15<00:50, 1828.80 examples/s]Map:  23%|██▎       | 28000/120000 [00:15<00:49, 1875.08 examples/s]Map:  23%|██▎       | 28000/120000 [00:15<00:50, 1808.46 examples/s]Map:  21%|██        | 25000/120000 [00:15<00:52, 1794.95 examples/s]Map:  21%|██        | 25000/120000 [00:14<00:52, 1799.33 examples/s]Map:  22%|██▎       | 27000/120000 [00:16<00:52, 1759.49 examples/s]Map:  23%|██▎       | 28000/120000 [00:15<00:50, 1816.94 examples/s]Map:  23%|██▎       | 28000/120000 [00:16<00:51, 1801.08 examples/s]Map:  23%|██▎       | 28000/120000 [00:15<00:49, 1852.95 examples/s]Map:  24%|██▍       | 29000/120000 [00:16<00:48, 1888.13 examples/s]Map:  24%|██▍       | 29000/120000 [00:16<00:50, 1809.77 examples/s]Map:  22%|██▏       | 26000/120000 [00:14<00:51, 1823.29 examples/s]Map:  22%|██▏       | 26000/120000 [00:16<00:52, 1805.69 examples/s]Map:  23%|██▎       | 28000/120000 [00:16<00:50, 1810.28 examples/s]Map:  24%|██▍       | 29000/120000 [00:16<00:50, 1819.79 examples/s]Map:  24%|██▍       | 29000/120000 [00:16<00:50, 1818.70 examples/s]Map:  24%|██▍       | 29000/120000 [00:16<00:49, 1852.16 examples/s]Map:  25%|██▌       | 30000/120000 [00:16<00:47, 1897.09 examples/s]Map:  25%|██▌       | 30000/120000 [00:17<00:49, 1806.76 examples/s]Map:  22%|██▎       | 27000/120000 [00:15<00:51, 1823.27 examples/s]Map:  22%|██▎       | 27000/120000 [00:16<00:52, 1785.54 examples/s]Map:  24%|██▍       | 29000/120000 [00:17<00:50, 1806.78 examples/s]Map:  25%|██▌       | 30000/120000 [00:16<00:49, 1807.58 examples/s]Map:  25%|██▌       | 30000/120000 [00:17<00:49, 1823.62 examples/s]Map:  25%|██▌       | 30000/120000 [00:16<00:48, 1855.36 examples/s]Map:  26%|██▌       | 31000/120000 [00:17<00:47, 1889.94 examples/s]Map:  26%|██▌       | 31000/120000 [00:17<00:49, 1815.06 examples/s]Map:  23%|██▎       | 28000/120000 [00:15<00:49, 1843.45 examples/s]Map:  23%|██▎       | 28000/120000 [00:17<00:50, 1806.43 examples/s]Map:  25%|██▌       | 30000/120000 [00:17<00:49, 1807.39 examples/s]Map:  26%|██▌       | 31000/120000 [00:17<00:48, 1822.48 examples/s]Map:  26%|██▌       | 31000/120000 [00:17<00:48, 1839.17 examples/s]Map:  26%|██▌       | 31000/120000 [00:17<00:47, 1864.86 examples/s]Map:  27%|██▋       | 32000/120000 [00:18<00:46, 1886.60 examples/s]Map:  27%|██▋       | 32000/120000 [00:18<00:48, 1830.21 examples/s]Map:  24%|██▍       | 29000/120000 [00:16<00:48, 1864.16 examples/s]Map:  24%|██▍       | 29000/120000 [00:18<00:49, 1835.85 examples/s]Map:  26%|██▌       | 31000/120000 [00:18<00:48, 1819.09 examples/s]Map:  27%|██▋       | 32000/120000 [00:17<00:48, 1830.05 examples/s]Map:  27%|██▋       | 32000/120000 [00:18<00:47, 1850.28 examples/s]Map:  27%|██▋       | 32000/120000 [00:17<00:47, 1859.69 examples/s]Map:  28%|██▊       | 33000/120000 [00:18<00:46, 1868.60 examples/s]Map:  28%|██▊       | 33000/120000 [00:18<00:48, 1808.37 examples/s]Map:  25%|██▌       | 30000/120000 [00:16<00:48, 1859.93 examples/s]Map:  25%|██▌       | 30000/120000 [00:18<00:48, 1843.93 examples/s]Map:  27%|██▋       | 32000/120000 [00:18<00:48, 1828.77 examples/s]Map:  28%|██▊       | 33000/120000 [00:18<00:48, 1806.27 examples/s]Map:  28%|██▊       | 33000/120000 [00:18<00:47, 1849.33 examples/s]Map:  28%|██▊       | 34000/120000 [00:19<00:45, 1889.75 examples/s]Map:  28%|██▊       | 33000/120000 [00:18<00:47, 1847.64 examples/s]Map:  26%|██▌       | 31000/120000 [00:17<00:47, 1874.13 examples/s]Map:  26%|██▌       | 31000/120000 [00:19<00:47, 1859.89 examples/s]Map:  28%|██▊       | 34000/120000 [00:19<00:49, 1751.41 examples/s]Map:  28%|██▊       | 33000/120000 [00:19<00:47, 1829.73 examples/s]Map:  28%|██▊       | 34000/120000 [00:19<00:47, 1821.35 examples/s]Map:  28%|██▊       | 34000/120000 [00:19<00:46, 1860.95 examples/s]Map:  29%|██▉       | 35000/120000 [00:19<00:45, 1887.57 examples/s]Map:  28%|██▊       | 34000/120000 [00:18<00:46, 1836.96 examples/s]Map:  27%|██▋       | 32000/120000 [00:18<00:47, 1835.12 examples/s]Map:  27%|██▋       | 32000/120000 [00:19<00:47, 1847.99 examples/s]Map:  28%|██▊       | 34000/120000 [00:19<00:46, 1843.37 examples/s]Map:  29%|██▉       | 35000/120000 [00:19<00:48, 1759.94 examples/s]Map:  29%|██▉       | 35000/120000 [00:19<00:46, 1826.91 examples/s]Map:  29%|██▉       | 35000/120000 [00:20<00:45, 1880.36 examples/s]Map:  30%|███       | 36000/120000 [00:20<00:44, 1878.59 examples/s]Map:  29%|██▉       | 35000/120000 [00:19<00:46, 1814.96 examples/s]Map:  28%|██▊       | 33000/120000 [00:18<00:47, 1834.42 examples/s]Map:  28%|██▊       | 33000/120000 [00:20<00:47, 1837.44 examples/s]Map:  29%|██▉       | 35000/120000 [00:20<00:45, 1863.50 examples/s]Map:  30%|███       | 36000/120000 [00:20<00:48, 1749.87 examples/s]Map:  30%|███       | 36000/120000 [00:20<00:46, 1826.06 examples/s]Map:  30%|███       | 36000/120000 [00:20<00:44, 1866.95 examples/s]Map:  31%|███       | 37000/120000 [00:20<00:44, 1876.70 examples/s]Map:  30%|███       | 36000/120000 [00:20<00:47, 1781.64 examples/s]Map:  28%|██▊       | 34000/120000 [00:19<00:46, 1843.44 examples/s]Map:  28%|██▊       | 34000/120000 [00:20<00:46, 1835.30 examples/s]Map:  30%|███       | 36000/120000 [00:20<00:45, 1862.97 examples/s]Map:  31%|███       | 37000/120000 [00:21<00:46, 1775.96 examples/s]Map:  31%|███       | 37000/120000 [00:20<00:45, 1828.85 examples/s]Map:  31%|███       | 37000/120000 [00:21<00:44, 1856.41 examples/s]Map:  32%|███▏      | 38000/120000 [00:21<00:43, 1878.35 examples/s]Map:  31%|███       | 37000/120000 [00:20<00:45, 1807.65 examples/s]Map:  29%|██▉       | 35000/120000 [00:19<00:45, 1855.13 examples/s]Map:  29%|██▉       | 35000/120000 [00:21<00:46, 1847.07 examples/s]Map:  31%|███       | 37000/120000 [00:21<00:44, 1865.71 examples/s]Map:  32%|███▏      | 38000/120000 [00:21<00:45, 1789.56 examples/s]Map:  32%|███▏      | 38000/120000 [00:21<00:44, 1825.40 examples/s]Map:  32%|███▏      | 38000/120000 [00:21<00:44, 1848.28 examples/s]Map:  32%|███▎      | 39000/120000 [00:21<00:42, 1884.91 examples/s]Map:  32%|███▏      | 38000/120000 [00:21<00:44, 1823.05 examples/s]Map:  30%|███       | 36000/120000 [00:20<00:45, 1839.79 examples/s]Map:  32%|███▏      | 38000/120000 [00:22<00:44, 1858.79 examples/s]Map:  30%|███       | 36000/120000 [00:21<00:45, 1832.32 examples/s]Map:  32%|███▎      | 39000/120000 [00:22<00:45, 1790.70 examples/s]Map:  32%|███▎      | 39000/120000 [00:21<00:44, 1816.13 examples/s]Map:  33%|███▎      | 40000/120000 [00:22<00:41, 1905.02 examples/s]Map:  32%|███▎      | 39000/120000 [00:22<00:44, 1825.48 examples/s]Map:  32%|███▎      | 39000/120000 [00:21<00:44, 1826.29 examples/s]Map:  31%|███       | 37000/120000 [00:20<00:44, 1863.35 examples/s]Map:  32%|███▎      | 39000/120000 [00:22<00:43, 1847.26 examples/s]Map:  31%|███       | 37000/120000 [00:22<00:45, 1831.66 examples/s]Map:  33%|███▎      | 40000/120000 [00:22<00:44, 1786.57 examples/s]Map:  33%|███▎      | 40000/120000 [00:22<00:43, 1831.52 examples/s]Map:  34%|███▍      | 41000/120000 [00:22<00:41, 1915.39 examples/s]Map:  33%|███▎      | 40000/120000 [00:22<00:43, 1822.08 examples/s]Map:  32%|███▏      | 38000/120000 [00:21<00:43, 1879.77 examples/s]Map:  33%|███▎      | 40000/120000 [00:22<00:45, 1750.53 examples/s]Map:  33%|███▎      | 40000/120000 [00:23<00:43, 1860.23 examples/s]Map:  32%|███▏      | 38000/120000 [00:22<00:44, 1833.48 examples/s]Map:  34%|███▍      | 41000/120000 [00:23<00:44, 1786.61 examples/s]Map:  34%|███▍      | 41000/120000 [00:22<00:43, 1833.14 examples/s]Map:  35%|███▌      | 42000/120000 [00:23<00:40, 1918.97 examples/s]Map:  34%|███▍      | 41000/120000 [00:23<00:43, 1822.52 examples/s]Map:  32%|███▎      | 39000/120000 [00:21<00:42, 1892.09 examples/s]Map:  34%|███▍      | 41000/120000 [00:22<00:44, 1778.40 examples/s]Map:  32%|███▎      | 39000/120000 [00:23<00:44, 1838.04 examples/s]Map:  34%|███▍      | 41000/120000 [00:23<00:43, 1828.48 examples/s]Map:  35%|███▌      | 42000/120000 [00:23<00:43, 1805.71 examples/s]Map:  36%|███▌      | 43000/120000 [00:23<00:39, 1932.73 examples/s]Map:  35%|███▌      | 42000/120000 [00:23<00:42, 1837.44 examples/s]Map:  35%|███▌      | 42000/120000 [00:23<00:42, 1819.32 examples/s]Map:  33%|███▎      | 40000/120000 [00:22<00:42, 1899.00 examples/s]Map:  35%|███▌      | 42000/120000 [00:23<00:43, 1794.74 examples/s]Map:  35%|███▌      | 42000/120000 [00:24<00:42, 1827.44 examples/s]Map:  33%|███▎      | 40000/120000 [00:24<00:45, 1774.81 examples/s]Map:  36%|███▌      | 43000/120000 [00:24<00:42, 1825.09 examples/s]Map:  37%|███▋      | 44000/120000 [00:24<00:39, 1929.12 examples/s]Map:  36%|███▌      | 43000/120000 [00:23<00:41, 1839.82 examples/s]Map:  36%|███▌      | 43000/120000 [00:24<00:42, 1829.12 examples/s]Map:  34%|███▍      | 41000/120000 [00:22<00:42, 1880.17 examples/s]Map:  36%|███▌      | 43000/120000 [00:23<00:42, 1816.54 examples/s]Map:  36%|███▌      | 43000/120000 [00:24<00:41, 1855.93 examples/s]Map:  34%|███▍      | 41000/120000 [00:24<00:43, 1802.16 examples/s]Map:  37%|███▋      | 44000/120000 [00:24<00:41, 1837.95 examples/s]Map:  38%|███▊      | 45000/120000 [00:24<00:39, 1903.46 examples/s]Map:  37%|███▋      | 44000/120000 [00:24<00:41, 1843.02 examples/s]Map:  37%|███▋      | 44000/120000 [00:24<00:41, 1824.82 examples/s]Map:  35%|███▌      | 42000/120000 [00:23<00:41, 1872.09 examples/s]Map:  37%|███▋      | 44000/120000 [00:24<00:41, 1829.38 examples/s]Map:  37%|███▋      | 44000/120000 [00:25<00:41, 1850.13 examples/s]Map:  35%|███▌      | 42000/120000 [00:25<00:42, 1828.83 examples/s]Map:  38%|███▊      | 46000/120000 [00:25<00:38, 1920.54 examples/s]Map:  38%|███▊      | 45000/120000 [00:25<00:40, 1836.78 examples/s]Map:  38%|███▊      | 45000/120000 [00:25<00:40, 1833.37 examples/s]Map:  38%|███▊      | 45000/120000 [00:25<00:42, 1782.56 examples/s]Map:  36%|███▌      | 43000/120000 [00:23<00:40, 1879.71 examples/s]Map:  38%|███▊      | 45000/120000 [00:25<00:41, 1827.97 examples/s]Map:  38%|███▊      | 45000/120000 [00:25<00:40, 1860.30 examples/s]Map:  36%|███▌      | 43000/120000 [00:25<00:41, 1857.88 examples/s]Map:  39%|███▉      | 47000/120000 [00:25<00:37, 1930.54 examples/s]Map:  38%|███▊      | 46000/120000 [00:25<00:40, 1847.36 examples/s]Map:  38%|███▊      | 46000/120000 [00:25<00:40, 1841.22 examples/s]Map:  38%|███▊      | 46000/120000 [00:26<00:41, 1799.95 examples/s]Map:  37%|███▋      | 44000/120000 [00:24<00:40, 1867.85 examples/s]Map:  38%|███▊      | 46000/120000 [00:25<00:39, 1856.38 examples/s]Map:  38%|███▊      | 46000/120000 [00:26<00:39, 1881.08 examples/s]Map:  37%|███▋      | 44000/120000 [00:26<00:40, 1873.21 examples/s]Map:  40%|████      | 48000/120000 [00:26<00:37, 1931.08 examples/s]Map:  39%|███▉      | 47000/120000 [00:26<00:39, 1839.34 examples/s]Map:  39%|███▉      | 47000/120000 [00:26<00:39, 1837.47 examples/s]Map:  39%|███▉      | 47000/120000 [00:26<00:40, 1796.33 examples/s]Map:  38%|███▊      | 45000/120000 [00:25<00:40, 1857.92 examples/s]Map:  39%|███▉      | 47000/120000 [00:26<00:39, 1841.71 examples/s]Map:  39%|███▉      | 47000/120000 [00:26<00:38, 1873.72 examples/s]Map:  38%|███▊      | 45000/120000 [00:26<00:39, 1877.66 examples/s]Map:  41%|████      | 49000/120000 [00:26<00:36, 1932.74 examples/s]Map:  40%|████      | 48000/120000 [00:27<00:39, 1837.22 examples/s]Map:  40%|████      | 48000/120000 [00:26<00:39, 1834.76 examples/s]Map:  40%|████      | 48000/120000 [00:27<00:39, 1813.71 examples/s]Map:  38%|███▊      | 46000/120000 [00:25<00:39, 1868.17 examples/s]Map:  40%|████      | 48000/120000 [00:27<00:38, 1875.51 examples/s]Map:  40%|████      | 48000/120000 [00:26<00:40, 1796.72 examples/s]Map:  38%|███▊      | 46000/120000 [00:27<00:39, 1872.22 examples/s]Map:  42%|████▏     | 50000/120000 [00:27<00:36, 1932.01 examples/s]Map:  41%|████      | 49000/120000 [00:27<00:38, 1852.38 examples/s]Map:  41%|████      | 49000/120000 [00:27<00:38, 1835.75 examples/s]Map:  41%|████      | 49000/120000 [00:27<00:38, 1834.30 examples/s]Map:  39%|███▉      | 47000/120000 [00:26<00:39, 1858.20 examples/s]Map:  41%|████      | 49000/120000 [00:27<00:37, 1880.48 examples/s]Map:  41%|████      | 49000/120000 [00:27<00:38, 1823.18 examples/s]Map:  42%|████▎     | 51000/120000 [00:28<00:36, 1910.82 examples/s]Map:  39%|███▉      | 47000/120000 [00:27<00:39, 1864.35 examples/s]Map:  42%|████▏     | 50000/120000 [00:28<00:37, 1846.93 examples/s]Map:  42%|████▏     | 50000/120000 [00:27<00:38, 1827.97 examples/s]Map:  42%|████▏     | 50000/120000 [00:28<00:38, 1833.01 examples/s]Map:  40%|████      | 48000/120000 [00:26<00:38, 1856.55 examples/s]Map:  42%|████▏     | 50000/120000 [00:28<00:37, 1878.65 examples/s]Map:  42%|████▏     | 50000/120000 [00:27<00:38, 1841.16 examples/s]Map:  40%|████      | 48000/120000 [00:28<00:40, 1788.23 examples/s]Map:  42%|████▎     | 51000/120000 [00:28<00:37, 1836.63 examples/s]Map:  43%|████▎     | 52000/120000 [00:28<00:40, 1692.49 examples/s]Map:  42%|████▎     | 51000/120000 [00:28<00:37, 1823.56 examples/s]Map:  42%|████▎     | 51000/120000 [00:28<00:37, 1837.64 examples/s]Map:  41%|████      | 49000/120000 [00:27<00:38, 1863.70 examples/s]Map:  42%|████▎     | 51000/120000 [00:29<00:37, 1860.63 examples/s]Map:  42%|████▎     | 51000/120000 [00:28<00:37, 1837.44 examples/s]Map:  41%|████      | 49000/120000 [00:28<00:39, 1819.50 examples/s]Map:  44%|████▍     | 53000/120000 [00:29<00:38, 1736.19 examples/s]Map:  42%|████▏     | 50000/120000 [00:27<00:37, 1867.08 examples/s]Map:  43%|████▎     | 52000/120000 [00:29<00:43, 1572.69 examples/s]Map:  43%|████▎     | 52000/120000 [00:29<00:41, 1619.41 examples/s]Map:  42%|████▏     | 50000/120000 [00:29<00:37, 1843.95 examples/s]Map:  43%|████▎     | 52000/120000 [00:29<00:41, 1635.92 examples/s]Map:  43%|████▎     | 52000/120000 [00:29<00:40, 1669.88 examples/s]Map:  43%|████▎     | 52000/120000 [00:29<00:41, 1643.16 examples/s]Map:  45%|████▌     | 54000/120000 [00:29<00:37, 1770.84 examples/s]Map:  42%|████▎     | 51000/120000 [00:28<00:36, 1885.24 examples/s]Map:  44%|████▍     | 53000/120000 [00:30<00:40, 1636.86 examples/s]Map:  44%|████▍     | 53000/120000 [00:29<00:39, 1678.88 examples/s]Map:  42%|████▎     | 51000/120000 [00:29<00:37, 1854.91 examples/s]Map:  44%|████▍     | 53000/120000 [00:30<00:39, 1692.28 examples/s]Map:  44%|████▍     | 53000/120000 [00:30<00:38, 1730.16 examples/s]Map:  44%|████▍     | 53000/120000 [00:29<00:39, 1701.61 examples/s]Map:  46%|████▌     | 55000/120000 [00:30<00:35, 1811.50 examples/s]Map:  45%|████▌     | 54000/120000 [00:30<00:39, 1686.41 examples/s]Map:  45%|████▌     | 54000/120000 [00:30<00:38, 1695.22 examples/s]Map:  43%|████▎     | 52000/120000 [00:28<00:40, 1663.58 examples/s]Map:  45%|████▌     | 54000/120000 [00:30<00:38, 1732.89 examples/s]Map:  45%|████▌     | 54000/120000 [00:30<00:37, 1769.08 examples/s]Map:  45%|████▌     | 54000/120000 [00:30<00:37, 1745.67 examples/s]Map:  47%|████▋     | 56000/120000 [00:30<00:34, 1829.17 examples/s]Map:  43%|████▎     | 52000/120000 [00:30<00:41, 1650.08 examples/s]Map:  46%|████▌     | 55000/120000 [00:31<00:37, 1728.74 examples/s]Map:  46%|████▌     | 55000/120000 [00:30<00:37, 1742.71 examples/s]Map:  44%|████▍     | 53000/120000 [00:29<00:38, 1729.60 examples/s]Map:  46%|████▌     | 55000/120000 [00:31<00:36, 1768.68 examples/s]Map:  46%|████▌     | 55000/120000 [00:31<00:36, 1800.64 examples/s]Map:  46%|████▌     | 55000/120000 [00:30<00:36, 1782.84 examples/s]Map:  48%|████▊     | 57000/120000 [00:31<00:34, 1833.36 examples/s]Map:  44%|████▍     | 53000/120000 [00:31<00:39, 1710.92 examples/s]Map:  47%|████▋     | 56000/120000 [00:31<00:36, 1762.36 examples/s]Map:  47%|████▋     | 56000/120000 [00:31<00:35, 1781.86 examples/s]Map:  45%|████▌     | 54000/120000 [00:30<00:37, 1744.62 examples/s]Map:  47%|████▋     | 56000/120000 [00:31<00:36, 1771.45 examples/s]Map:  47%|████▋     | 56000/120000 [00:31<00:35, 1827.96 examples/s]Map:  47%|████▋     | 56000/120000 [00:31<00:35, 1814.28 examples/s]Map:  48%|████▊     | 58000/120000 [00:31<00:33, 1840.19 examples/s]Map:  45%|████▌     | 54000/120000 [00:31<00:37, 1756.12 examples/s]Map:  48%|████▊     | 57000/120000 [00:32<00:35, 1776.25 examples/s]Map:  48%|████▊     | 57000/120000 [00:31<00:34, 1802.99 examples/s]Map:  46%|████▌     | 55000/120000 [00:30<00:36, 1781.67 examples/s]Map:  48%|████▊     | 57000/120000 [00:32<00:35, 1777.65 examples/s]Map:  48%|████▊     | 57000/120000 [00:32<00:34, 1827.96 examples/s]Map:  48%|████▊     | 57000/120000 [00:31<00:34, 1825.69 examples/s]Map:  49%|████▉     | 59000/120000 [00:32<00:33, 1845.56 examples/s]Map:  46%|████▌     | 55000/120000 [00:32<00:36, 1800.00 examples/s]Map:  48%|████▊     | 58000/120000 [00:32<00:34, 1802.72 examples/s]Map:  48%|████▊     | 58000/120000 [00:32<00:34, 1799.69 examples/s]Map:  47%|████▋     | 56000/120000 [00:31<00:35, 1808.50 examples/s]Map:  48%|████▊     | 58000/120000 [00:32<00:34, 1801.60 examples/s]Map:  48%|████▊     | 58000/120000 [00:33<00:33, 1839.06 examples/s]Map:  48%|████▊     | 58000/120000 [00:32<00:33, 1844.43 examples/s]Map:  50%|█████     | 60000/120000 [00:33<00:32, 1844.55 examples/s]Map:  47%|████▋     | 56000/120000 [00:32<00:35, 1813.96 examples/s]Map:  49%|████▉     | 59000/120000 [00:33<00:33, 1825.17 examples/s]Map:  49%|████▉     | 59000/120000 [00:32<00:33, 1820.82 examples/s]Map:  48%|████▊     | 57000/120000 [00:31<00:34, 1808.38 examples/s]Map:  49%|████▉     | 59000/120000 [00:33<00:33, 1845.34 examples/s]Map:  49%|████▉     | 59000/120000 [00:33<00:33, 1804.20 examples/s]Map:  49%|████▉     | 59000/120000 [00:32<00:32, 1854.04 examples/s]Map:  51%|█████     | 61000/120000 [00:33<00:31, 1870.35 examples/s]Map:  48%|████▊     | 57000/120000 [00:33<00:34, 1828.96 examples/s]Map:  50%|█████     | 60000/120000 [00:33<00:32, 1825.47 examples/s]Map:  50%|█████     | 60000/120000 [00:33<00:32, 1820.65 examples/s]Map:  48%|████▊     | 58000/120000 [00:32<00:33, 1826.42 examples/s]Map:  50%|█████     | 60000/120000 [00:34<00:32, 1841.05 examples/s]Map:  50%|█████     | 60000/120000 [00:33<00:33, 1806.14 examples/s]Map:  50%|█████     | 60000/120000 [00:33<00:32, 1854.01 examples/s]Map:  52%|█████▏    | 62000/120000 [00:34<00:30, 1877.84 examples/s]Map:  48%|████▊     | 58000/120000 [00:33<00:33, 1835.19 examples/s]Map:  51%|█████     | 61000/120000 [00:34<00:32, 1835.20 examples/s]Map:  51%|█████     | 61000/120000 [00:33<00:31, 1847.87 examples/s]Map:  49%|████▉     | 59000/120000 [00:32<00:32, 1854.54 examples/s]Map:  51%|█████     | 61000/120000 [00:34<00:31, 1853.50 examples/s]Map:  51%|█████     | 61000/120000 [00:33<00:31, 1852.94 examples/s]Map:  51%|█████     | 61000/120000 [00:34<00:32, 1796.37 examples/s]Map:  52%|█████▎    | 63000/120000 [00:34<00:30, 1857.59 examples/s]Map:  49%|████▉     | 59000/120000 [00:34<00:33, 1843.70 examples/s]Map:  52%|█████▏    | 62000/120000 [00:34<00:31, 1823.61 examples/s]Map:  52%|█████▏    | 62000/120000 [00:34<00:31, 1837.46 examples/s]Map:  50%|█████     | 60000/120000 [00:33<00:32, 1851.07 examples/s]Map:  52%|█████▏    | 62000/120000 [00:35<00:31, 1861.60 examples/s]Map:  52%|█████▏    | 62000/120000 [00:34<00:31, 1842.41 examples/s]Map:  53%|█████▎    | 64000/120000 [00:35<00:30, 1857.36 examples/s]Map:  52%|█████▏    | 62000/120000 [00:35<00:32, 1786.33 examples/s]Map:  50%|█████     | 60000/120000 [00:35<00:32, 1820.30 examples/s]Map:  52%|█████▎    | 63000/120000 [00:35<00:31, 1821.67 examples/s]Map:  52%|█████▎    | 63000/120000 [00:35<00:31, 1818.89 examples/s]Map:  51%|█████     | 61000/120000 [00:33<00:31, 1870.93 examples/s]Map:  52%|█████▎    | 63000/120000 [00:35<00:30, 1872.73 examples/s]Map:  54%|█████▍    | 65000/120000 [00:35<00:29, 1872.14 examples/s]Map:  52%|█████▎    | 63000/120000 [00:35<00:31, 1823.91 examples/s]Map:  52%|█████▎    | 63000/120000 [00:35<00:31, 1797.77 examples/s]Map:  51%|█████     | 61000/120000 [00:35<00:32, 1831.83 examples/s]Map:  53%|█████▎    | 64000/120000 [00:36<00:30, 1847.13 examples/s]Map:  53%|█████▎    | 64000/120000 [00:35<00:30, 1824.43 examples/s]Map:  52%|█████▏    | 62000/120000 [00:34<00:31, 1866.96 examples/s]Map:  53%|█████▎    | 64000/120000 [00:36<00:29, 1878.05 examples/s]Map:  55%|█████▌    | 66000/120000 [00:36<00:28, 1891.42 examples/s]Map:  53%|█████▎    | 64000/120000 [00:36<00:30, 1822.51 examples/s]Map:  53%|█████▎    | 64000/120000 [00:35<00:31, 1789.64 examples/s]Map:  52%|█████▏    | 62000/120000 [00:36<00:31, 1827.77 examples/s]Map:  54%|█████▍    | 65000/120000 [00:36<00:29, 1865.88 examples/s]Map:  54%|█████▍    | 65000/120000 [00:36<00:30, 1825.59 examples/s]Map:  52%|█████▎    | 63000/120000 [00:34<00:30, 1873.26 examples/s]Map:  54%|█████▍    | 65000/120000 [00:36<00:29, 1864.66 examples/s]Map:  56%|█████▌    | 67000/120000 [00:36<00:27, 1904.28 examples/s]Map:  54%|█████▍    | 65000/120000 [00:36<00:30, 1831.77 examples/s]Map:  54%|█████▍    | 65000/120000 [00:36<00:30, 1802.89 examples/s]Map:  52%|█████▎    | 63000/120000 [00:36<00:31, 1825.57 examples/s]Map:  55%|█████▌    | 66000/120000 [00:37<00:28, 1865.90 examples/s]Map:  55%|█████▌    | 66000/120000 [00:36<00:29, 1824.72 examples/s]Map:  53%|█████▎    | 64000/120000 [00:35<00:30, 1850.10 examples/s]Map:  57%|█████▋    | 68000/120000 [00:37<00:27, 1901.60 examples/s]Map:  55%|█████▌    | 66000/120000 [00:37<00:29, 1841.15 examples/s]Map:  55%|█████▌    | 66000/120000 [00:37<00:29, 1847.83 examples/s]Map:  55%|█████▌    | 66000/120000 [00:36<00:29, 1817.26 examples/s]Map:  53%|█████▎    | 64000/120000 [00:37<00:30, 1839.20 examples/s]Map:  56%|█████▌    | 67000/120000 [00:37<00:28, 1872.90 examples/s]Map:  56%|█████▌    | 67000/120000 [00:37<00:28, 1839.28 examples/s]Map:  54%|█████▍    | 65000/120000 [00:35<00:29, 1868.92 examples/s]Map:  57%|█████▊    | 69000/120000 [00:37<00:26, 1900.38 examples/s]Map:  56%|█████▌    | 67000/120000 [00:37<00:28, 1840.71 examples/s]Map:  56%|█████▌    | 67000/120000 [00:37<00:28, 1853.72 examples/s]Map:  56%|█████▌    | 67000/120000 [00:37<00:28, 1832.46 examples/s]Map:  54%|█████▍    | 65000/120000 [00:37<00:29, 1834.53 examples/s]Map:  57%|█████▋    | 68000/120000 [00:38<00:27, 1867.58 examples/s]Map:  57%|█████▋    | 68000/120000 [00:37<00:28, 1826.30 examples/s]Map:  55%|█████▌    | 66000/120000 [00:36<00:29, 1842.38 examples/s]Map:  58%|█████▊    | 70000/120000 [00:38<00:26, 1903.39 examples/s]Map:  57%|█████▋    | 68000/120000 [00:38<00:28, 1833.74 examples/s]Map:  57%|█████▋    | 68000/120000 [00:38<00:28, 1840.22 examples/s]Map:  57%|█████▋    | 68000/120000 [00:37<00:28, 1839.74 examples/s]Map:  55%|█████▌    | 66000/120000 [00:38<00:29, 1835.13 examples/s]Map:  57%|█████▊    | 69000/120000 [00:38<00:27, 1853.10 examples/s]Map:  56%|█████▌    | 67000/120000 [00:37<00:28, 1852.62 examples/s]Map:  59%|█████▉    | 71000/120000 [00:38<00:25, 1913.11 examples/s]Map:  57%|█████▊    | 69000/120000 [00:38<00:28, 1811.17 examples/s]Map:  57%|█████▊    | 69000/120000 [00:38<00:27, 1843.30 examples/s]Map:  57%|█████▊    | 69000/120000 [00:38<00:27, 1827.24 examples/s]Map:  57%|█████▊    | 69000/120000 [00:38<00:27, 1841.78 examples/s]Map:  56%|█████▌    | 67000/120000 [00:38<00:28, 1842.71 examples/s]Map:  58%|█████▊    | 70000/120000 [00:39<00:27, 1846.89 examples/s]Map:  57%|█████▋    | 68000/120000 [00:37<00:28, 1854.11 examples/s]Map:  60%|██████    | 72000/120000 [00:39<00:25, 1892.01 examples/s]Map:  58%|█████▊    | 70000/120000 [00:38<00:27, 1820.34 examples/s]Map:  58%|█████▊    | 70000/120000 [00:39<00:26, 1859.22 examples/s]Map:  58%|█████▊    | 70000/120000 [00:38<00:26, 1860.11 examples/s]Map:  58%|█████▊    | 70000/120000 [00:39<00:27, 1825.30 examples/s]Map:  57%|█████▋    | 68000/120000 [00:39<00:27, 1860.62 examples/s]Map:  59%|█████▉    | 71000/120000 [00:39<00:26, 1840.06 examples/s]Map:  57%|█████▊    | 69000/120000 [00:38<00:27, 1862.31 examples/s]Map:  59%|█████▉    | 71000/120000 [00:39<00:26, 1815.67 examples/s]Map:  61%|██████    | 73000/120000 [00:39<00:25, 1850.68 examples/s]Map:  59%|█████▉    | 71000/120000 [00:40<00:26, 1862.86 examples/s]Map:  59%|█████▉    | 71000/120000 [00:39<00:26, 1865.84 examples/s]Map:  59%|█████▉    | 71000/120000 [00:39<00:26, 1822.37 examples/s]Map:  57%|█████▊    | 69000/120000 [00:39<00:27, 1854.91 examples/s]Map:  60%|██████    | 72000/120000 [00:40<00:26, 1844.46 examples/s]Map:  58%|█████▊    | 70000/120000 [00:38<00:26, 1882.53 examples/s]Map:  60%|██████    | 72000/120000 [00:40<00:26, 1823.16 examples/s]Map:  62%|██████▏   | 74000/120000 [00:40<00:24, 1851.89 examples/s]Map:  60%|██████    | 72000/120000 [00:40<00:25, 1850.64 examples/s]Map:  60%|██████    | 72000/120000 [00:39<00:25, 1874.01 examples/s]Map:  60%|██████    | 72000/120000 [00:40<00:26, 1816.93 examples/s]Map:  58%|█████▊    | 70000/120000 [00:40<00:26, 1866.28 examples/s]Map:  61%|██████    | 73000/120000 [00:40<00:25, 1843.81 examples/s]Map:  59%|█████▉    | 71000/120000 [00:39<00:26, 1879.91 examples/s]Map:  62%|██████▎   | 75000/120000 [00:41<00:24, 1861.03 examples/s]Map:  61%|██████    | 73000/120000 [00:40<00:25, 1819.71 examples/s]Map:  61%|██████    | 73000/120000 [00:41<00:25, 1861.96 examples/s]Map:  61%|██████    | 73000/120000 [00:40<00:24, 1888.76 examples/s]Map:  61%|██████    | 73000/120000 [00:41<00:25, 1832.67 examples/s]Map:  59%|█████▉    | 71000/120000 [00:41<00:26, 1864.10 examples/s]Map:  62%|██████▏   | 74000/120000 [00:41<00:24, 1845.41 examples/s]Map:  60%|██████    | 72000/120000 [00:39<00:25, 1864.59 examples/s]Map:  63%|██████▎   | 76000/120000 [00:41<00:23, 1889.33 examples/s]Map:  62%|██████▏   | 74000/120000 [00:41<00:25, 1830.33 examples/s]Map:  62%|██████▏   | 74000/120000 [00:41<00:24, 1859.90 examples/s]Map:  62%|██████▏   | 74000/120000 [00:40<00:24, 1880.28 examples/s]Map:  62%|██████▏   | 74000/120000 [00:41<00:25, 1831.89 examples/s]Map:  60%|██████    | 72000/120000 [00:41<00:26, 1841.22 examples/s]Map:  62%|██████▎   | 75000/120000 [00:41<00:24, 1852.34 examples/s]Map:  61%|██████    | 73000/120000 [00:40<00:24, 1880.16 examples/s]Map:  64%|██████▍   | 77000/120000 [00:42<00:22, 1903.22 examples/s]Map:  62%|██████▎   | 75000/120000 [00:41<00:24, 1826.84 examples/s]Map:  62%|██████▎   | 75000/120000 [00:42<00:24, 1846.40 examples/s]Map:  62%|██████▎   | 75000/120000 [00:41<00:24, 1869.39 examples/s]Map:  62%|██████▎   | 75000/120000 [00:42<00:24, 1826.50 examples/s]Map:  61%|██████    | 73000/120000 [00:42<00:25, 1839.09 examples/s]Map:  63%|██████▎   | 76000/120000 [00:42<00:23, 1874.20 examples/s]Map:  62%|██████▏   | 74000/120000 [00:40<00:24, 1871.95 examples/s]Map:  65%|██████▌   | 78000/120000 [00:42<00:22, 1893.88 examples/s]Map:  63%|██████▎   | 76000/120000 [00:42<00:23, 1845.76 examples/s]Map:  63%|██████▎   | 76000/120000 [00:42<00:23, 1855.88 examples/s]Map:  63%|██████▎   | 76000/120000 [00:42<00:23, 1864.52 examples/s]Map:  63%|██████▎   | 76000/120000 [00:42<00:23, 1844.73 examples/s]Map:  62%|██████▏   | 74000/120000 [00:42<00:24, 1851.58 examples/s]Map:  64%|██████▍   | 77000/120000 [00:42<00:22, 1881.92 examples/s]Map:  62%|██████▎   | 75000/120000 [00:41<00:24, 1864.81 examples/s]Map:  66%|██████▌   | 79000/120000 [00:43<00:21, 1900.58 examples/s]Map:  64%|██████▍   | 77000/120000 [00:42<00:23, 1848.55 examples/s]Map:  64%|██████▍   | 77000/120000 [00:43<00:22, 1870.70 examples/s]Map:  64%|██████▍   | 77000/120000 [00:42<00:23, 1869.35 examples/s]Map:  64%|██████▍   | 77000/120000 [00:43<00:23, 1844.14 examples/s]Map:  62%|██████▎   | 75000/120000 [00:43<00:24, 1853.53 examples/s]Map:  65%|██████▌   | 78000/120000 [00:43<00:22, 1875.19 examples/s]Map:  63%|██████▎   | 76000/120000 [00:41<00:23, 1867.94 examples/s]Map:  67%|██████▋   | 80000/120000 [00:43<00:21, 1898.79 examples/s]Map:  65%|██████▌   | 78000/120000 [00:43<00:22, 1840.00 examples/s]Map:  65%|██████▌   | 78000/120000 [00:43<00:22, 1858.59 examples/s]Map:  65%|██████▌   | 78000/120000 [00:43<00:22, 1862.67 examples/s]Map:  65%|██████▌   | 78000/120000 [00:43<00:22, 1829.00 examples/s]Map:  63%|██████▎   | 76000/120000 [00:43<00:23, 1857.66 examples/s]Map:  66%|██████▌   | 79000/120000 [00:44<00:21, 1878.85 examples/s]Map:  64%|██████▍   | 77000/120000 [00:42<00:22, 1869.99 examples/s]Map:  68%|██████▊   | 81000/120000 [00:44<00:21, 1814.90 examples/s]Map:  66%|██████▌   | 79000/120000 [00:43<00:22, 1843.19 examples/s]Map:  66%|██████▌   | 79000/120000 [00:44<00:22, 1858.51 examples/s]Map:  66%|██████▌   | 79000/120000 [00:43<00:21, 1872.81 examples/s]Map:  64%|██████▍   | 77000/120000 [00:44<00:23, 1865.80 examples/s]Map:  66%|██████▌   | 79000/120000 [00:44<00:22, 1794.80 examples/s]Map:  67%|██████▋   | 80000/120000 [00:44<00:21, 1854.01 examples/s]Map:  65%|██████▌   | 78000/120000 [00:42<00:22, 1857.81 examples/s]Map:  68%|██████▊   | 82000/120000 [00:44<00:20, 1859.14 examples/s]Map:  67%|██████▋   | 80000/120000 [00:44<00:22, 1791.51 examples/s]Map:  67%|██████▋   | 80000/120000 [00:44<00:22, 1788.96 examples/s]Map:  67%|██████▋   | 80000/120000 [00:44<00:21, 1846.23 examples/s]Map:  65%|██████▌   | 78000/120000 [00:44<00:22, 1853.94 examples/s]Map:  67%|██████▋   | 80000/120000 [00:44<00:22, 1796.00 examples/s]Map:  68%|██████▊   | 81000/120000 [00:45<00:21, 1840.14 examples/s]Map:  66%|██████▌   | 79000/120000 [00:43<00:22, 1855.72 examples/s]Map:  69%|██████▉   | 83000/120000 [00:45<00:19, 1876.96 examples/s]Map:  68%|██████▊   | 81000/120000 [00:45<00:21, 1793.79 examples/s]Map:  68%|██████▊   | 81000/120000 [00:44<00:21, 1832.71 examples/s]Map:  68%|██████▊   | 81000/120000 [00:45<00:22, 1738.71 examples/s]Map:  66%|██████▌   | 79000/120000 [00:45<00:21, 1866.30 examples/s]Map:  68%|██████▊   | 81000/120000 [00:45<00:21, 1777.20 examples/s]Map:  68%|██████▊   | 82000/120000 [00:45<00:20, 1858.91 examples/s]Map:  67%|██████▋   | 80000/120000 [00:43<00:21, 1868.60 examples/s]Map:  70%|███████   | 84000/120000 [00:45<00:19, 1876.04 examples/s]Map:  68%|██████▊   | 82000/120000 [00:46<00:20, 1818.85 examples/s]Map:  68%|██████▊   | 82000/120000 [00:45<00:21, 1783.56 examples/s]Map:  67%|██████▋   | 80000/120000 [00:45<00:21, 1885.16 examples/s]Map:  68%|██████▊   | 82000/120000 [00:45<00:21, 1763.89 examples/s]Map:  68%|██████▊   | 82000/120000 [00:46<00:21, 1805.03 examples/s]Map:  69%|██████▉   | 83000/120000 [00:46<00:19, 1861.70 examples/s]Map:  68%|██████▊   | 81000/120000 [00:44<00:20, 1863.28 examples/s]Map:  71%|███████   | 85000/120000 [00:46<00:18, 1878.45 examples/s]Map:  69%|██████▉   | 83000/120000 [00:46<00:20, 1842.64 examples/s]Map:  69%|██████▉   | 83000/120000 [00:46<00:20, 1820.23 examples/s]Map:  68%|██████▊   | 81000/120000 [00:46<00:20, 1883.03 examples/s]Map:  69%|██████▉   | 83000/120000 [00:45<00:20, 1790.49 examples/s]Map:  69%|██████▉   | 83000/120000 [00:46<00:20, 1822.70 examples/s]Map:  70%|███████   | 84000/120000 [00:46<00:19, 1859.83 examples/s]Map:  68%|██████▊   | 82000/120000 [00:45<00:20, 1874.47 examples/s]Map:  72%|███████▏  | 86000/120000 [00:46<00:17, 1891.98 examples/s]Map:  70%|███████   | 84000/120000 [00:47<00:19, 1854.58 examples/s]Map:  70%|███████   | 84000/120000 [00:46<00:19, 1834.01 examples/s]Map:  68%|██████▊   | 82000/120000 [00:46<00:20, 1886.63 examples/s]Map:  70%|███████   | 84000/120000 [00:46<00:20, 1795.46 examples/s]Map:  70%|███████   | 84000/120000 [00:47<00:19, 1821.19 examples/s]Map:  71%|███████   | 85000/120000 [00:47<00:18, 1870.83 examples/s]Map:  72%|███████▎  | 87000/120000 [00:47<00:17, 1880.99 examples/s]Map:  69%|██████▉   | 83000/120000 [00:45<00:19, 1851.37 examples/s]Map:  71%|███████   | 85000/120000 [00:47<00:18, 1870.64 examples/s]Map:  71%|███████   | 85000/120000 [00:47<00:18, 1852.82 examples/s]Map:  69%|██████▉   | 83000/120000 [00:47<00:19, 1878.76 examples/s]Map:  71%|███████   | 85000/120000 [00:46<00:19, 1828.55 examples/s]Map:  71%|███████   | 85000/120000 [00:47<00:19, 1826.87 examples/s]Map:  72%|███████▏  | 86000/120000 [00:47<00:18, 1872.90 examples/s]Map:  73%|███████▎  | 88000/120000 [00:47<00:17, 1854.09 examples/s]Map:  70%|███████   | 84000/120000 [00:46<00:19, 1816.90 examples/s]Map:  72%|███████▏  | 86000/120000 [00:48<00:18, 1874.13 examples/s]Map:  72%|███████▏  | 86000/120000 [00:47<00:18, 1839.67 examples/s]Map:  70%|███████   | 84000/120000 [00:47<00:19, 1877.58 examples/s]Map:  72%|███████▏  | 86000/120000 [00:47<00:18, 1841.93 examples/s]Map:  72%|███████▏  | 86000/120000 [00:48<00:18, 1829.67 examples/s]Map:  72%|███████▎  | 87000/120000 [00:48<00:17, 1858.49 examples/s]Map:  74%|███████▍  | 89000/120000 [00:48<00:16, 1862.84 examples/s]Map:  71%|███████   | 85000/120000 [00:46<00:19, 1805.92 examples/s]Map:  72%|███████▎  | 87000/120000 [00:48<00:17, 1864.94 examples/s]Map:  71%|███████   | 85000/120000 [00:48<00:18, 1878.94 examples/s]Map:  72%|███████▎  | 87000/120000 [00:48<00:18, 1782.02 examples/s]Map:  72%|███████▎  | 87000/120000 [00:48<00:17, 1841.67 examples/s]Map:  72%|███████▎  | 87000/120000 [00:48<00:18, 1809.97 examples/s]Map:  73%|███████▎  | 88000/120000 [00:48<00:17, 1850.59 examples/s]Map:  75%|███████▌  | 90000/120000 [00:49<00:15, 1878.50 examples/s]Map:  72%|███████▏  | 86000/120000 [00:47<00:18, 1810.19 examples/s]Map:  73%|███████▎  | 88000/120000 [00:49<00:16, 1891.28 examples/s]Map:  72%|███████▏  | 86000/120000 [00:49<00:17, 1899.25 examples/s]Map:  73%|███████▎  | 88000/120000 [00:48<00:17, 1791.29 examples/s]Map:  73%|███████▎  | 88000/120000 [00:48<00:17, 1834.70 examples/s]Map:  73%|███████▎  | 88000/120000 [00:49<00:17, 1818.10 examples/s]Map:  74%|███████▍  | 89000/120000 [00:49<00:16, 1841.43 examples/s]Map:  76%|███████▌  | 91000/120000 [00:49<00:15, 1904.75 examples/s]Map:  72%|███████▎  | 87000/120000 [00:47<00:18, 1807.94 examples/s]Map:  74%|███████▍  | 89000/120000 [00:49<00:16, 1891.17 examples/s]Map:  72%|███████▎  | 87000/120000 [00:49<00:17, 1884.58 examples/s]Map:  74%|███████▍  | 89000/120000 [00:49<00:17, 1790.13 examples/s]Map:  74%|███████▍  | 89000/120000 [00:49<00:16, 1824.70 examples/s]Map:  74%|███████▍  | 89000/120000 [00:49<00:17, 1817.83 examples/s]Map:  77%|███████▋  | 92000/120000 [00:50<00:14, 1895.85 examples/s]Map:  75%|███████▌  | 90000/120000 [00:50<00:16, 1826.62 examples/s]Map:  73%|███████▎  | 88000/120000 [00:48<00:17, 1827.24 examples/s]Map:  75%|███████▌  | 90000/120000 [00:50<00:15, 1879.88 examples/s]Map:  73%|███████▎  | 88000/120000 [00:50<00:17, 1878.33 examples/s]Map:  75%|███████▌  | 90000/120000 [00:49<00:16, 1796.60 examples/s]Map:  75%|███████▌  | 90000/120000 [00:49<00:16, 1818.10 examples/s]Map:  75%|███████▌  | 90000/120000 [00:50<00:16, 1823.29 examples/s]Map:  78%|███████▊  | 93000/120000 [00:50<00:14, 1894.24 examples/s]Map:  76%|███████▌  | 91000/120000 [00:50<00:15, 1833.43 examples/s]Map:  74%|███████▍  | 89000/120000 [00:48<00:16, 1838.60 examples/s]Map:  76%|███████▌  | 91000/120000 [00:50<00:15, 1872.94 examples/s]Map:  74%|███████▍  | 89000/120000 [00:50<00:16, 1873.37 examples/s]Map:  76%|███████▌  | 91000/120000 [00:50<00:16, 1804.45 examples/s]Map:  76%|███████▌  | 91000/120000 [00:50<00:16, 1810.55 examples/s]Map:  76%|███████▌  | 91000/120000 [00:50<00:15, 1836.59 examples/s]Map:  78%|███████▊  | 94000/120000 [00:51<00:13, 1897.91 examples/s]Map:  77%|███████▋  | 92000/120000 [00:51<00:15, 1828.08 examples/s]Map:  75%|███████▌  | 90000/120000 [00:49<00:16, 1849.05 examples/s]Map:  77%|███████▋  | 92000/120000 [00:51<00:14, 1866.80 examples/s]Map:  75%|███████▌  | 90000/120000 [00:51<00:16, 1862.14 examples/s]Map:  77%|███████▋  | 92000/120000 [00:50<00:15, 1825.16 examples/s]Map:  77%|███████▋  | 92000/120000 [00:51<00:15, 1805.32 examples/s]Map:  79%|███████▉  | 95000/120000 [00:51<00:13, 1907.90 examples/s]Map:  77%|███████▋  | 92000/120000 [00:51<00:15, 1842.16 examples/s]Map:  78%|███████▊  | 93000/120000 [00:51<00:15, 1782.16 examples/s]Map:  76%|███████▌  | 91000/120000 [00:49<00:15, 1852.93 examples/s]Map:  78%|███████▊  | 93000/120000 [00:51<00:14, 1869.08 examples/s]Map:  76%|███████▌  | 91000/120000 [00:51<00:15, 1855.36 examples/s]Map:  78%|███████▊  | 93000/120000 [00:51<00:14, 1820.04 examples/s]Map:  78%|███████▊  | 93000/120000 [00:51<00:14, 1801.28 examples/s]Map:  80%|████████  | 96000/120000 [00:52<00:12, 1886.24 examples/s]Map:  78%|███████▊  | 93000/120000 [00:52<00:14, 1812.37 examples/s]Map:  78%|███████▊  | 94000/120000 [00:52<00:14, 1810.69 examples/s]Map:  77%|███████▋  | 92000/120000 [00:50<00:15, 1864.57 examples/s]Map:  78%|███████▊  | 94000/120000 [00:52<00:13, 1887.12 examples/s]Map:  77%|███████▋  | 92000/120000 [00:52<00:15, 1865.80 examples/s]Map:  78%|███████▊  | 94000/120000 [00:51<00:14, 1828.89 examples/s]Map:  78%|███████▊  | 94000/120000 [00:52<00:14, 1809.83 examples/s]Map:  81%|████████  | 97000/120000 [00:52<00:12, 1904.46 examples/s]Map:  78%|███████▊  | 94000/120000 [00:52<00:14, 1819.38 examples/s]Map:  79%|███████▉  | 95000/120000 [00:52<00:13, 1829.80 examples/s]Map:  78%|███████▊  | 93000/120000 [00:51<00:14, 1857.09 examples/s]Map:  79%|███████▉  | 95000/120000 [00:52<00:13, 1837.34 examples/s]Map:  78%|███████▊  | 93000/120000 [00:52<00:14, 1870.15 examples/s]Map:  79%|███████▉  | 95000/120000 [00:52<00:13, 1851.75 examples/s]Map:  79%|███████▉  | 95000/120000 [00:52<00:13, 1799.59 examples/s]Map:  82%|████████▏ | 98000/120000 [00:53<00:11, 1906.05 examples/s]Map:  79%|███████▉  | 95000/120000 [00:53<00:13, 1822.69 examples/s]Map:  80%|████████  | 96000/120000 [00:53<00:13, 1825.52 examples/s]Map:  78%|███████▊  | 94000/120000 [00:51<00:13, 1868.27 examples/s]Map:  80%|████████  | 96000/120000 [00:53<00:12, 1859.55 examples/s]Map:  78%|███████▊  | 94000/120000 [00:53<00:13, 1881.41 examples/s]Map:  80%|████████  | 96000/120000 [00:52<00:12, 1860.84 examples/s]Map:  82%|████████▎ | 99000/120000 [00:53<00:11, 1898.56 examples/s]Map:  80%|████████  | 96000/120000 [00:53<00:13, 1803.40 examples/s]Map:  80%|████████  | 96000/120000 [00:53<00:13, 1830.42 examples/s]Map:  81%|████████  | 97000/120000 [00:53<00:12, 1843.27 examples/s]Map:  79%|███████▉  | 95000/120000 [00:52<00:13, 1872.96 examples/s]Map:  81%|████████  | 97000/120000 [00:54<00:12, 1860.50 examples/s]Map:  79%|███████▉  | 95000/120000 [00:53<00:13, 1890.01 examples/s]Map:  81%|████████  | 97000/120000 [00:53<00:12, 1861.22 examples/s]Map:  83%|████████▎ | 100000/120000 [00:54<00:10, 1911.26 examples/s]Map:  81%|████████  | 97000/120000 [00:53<00:12, 1820.70 examples/s]Map:  81%|████████  | 97000/120000 [00:54<00:12, 1837.95 examples/s]Map:  82%|████████▏ | 98000/120000 [00:54<00:11, 1849.27 examples/s]Map:  80%|████████  | 96000/120000 [00:52<00:12, 1874.06 examples/s]Map:  82%|████████▏ | 98000/120000 [00:54<00:11, 1874.79 examples/s]Map:  80%|████████  | 96000/120000 [00:54<00:12, 1890.99 examples/s]Map:  82%|████████▏ | 98000/120000 [00:54<00:11, 1869.69 examples/s]Map:  84%|████████▍ | 101000/120000 [00:54<00:09, 1921.10 examples/s]Map:  82%|████████▏ | 98000/120000 [00:54<00:12, 1827.21 examples/s]Map:  82%|████████▏ | 98000/120000 [00:54<00:11, 1840.99 examples/s]Map:  81%|████████  | 97000/120000 [00:53<00:12, 1875.16 examples/s]Map:  82%|████████▎ | 99000/120000 [00:54<00:11, 1842.67 examples/s]Map:  82%|████████▎ | 99000/120000 [00:55<00:11, 1874.10 examples/s]Map:  81%|████████  | 97000/120000 [00:54<00:12, 1895.39 examples/s]Map:  82%|████████▎ | 99000/120000 [00:54<00:11, 1860.40 examples/s]Map:  85%|████████▌ | 102000/120000 [00:55<00:09, 1902.35 examples/s]Map:  82%|████████▎ | 99000/120000 [00:54<00:11, 1824.06 examples/s]Map:  82%|████████▎ | 99000/120000 [00:55<00:11, 1839.36 examples/s]Map:  83%|████████▎ | 100000/120000 [00:55<00:10, 1860.98 examples/s]Map:  82%|████████▏ | 98000/120000 [00:53<00:11, 1862.58 examples/s]Map:  83%|████████▎ | 100000/120000 [00:55<00:10, 1875.71 examples/s]Map:  82%|████████▏ | 98000/120000 [00:55<00:11, 1890.11 examples/s]Map:  86%|████████▌ | 103000/120000 [00:55<00:08, 1913.61 examples/s]Map:  83%|████████▎ | 100000/120000 [00:55<00:10, 1871.47 examples/s]Map:  83%|████████▎ | 100000/120000 [00:55<00:10, 1827.82 examples/s]Map:  83%|████████▎ | 100000/120000 [00:55<00:10, 1847.85 examples/s]Map:  84%|████████▍ | 101000/120000 [00:55<00:10, 1873.78 examples/s]Map:  82%|████████▎ | 99000/120000 [00:54<00:11, 1833.21 examples/s]Map:  84%|████████▍ | 101000/120000 [00:56<00:10, 1883.91 examples/s]Map:  82%|████████▎ | 99000/120000 [00:55<00:11, 1881.86 examples/s]Map:  87%|████████▋ | 104000/120000 [00:56<00:08, 1901.88 examples/s]Map:  84%|████████▍ | 101000/120000 [00:55<00:10, 1849.14 examples/s]Map:  84%|████████▍ | 101000/120000 [00:55<00:10, 1837.82 examples/s]Map:  84%|████████▍ | 101000/120000 [00:56<00:10, 1849.65 examples/s]Map:  85%|████████▌ | 102000/120000 [00:56<00:09, 1864.47 examples/s]Map:  83%|████████▎ | 100000/120000 [00:54<00:10, 1849.92 examples/s]Map:  85%|████████▌ | 102000/120000 [00:56<00:09, 1857.87 examples/s]Map:  83%|████████▎ | 100000/120000 [00:56<00:10, 1882.56 examples/s]Map:  88%|████████▊ | 105000/120000 [00:56<00:07, 1890.56 examples/s]Map:  85%|████████▌ | 102000/120000 [00:56<00:09, 1843.02 examples/s]Map:  85%|████████▌ | 102000/120000 [00:56<00:09, 1829.11 examples/s]Map:  85%|████████▌ | 102000/120000 [00:56<00:09, 1838.45 examples/s]Map:  86%|████████▌ | 103000/120000 [00:57<00:09, 1853.45 examples/s]Map:  84%|████████▍ | 101000/120000 [00:55<00:10, 1866.12 examples/s]Map:  86%|████████▌ | 103000/120000 [00:57<00:09, 1863.73 examples/s]Map:  84%|████████▍ | 101000/120000 [00:56<00:10, 1888.22 examples/s]Map:  86%|████████▌ | 103000/120000 [00:56<00:09, 1853.27 examples/s]Map:  86%|████████▌ | 103000/120000 [00:57<00:09, 1838.65 examples/s]Map:  86%|████████▌ | 103000/120000 [00:57<00:09, 1847.78 examples/s]Map:  88%|████████▊ | 106000/120000 [00:57<00:08, 1688.02 examples/s]Map:  87%|████████▋ | 104000/120000 [00:57<00:08, 1853.44 examples/s]Map:  85%|████████▌ | 102000/120000 [00:55<00:09, 1857.09 examples/s]Map:  87%|████████▋ | 104000/120000 [00:57<00:08, 1874.96 examples/s]Map:  85%|████████▌ | 102000/120000 [00:57<00:09, 1884.06 examples/s]Map:  87%|████████▋ | 104000/120000 [00:57<00:08, 1854.51 examples/s]Map:  87%|████████▋ | 104000/120000 [00:57<00:08, 1842.50 examples/s]Map:  89%|████████▉ | 107000/120000 [00:58<00:07, 1750.84 examples/s]Map:  87%|████████▋ | 104000/120000 [00:58<00:08, 1846.42 examples/s]Map:  88%|████████▊ | 105000/120000 [00:58<00:08, 1852.08 examples/s]Map:  86%|████████▌ | 103000/120000 [00:56<00:09, 1879.34 examples/s]Map:  88%|████████▊ | 105000/120000 [00:58<00:08, 1869.00 examples/s]Map:  86%|████████▌ | 103000/120000 [00:58<00:08, 1894.28 examples/s]Map:  88%|████████▊ | 105000/120000 [00:57<00:08, 1849.59 examples/s]Map:  88%|████████▊ | 105000/120000 [00:58<00:08, 1844.14 examples/s]Map:  90%|█████████ | 108000/120000 [00:58<00:06, 1804.09 examples/s]Map:  88%|████████▊ | 105000/120000 [00:58<00:08, 1824.16 examples/s]Map:  87%|████████▋ | 104000/120000 [00:56<00:08, 1871.08 examples/s]Map:  87%|████████▋ | 104000/120000 [00:58<00:08, 1883.09 examples/s]Map:  88%|████████▊ | 106000/120000 [00:58<00:08, 1668.07 examples/s]Map:  88%|████████▊ | 106000/120000 [00:59<00:08, 1654.16 examples/s]Map:  91%|█████████ | 109000/120000 [00:59<00:05, 1853.03 examples/s]Map:  88%|████████▊ | 105000/120000 [00:57<00:08, 1852.11 examples/s]Map:  88%|████████▊ | 106000/120000 [00:58<00:08, 1637.09 examples/s]Map:  88%|████████▊ | 105000/120000 [00:59<00:07, 1883.96 examples/s]Map:  88%|████████▊ | 106000/120000 [00:58<00:08, 1655.57 examples/s]Map:  88%|████████▊ | 106000/120000 [00:59<00:08, 1629.69 examples/s]Map:  89%|████████▉ | 107000/120000 [00:59<00:07, 1708.78 examples/s]Map:  89%|████████▉ | 107000/120000 [00:59<00:07, 1706.92 examples/s]Map:  92%|█████████▏| 110000/120000 [00:59<00:05, 1873.78 examples/s]Map:  89%|████████▉ | 107000/120000 [00:59<00:07, 1700.82 examples/s]Map:  89%|████████▉ | 107000/120000 [00:59<00:07, 1705.82 examples/s]Map:  90%|█████████ | 108000/120000 [00:59<00:06, 1756.35 examples/s]Map:  89%|████████▉ | 107000/120000 [00:59<00:07, 1688.12 examples/s]Map:  88%|████████▊ | 106000/120000 [00:58<00:08, 1646.12 examples/s]Map:  88%|████████▊ | 106000/120000 [00:59<00:08, 1676.18 examples/s]Map:  90%|█████████ | 108000/120000 [01:00<00:06, 1734.80 examples/s]Map:  92%|█████████▎| 111000/120000 [01:00<00:04, 1867.63 examples/s]Map:  90%|█████████ | 108000/120000 [00:59<00:06, 1734.56 examples/s]Map:  90%|█████████ | 108000/120000 [00:59<00:06, 1743.85 examples/s]Map:  91%|█████████ | 109000/120000 [01:00<00:06, 1776.77 examples/s]Map:  89%|████████▉ | 107000/120000 [00:58<00:07, 1720.45 examples/s]Map:  90%|█████████ | 108000/120000 [01:00<00:07, 1711.47 examples/s]Map:  89%|████████▉ | 107000/120000 [01:00<00:07, 1728.11 examples/s]Map:  91%|█████████ | 109000/120000 [01:00<00:06, 1768.60 examples/s]Map:  93%|█████████▎| 112000/120000 [01:00<00:04, 1814.40 examples/s]Map:  91%|█████████ | 109000/120000 [01:00<00:06, 1772.28 examples/s]Map:  91%|█████████ | 109000/120000 [01:00<00:06, 1782.66 examples/s]Map:  92%|█████████▏| 110000/120000 [01:01<00:05, 1805.53 examples/s]Map:  90%|█████████ | 108000/120000 [00:59<00:06, 1757.08 examples/s]Map:  91%|█████████ | 109000/120000 [01:01<00:06, 1751.15 examples/s]Map:  90%|█████████ | 108000/120000 [01:00<00:06, 1761.63 examples/s]Map:  92%|█████████▏| 110000/120000 [01:01<00:05, 1804.73 examples/s]Map:  94%|█████████▍| 113000/120000 [01:01<00:03, 1842.96 examples/s]Map:  92%|█████████▏| 110000/120000 [01:00<00:05, 1808.09 examples/s]Map:  92%|█████████▏| 110000/120000 [01:01<00:05, 1805.26 examples/s]Map:  92%|█████████▎| 111000/120000 [01:01<00:04, 1816.42 examples/s]Map:  91%|█████████ | 109000/120000 [00:59<00:06, 1793.15 examples/s]Map:  91%|█████████ | 109000/120000 [01:01<00:06, 1814.20 examples/s]Map:  92%|█████████▏| 110000/120000 [01:01<00:05, 1774.38 examples/s]Map:  92%|█████████▎| 111000/120000 [01:01<00:04, 1812.33 examples/s]Map:  95%|█████████▌| 114000/120000 [01:01<00:03, 1847.81 examples/s]Map:  92%|█████████▎| 111000/120000 [01:01<00:04, 1811.16 examples/s]Map:  92%|█████████▎| 111000/120000 [01:01<00:04, 1817.43 examples/s]Map:  93%|█████████▎| 112000/120000 [01:02<00:04, 1824.66 examples/s]Map:  92%|█████████▏| 110000/120000 [01:00<00:05, 1812.10 examples/s]Map:  92%|█████████▏| 110000/120000 [01:02<00:05, 1819.29 examples/s]Map:  92%|█████████▎| 111000/120000 [01:02<00:05, 1787.65 examples/s]Map:  93%|█████████▎| 112000/120000 [01:02<00:04, 1838.62 examples/s]Map:  96%|█████████▌| 115000/120000 [01:02<00:02, 1873.72 examples/s]Map:  93%|█████████▎| 112000/120000 [01:01<00:04, 1834.88 examples/s]Map:  93%|█████████▎| 112000/120000 [01:02<00:04, 1825.87 examples/s]Map:  94%|█████████▍| 113000/120000 [01:02<00:03, 1828.64 examples/s]Map:  92%|█████████▎| 111000/120000 [01:00<00:04, 1815.33 examples/s]Map:  93%|█████████▎| 112000/120000 [01:02<00:04, 1803.07 examples/s]Map:  94%|█████████▍| 113000/120000 [01:02<00:03, 1845.29 examples/s]Map:  92%|█████████▎| 111000/120000 [01:02<00:05, 1778.42 examples/s]Map:  97%|█████████▋| 116000/120000 [01:02<00:02, 1881.85 examples/s]Map:  94%|█████████▍| 113000/120000 [01:02<00:03, 1842.03 examples/s]Map:  94%|█████████▍| 113000/120000 [01:02<00:03, 1785.61 examples/s]Map:  95%|█████████▌| 114000/120000 [01:03<00:03, 1827.14 examples/s]Map:  93%|█████████▎| 112000/120000 [01:01<00:04, 1814.50 examples/s]Map:  94%|█████████▍| 113000/120000 [01:03<00:03, 1831.93 examples/s]Map:  95%|█████████▌| 114000/120000 [01:03<00:03, 1851.06 examples/s]Map:  93%|█████████▎| 112000/120000 [01:03<00:04, 1821.34 examples/s]Map:  98%|█████████▊| 117000/120000 [01:03<00:01, 1873.46 examples/s]Map:  95%|█████████▌| 114000/120000 [01:02<00:03, 1840.70 examples/s]Map:  95%|█████████▌| 114000/120000 [01:03<00:03, 1802.79 examples/s]Map:  94%|█████████▍| 113000/120000 [01:02<00:03, 1834.50 examples/s]Map:  96%|█████████▌| 115000/120000 [01:03<00:02, 1826.68 examples/s]Map:  95%|█████████▌| 114000/120000 [01:03<00:03, 1826.45 examples/s]Map:  96%|█████████▌| 115000/120000 [01:03<00:02, 1865.54 examples/s]Map:  94%|█████████▍| 113000/120000 [01:03<00:03, 1832.29 examples/s]Map:  98%|█████████▊| 118000/120000 [01:03<00:01, 1883.32 examples/s]Map:  96%|█████████▌| 115000/120000 [01:03<00:02, 1832.02 examples/s]Map:  96%|█████████▌| 115000/120000 [01:03<00:02, 1815.38 examples/s]Map:  95%|█████████▌| 114000/120000 [01:02<00:03, 1837.48 examples/s]Map:  97%|█████████▋| 116000/120000 [01:04<00:02, 1826.57 examples/s]Map:  97%|█████████▋| 116000/120000 [01:04<00:02, 1848.53 examples/s]Map:  95%|█████████▌| 114000/120000 [01:04<00:03, 1842.63 examples/s]Map:  96%|█████████▌| 115000/120000 [01:04<00:02, 1792.01 examples/s]Map:  99%|█████████▉| 119000/120000 [01:04<00:00, 1890.58 examples/s]Map:  97%|█████████▋| 116000/120000 [01:04<00:02, 1801.54 examples/s]Map:  97%|█████████▋| 116000/120000 [01:04<00:02, 1830.28 examples/s]Map:  96%|█████████▌| 115000/120000 [01:03<00:02, 1847.70 examples/s]Map:  98%|█████████▊| 117000/120000 [01:04<00:01, 1829.74 examples/s]Map:  96%|█████████▌| 115000/120000 [01:04<00:02, 1856.08 examples/s]Map:  98%|█████████▊| 117000/120000 [01:04<00:01, 1833.40 examples/s]Map:  97%|█████████▋| 116000/120000 [01:04<00:02, 1788.75 examples/s]Map: 100%|██████████| 120000/120000 [01:05<00:00, 1890.09 examples/s]Map: 100%|██████████| 120000/120000 [01:05<00:00, 1840.30 examples/s]
+[2024-12-17 01:52:13,197] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Map:  98%|█████████▊| 117000/120000 [01:04<00:01, 1813.37 examples/s]Map:  98%|█████████▊| 117000/120000 [01:04<00:01, 1827.20 examples/s]Map:  97%|█████████▋| 116000/120000 [01:03<00:02, 1847.62 examples/s]Map:  98%|█████████▊| 118000/120000 [01:05<00:01, 1846.96 examples/s]Map:  97%|█████████▋| 116000/120000 [01:05<00:02, 1882.35 examples/s]Map:  98%|█████████▊| 118000/120000 [01:05<00:01, 1837.33 examples/s]Map:  98%|█████████▊| 117000/120000 [01:05<00:01, 1783.26 examples/s]Map:  98%|█████████▊| 118000/120000 [01:05<00:01, 1832.24 examples/s]Map:  98%|█████████▊| 118000/120000 [01:05<00:01, 1845.26 examples/s]Map:  98%|█████████▊| 117000/120000 [01:04<00:01, 1862.71 examples/s]Map:  98%|█████████▊| 117000/120000 [01:05<00:01, 1865.45 examples/s]Map:  99%|█████████▉| 119000/120000 [01:05<00:00, 1837.77 examples/s]Map:  99%|█████████▉| 119000/120000 [01:06<00:00, 1848.13 examples/s]Map:  98%|█████████▊| 118000/120000 [01:05<00:01, 1790.81 examples/s]Map:  99%|█████████▉| 119000/120000 [01:05<00:00, 1843.25 examples/s]Map:  99%|█████████▉| 119000/120000 [01:05<00:00, 1846.75 examples/s]Map:  98%|█████████▊| 118000/120000 [01:04<00:01, 1882.83 examples/s]Map:  98%|█████████▊| 118000/120000 [01:06<00:01, 1872.12 examples/s]Map: 100%|██████████| 120000/120000 [01:06<00:00, 1827.89 examples/s]Map: 100%|██████████| 120000/120000 [01:06<00:00, 1853.53 examples/s]Map:  99%|█████████▉| 119000/120000 [01:06<00:00, 1813.39 examples/s]Map: 100%|██████████| 120000/120000 [01:06<00:00, 1798.49 examples/s]
+[2024-12-17 01:52:14,749] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Map: 100%|██████████| 120000/120000 [01:06<00:00, 1796.45 examples/s]
+[2024-12-17 01:52:14,761] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Map: 100%|██████████| 120000/120000 [01:06<00:00, 1852.01 examples/s]Map: 100%|██████████| 120000/120000 [01:06<00:00, 1835.31 examples/s]Map:  99%|█████████▉| 119000/120000 [01:05<00:00, 1874.74 examples/s]Map: 100%|██████████| 120000/120000 [01:06<00:00, 1808.61 examples/s]
+[2024-12-17 01:52:15,051] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Map:  99%|█████████▉| 119000/120000 [01:06<00:00, 1864.33 examples/s]Map: 100%|██████████| 120000/120000 [01:07<00:00, 1829.06 examples/s]Map: 100%|██████████| 120000/120000 [01:06<00:00, 1798.11 examples/s]
+[2024-12-17 01:52:15,201] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Map: 100%|██████████| 120000/120000 [01:07<00:00, 1784.52 examples/s]
+[2024-12-17 01:52:15,368] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+Map: 100%|██████████| 120000/120000 [01:05<00:00, 1857.30 examples/s]Map: 100%|██████████| 120000/120000 [01:07<00:00, 1871.43 examples/s]Map: 100%|██████████| 120000/120000 [01:05<00:00, 1822.88 examples/s]
+[2024-12-17 01:52:15,616] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.16.2+33550885, git-hash=33550885, git-branch=tohtana/no_z3_hook
+[2024-12-17 01:52:15,616] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:52:15,637] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-12-17 01:52:15,639] [INFO] [logging.py:128:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2024-12-17 01:52:15,639] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2024-12-17 01:52:15,703] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2024-12-17 01:52:15,703] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2024-12-17 01:52:15,703] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2024-12-17 01:52:15,703] [INFO] [logging.py:128:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+Map: 100%|██████████| 120000/120000 [01:07<00:00, 1776.25 examples/s]
+[2024-12-17 01:52:15,767] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 32
+[2024-12-17 01:52:15,931] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2024-12-17 01:52:15,932] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 9.92 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-17 01:52:15,932] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.42 GB, percent = 4.7%
+[2024-12-17 01:52:15,935] [INFO] [stage3.py:168:__init__] Reduce bucket size 500000000
+[2024-12-17 01:52:15,935] [INFO] [stage3.py:169:__init__] Prefetch bucket size 50000000
+[2024-12-17 01:52:16,127] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2024-12-17 01:52:16,128] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-17 01:52:16,128] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.47 GB, percent = 4.7%
+Parameter Offload: Total persistent parameters: 1318912 in 161 params
+[2024-12-17 01:52:16,387] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2024-12-17 01:52:16,388] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-17 01:52:16,388] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.45 GB, percent = 4.7%
+[2024-12-17 01:52:16,589] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2024-12-17 01:52:16,590] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 11.82 GB         Max_CA 12 GB 
+[2024-12-17 01:52:16,590] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.45 GB, percent = 4.7%
+[2024-12-17 01:52:21,242] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 21
+[2024-12-17 01:52:21,243] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 4.11 GB         Max_CA 12 GB 
+[2024-12-17 01:52:21,243] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 111.18 GB, percent = 6.3%
+[2024-12-17 01:52:21,448] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2024-12-17 01:52:21,449] [INFO] [utils.py:782:see_memory_usage] MA 4.11 GB         Max_MA 4.11 GB         CA 4.11 GB         Max_CA 4 GB 
+[2024-12-17 01:52:21,449] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.42 GB, percent = 4.7%
+[2024-12-17 01:52:21,668] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2024-12-17 01:52:21,669] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.45 GB         CA 12.76 GB         Max_CA 13 GB 
+[2024-12-17 01:52:21,669] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.42 GB, percent = 4.7%
+[2024-12-17 01:52:22,712] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2024-12-17 01:52:22,713] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.32 GB         CA 12.76 GB         Max_CA 13 GB 
+[2024-12-17 01:52:22,713] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.42 GB, percent = 4.7%
+[2024-12-17 01:52:22,915] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2024-12-17 01:52:22,916] [INFO] [utils.py:782:see_memory_usage] MA 12.32 GB         Max_MA 12.72 GB         CA 13.16 GB         Max_CA 13 GB 
+[2024-12-17 01:52:22,916] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.42 GB, percent = 4.7%
+[2024-12-17 01:52:22,917] [INFO] [stage3.py:528:_setup_for_real_optimizer] optimizer state initialized
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+[2024-12-17 01:52:24,293] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2024-12-17 01:52:24,294] [INFO] [utils.py:782:see_memory_usage] MA 17.36 GB         Max_MA 21.28 GB         CA 22.11 GB         Max_CA 22 GB 
+[2024-12-17 01:52:24,294] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 82.52 GB, percent = 4.7%
+[2024-12-17 01:52:24,294] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2024-12-17 01:52:24,295] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2024-12-17 01:52:24,295] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2024-12-17 01:52:24,295] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[2e-05], mom=[(0.9, 0.999)]
+[2024-12-17 01:52:24,297] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   amp_params ................... False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   bfloat16_enabled ............. True
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f03fa283bb0>
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   dump_state ................... False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... None
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2024-12-17 01:52:24,298] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   fp16_auto_cast ............... None
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   fp16_enabled ................. False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 1
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   loss_scale ................... 1.0
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   optimizer_name ............... None
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   optimizer_params ............. None
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   pld_params ................... False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   scheduler_name ............... None
+[2024-12-17 01:52:24,299] [INFO] [config.py:1003:print]   scheduler_params ............. None
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   steps_per_print .............. inf
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   train_batch_size ............. 64
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  2
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   world_size ................... 32
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  True
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=100000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=False module_granularity_threshold=0 use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False zeropp_loco_param=None mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2024-12-17 01:52:24,300] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 3
+[2024-12-17 01:52:24,300] [INFO] [config.py:989:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "sub_group_size": 1.000000e+08
+    }, 
+    "gradient_accumulation_steps": 1, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "train_batch_size": 64, 
+    "train_micro_batch_size_per_gpu": 2, 
+    "wall_clock_breakdown": false, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true
+}
+Model prepared: <class 'deepspeed.runtime.engine.DeepSpeedEngine'>
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Emitting ninja build file /home/aiscuser/.cache/torch_extensions/py310_cu124/native_z3/build.ninja...
+Building extension module native_z3...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module native_z3...
+Time to load native_z3 op: 2.5184390544891357 seconds
+Loading extension module native_z3...
+Time to load native_z3 op: 2.552197217941284 seconds
+Loading extension module native_z3...
+Time to load native_z3 op: 2.5546414852142334 seconds
+Loading extension module native_z3...
+Loading extension module native_z3...
+Loading extension module native_z3...
+Time to load native_z3 op: 2.564512252807617 seconds
+Time to load native_z3 op: 2.562988042831421 seconds
+Time to load native_z3 op: 2.5665862560272217 seconds
+Loading extension module native_z3...
+Time to load native_z3 op: 2.5681395530700684 seconds
+Installed CUDA version 12.3 does not match the version torch was compiled with 12.4 but since the APIs are compatible, accepting this combination
+Using /home/aiscuser/.cache/torch_extensions/py310_cu124 as PyTorch extensions root...
+Emitting ninja build file /home/aiscuser/.cache/torch_extensions/py310_cu124/native_z3/build.ninja...
+Building extension module native_z3...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module native_z3...
+Time to load native_z3 op: 2.4431493282318115 seconds
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+Opt passes: [(<function schedule_prefetch at 0x7f03ee07d2d0>, 0.0), (<function make_selective_gather.<locals>.selective_gather_wrapper at 0x7f049b3ec430>, -1.0)]
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+Compiling with fast_free
+schedule_prefetch graph_id=139638986942512 max_mem=76488966144.0 available_memory=37972410368 memory_allocated=41687585280 max_allocated=41754710528 total_param_size=2101346304 margin=0.1
+size: 0, avg_duration: 0
+size: 64, avg_duration: 0.00010483930236659944
+size: 128, avg_duration: 0.00010488060070201755
+size: 256, avg_duration: 0.00010283839947078377
+size: 512, avg_duration: 0.00014828039275016636
+size: 1024, avg_duration: 0.00025243600248359144
+size: 2048, avg_duration: 0.00010712240327848122
+size: 4096, avg_duration: 0.0001017159956973046
+size: 8192, avg_duration: 0.00010188900341745466
+size: 16384, avg_duration: 0.00010189579916186631
+size: 32768, avg_duration: 0.00010342540190322325
+size: 65536, avg_duration: 9.756159852258861e-05
+size: 131072, avg_duration: 0.0001508389977971092
+size: 262144, avg_duration: 0.00020650151418522
+size: 524288, avg_duration: 0.00020696979481726885
+size: 1048576, avg_duration: 0.0002171179949073121
+size: 2097152, avg_duration: 0.0002165993064409122
+size: 4194304, avg_duration: 0.0002481261035427451
+size: 8388608, avg_duration: 0.0002569720090832561
+size: 16777216, avg_duration: 0.00031242301338352263
+size: 33554432, avg_duration: 0.00040600390639156103
+size: 67108864, avg_duration: 0.0006403196603059769
+size: 134217728, avg_duration: 0.0009691438754089177
+size: 268435456, avg_duration: 0.0017333851428702474
+size: 536870912, avg_duration: 0.0031375642865896225
+size: 1073741824, avg_duration: 0.00589430658146739
+size: 2147483648, avg_duration: 0.011459646746516228
+schedule_prefetch graph_id=139631539163760 max_mem=76488966144.0 available_memory=37972410368 memory_allocated=41754710528 max_allocated=41754711040 total_param_size=0 margin=0.1
+schedule_prefetch graph_id=139629501787552 max_mem=76488966144.0 available_memory=37972410368 memory_allocated=41754710528 max_allocated=41771487744 total_param_size=0 margin=0.1
+schedule_prefetch graph_id=139629517504464 max_mem=76488966144.0 available_memory=37972410368 memory_allocated=41768849920 max_allocated=47137616384 total_param_size=136904720384 margin=0.1
+schedule_prefetch graph_id=139628832604416 max_mem=76488966144.0 available_memory=32100384768 memory_allocated=47137575424 max_allocated=51340301824 total_param_size=2101346304 margin=0.1
+schedule_prefetch graph_id=139628832604416 max_mem=76488966144.0 available_memory=27981578240 memory_allocated=51256368128 max_allocated=51323509760 total_param_size=2101346304 margin=0.1
+schedule_prefetch graph_id=139629517504464 max_mem=76488966144.0 available_memory=32184270848 memory_allocated=47120750592 max_allocated=47187859456 total_param_size=136904720384 margin=0.1
+schedule_prefetch graph_id=139638986942512 max_mem=76488966144.0 available_memory=37754306560 memory_allocated=41752025088 max_allocated=41752025088 total_param_size=0 margin=0.1
+selective_gather graph_id=139638986942512 max_mem=44001191936 fwd_max_mem=43856039936 bwd_max_mem=44001191936
+selective_gather graph_id=139631539163760 max_mem=44001191936 fwd_max_mem=41754714624 bwd_max_mem=0
+selective_gather graph_id=139629501787552 max_mem=44001191936 fwd_max_mem=41805041664 bwd_max_mem=0
+selective_gather graph_id=139629517504464 max_mem=55142495744 fwd_max_mem=51902417920 bwd_max_mem=55142495744
+selective_gather graph_id=139628832604416 max_mem=57560406528 fwd_max_mem=53441613824 bwd_max_mem=57560406528
+selective_gather max_mem=57560406528 total_mem=84987740160 MEM_MARGIN=0.1 available_mem=18928559616.0
+Set persistent: 8 size: 16384 persistent_mem: 16384 shape: torch.Size([8192])
+Set persistent: 9 size: 16384 persistent_mem: 32768 shape: torch.Size([8192])
+Set persistent: 234 size: 16384 persistent_mem: 49152 shape: torch.Size([8192])
+Set persistent: 53 size: 16384 persistent_mem: 65536 shape: torch.Size([8192])
+Set persistent: 27 size: 16384 persistent_mem: 81920 shape: torch.Size([8192])
+Set persistent: 17 size: 16384 persistent_mem: 98304 shape: torch.Size([8192])
+Set persistent: 18 size: 16384 persistent_mem: 114688 shape: torch.Size([8192])
+Set persistent: 45 size: 16384 persistent_mem: 131072 shape: torch.Size([8192])
+Set persistent: 386 size: 16384 persistent_mem: 147456 shape: torch.Size([8192])
+Set persistent: 36 size: 16384 persistent_mem: 163840 shape: torch.Size([8192])
+Set persistent: 26 size: 16384 persistent_mem: 180224 shape: torch.Size([8192])
+Set persistent: 684 size: 16384 persistent_mem: 196608 shape: torch.Size([8192])
+Set persistent: 71 size: 16384 persistent_mem: 212992 shape: torch.Size([8192])
+Set persistent: 477 size: 16384 persistent_mem: 229376 shape: torch.Size([8192])
+Set persistent: 35 size: 16384 persistent_mem: 245760 shape: torch.Size([8192])
+Set persistent: 44 size: 16384 persistent_mem: 262144 shape: torch.Size([8192])
+Set persistent: 197 size: 16384 persistent_mem: 278528 shape: torch.Size([8192])
+Set persistent: 54 size: 16384 persistent_mem: 294912 shape: torch.Size([8192])
+Set persistent: 117 size: 16384 persistent_mem: 311296 shape: torch.Size([8192])
+Set persistent: 422 size: 16384 persistent_mem: 327680 shape: torch.Size([8192])
+Set persistent: 171 size: 16384 persistent_mem: 344064 shape: torch.Size([8192])
+Set persistent: 62 size: 16384 persistent_mem: 360448 shape: torch.Size([8192])
+Set persistent: 135 size: 16384 persistent_mem: 376832 shape: torch.Size([8192])
+Set persistent: 278 size: 16384 persistent_mem: 393216 shape: torch.Size([8192])
+Set persistent: 305 size: 16384 persistent_mem: 409600 shape: torch.Size([8192])
+Set persistent: 377 size: 16384 persistent_mem: 425984 shape: torch.Size([8192])
+Set persistent: 260 size: 16384 persistent_mem: 442368 shape: torch.Size([8192])
+Set persistent: 81 size: 16384 persistent_mem: 458752 shape: torch.Size([8192])
+Set persistent: 414 size: 16384 persistent_mem: 475136 shape: torch.Size([8192])
+Set persistent: 162 size: 16384 persistent_mem: 491520 shape: torch.Size([8192])
+Set persistent: 360 size: 16384 persistent_mem: 507904 shape: torch.Size([8192])
+Set persistent: 297 size: 16384 persistent_mem: 524288 shape: torch.Size([8192])
+Set persistent: 639 size: 16384 persistent_mem: 540672 shape: torch.Size([8192])
+Set persistent: 333 size: 16384 persistent_mem: 557056 shape: torch.Size([8192])
+Set persistent: 459 size: 16384 persistent_mem: 573440 shape: torch.Size([8192])
+Set persistent: 702 size: 16384 persistent_mem: 589824 shape: torch.Size([8192])
+Set persistent: 656 size: 16384 persistent_mem: 606208 shape: torch.Size([8192])
+Set persistent: 611 size: 16384 persistent_mem: 622592 shape: torch.Size([8192])
+Set persistent: 413 size: 16384 persistent_mem: 638976 shape: torch.Size([8192])
+Set persistent: 72 size: 16384 persistent_mem: 655360 shape: torch.Size([8192])
+Set persistent: 458 size: 16384 persistent_mem: 671744 shape: torch.Size([8192])
+Set persistent: 431 size: 16384 persistent_mem: 688128 shape: torch.Size([8192])
+Set persistent: 125 size: 16384 persistent_mem: 704512 shape: torch.Size([8192])
+Set persistent: 279 size: 16384 persistent_mem: 720896 shape: torch.Size([8192])
+Set persistent: 198 size: 16384 persistent_mem: 737280 shape: torch.Size([8192])
+Set persistent: 153 size: 16384 persistent_mem: 753664 shape: torch.Size([8192])
+Set persistent: 350 size: 16384 persistent_mem: 770048 shape: torch.Size([8192])
+Set persistent: 441 size: 16384 persistent_mem: 786432 shape: torch.Size([8192])
+Set persistent: 531 size: 16384 persistent_mem: 802816 shape: torch.Size([8192])
+Set persistent: 107 size: 16384 persistent_mem: 819200 shape: torch.Size([8192])
+Set persistent: 269 size: 16384 persistent_mem: 835584 shape: torch.Size([8192])
+Set persistent: 242 size: 16384 persistent_mem: 851968 shape: torch.Size([8192])
+Set persistent: 450 size: 16384 persistent_mem: 868352 shape: torch.Size([8192])
+Set persistent: 80 size: 16384 persistent_mem: 884736 shape: torch.Size([8192])
+Set persistent: 530 size: 16384 persistent_mem: 901120 shape: torch.Size([8192])
+Set persistent: 161 size: 16384 persistent_mem: 917504 shape: torch.Size([8192])
+Set persistent: 270 size: 16384 persistent_mem: 933888 shape: torch.Size([8192])
+Set persistent: 243 size: 16384 persistent_mem: 950272 shape: torch.Size([8192])
+Set persistent: 144 size: 16384 persistent_mem: 966656 shape: torch.Size([8192])
+Set persistent: 288 size: 16384 persistent_mem: 983040 shape: torch.Size([8192])
+Set persistent: 134 size: 16384 persistent_mem: 999424 shape: torch.Size([8192])
+Set persistent: 225 size: 16384 persistent_mem: 1015808 shape: torch.Size([8192])
+Set persistent: 90 size: 16384 persistent_mem: 1032192 shape: torch.Size([8192])
+Set persistent: 549 size: 16384 persistent_mem: 1048576 shape: torch.Size([8192])
+Set persistent: 323 size: 16384 persistent_mem: 1064960 shape: torch.Size([8192])
+Set persistent: 404 size: 16384 persistent_mem: 1081344 shape: torch.Size([8192])
+Set persistent: 387 size: 16384 persistent_mem: 1097728 shape: torch.Size([8192])
+Set persistent: 179 size: 16384 persistent_mem: 1114112 shape: torch.Size([8192])
+Set persistent: 224 size: 16384 persistent_mem: 1130496 shape: torch.Size([8192])
+Set persistent: 216 size: 16384 persistent_mem: 1146880 shape: torch.Size([8192])
+Set persistent: 720 size: 16384 persistent_mem: 1163264 shape: torch.Size([8192])
+Set persistent: 548 size: 16384 persistent_mem: 1179648 shape: torch.Size([8192])
+Set persistent: 369 size: 16384 persistent_mem: 1196032 shape: torch.Size([8192])
+Set persistent: 468 size: 16384 persistent_mem: 1212416 shape: torch.Size([8192])
+Set persistent: 314 size: 16384 persistent_mem: 1228800 shape: torch.Size([8192])
+Set persistent: 63 size: 16384 persistent_mem: 1245184 shape: torch.Size([8192])
+Set persistent: 233 size: 16384 persistent_mem: 1261568 shape: torch.Size([8192])
+Set persistent: 620 size: 16384 persistent_mem: 1277952 shape: torch.Size([8192])
+Set persistent: 432 size: 16384 persistent_mem: 1294336 shape: torch.Size([8192])
+Set persistent: 188 size: 16384 persistent_mem: 1310720 shape: torch.Size([8192])
+Set persistent: 666 size: 16384 persistent_mem: 1327104 shape: torch.Size([8192])
+Set persistent: 126 size: 16384 persistent_mem: 1343488 shape: torch.Size([8192])
+Set persistent: 296 size: 16384 persistent_mem: 1359872 shape: torch.Size([8192])
+Set persistent: 306 size: 16384 persistent_mem: 1376256 shape: torch.Size([8192])
+Set persistent: 648 size: 16384 persistent_mem: 1392640 shape: torch.Size([8192])
+Set persistent: 368 size: 16384 persistent_mem: 1409024 shape: torch.Size([8192])
+Set persistent: 207 size: 16384 persistent_mem: 1425408 shape: torch.Size([8192])
+Set persistent: 575 size: 16384 persistent_mem: 1441792 shape: torch.Size([8192])
+Set persistent: 557 size: 16384 persistent_mem: 1458176 shape: torch.Size([8192])
+Set persistent: 503 size: 16384 persistent_mem: 1474560 shape: torch.Size([8192])
+Set persistent: 629 size: 16384 persistent_mem: 1490944 shape: torch.Size([8192])
+Set persistent: 342 size: 16384 persistent_mem: 1507328 shape: torch.Size([8192])
+Set persistent: 215 size: 16384 persistent_mem: 1523712 shape: torch.Size([8192])
+Set persistent: 116 size: 16384 persistent_mem: 1540096 shape: torch.Size([8192])
+Set persistent: 423 size: 16384 persistent_mem: 1556480 shape: torch.Size([8192])
+Set persistent: 476 size: 16384 persistent_mem: 1572864 shape: torch.Size([8192])
+Set persistent: 108 size: 16384 persistent_mem: 1589248 shape: torch.Size([8192])
+Set persistent: 630 size: 16384 persistent_mem: 1605632 shape: torch.Size([8192])
+Set persistent: 315 size: 16384 persistent_mem: 1622016 shape: torch.Size([8192])
+Set persistent: 711 size: 16384 persistent_mem: 1638400 shape: torch.Size([8192])
+Set persistent: 495 size: 16384 persistent_mem: 1654784 shape: torch.Size([8192])
+Set persistent: 657 size: 16384 persistent_mem: 1671168 shape: torch.Size([8192])
+Set persistent: 594 size: 16384 persistent_mem: 1687552 shape: torch.Size([8192])
+Set persistent: 494 size: 16384 persistent_mem: 1703936 shape: torch.Size([8192])
+Set persistent: 513 size: 16384 persistent_mem: 1720320 shape: torch.Size([8192])
+Set persistent: 621 size: 16384 persistent_mem: 1736704 shape: torch.Size([8192])
+Set persistent: 504 size: 16384 persistent_mem: 1753088 shape: torch.Size([8192])
+Set persistent: 332 size: 16384 persistent_mem: 1769472 shape: torch.Size([8192])
+Set persistent: 152 size: 16384 persistent_mem: 1785856 shape: torch.Size([8192])
+Set persistent: 693 size: 16384 persistent_mem: 1802240 shape: torch.Size([8192])
+Set persistent: 721 size: 16384 persistent_mem: 1818624 shape: torch.Size([8192])
+Set persistent: 143 size: 16384 persistent_mem: 1835008 shape: torch.Size([8192])
+Set persistent: 251 size: 16384 persistent_mem: 1851392 shape: torch.Size([8192])
+Set persistent: 675 size: 16384 persistent_mem: 1867776 shape: torch.Size([8192])
+Set persistent: 396 size: 16384 persistent_mem: 1884160 shape: torch.Size([8192])
+Set persistent: 287 size: 16384 persistent_mem: 1900544 shape: torch.Size([8192])
+Set persistent: 566 size: 16384 persistent_mem: 1916928 shape: torch.Size([8192])
+Set persistent: 692 size: 16384 persistent_mem: 1933312 shape: torch.Size([8192])
+Set persistent: 405 size: 16384 persistent_mem: 1949696 shape: torch.Size([8192])
+Set persistent: 206 size: 16384 persistent_mem: 1966080 shape: torch.Size([8192])
+Set persistent: 359 size: 16384 persistent_mem: 1982464 shape: torch.Size([8192])
+Set persistent: 324 size: 16384 persistent_mem: 1998848 shape: torch.Size([8192])
+Set persistent: 719 size: 16384 persistent_mem: 2015232 shape: torch.Size([8192])
+Set persistent: 602 size: 16384 persistent_mem: 2031616 shape: torch.Size([8192])
+Set persistent: 351 size: 16384 persistent_mem: 2048000 shape: torch.Size([8192])
+Set persistent: 540 size: 16384 persistent_mem: 2064384 shape: torch.Size([8192])
+Set persistent: 603 size: 16384 persistent_mem: 2080768 shape: torch.Size([8192])
+Set persistent: 261 size: 16384 persistent_mem: 2097152 shape: torch.Size([8192])
+Set persistent: 612 size: 16384 persistent_mem: 2113536 shape: torch.Size([8192])
+Set persistent: 584 size: 16384 persistent_mem: 2129920 shape: torch.Size([8192])
+Set persistent: 440 size: 16384 persistent_mem: 2146304 shape: torch.Size([8192])
+Set persistent: 189 size: 16384 persistent_mem: 2162688 shape: torch.Size([8192])
+Set persistent: 701 size: 16384 persistent_mem: 2179072 shape: torch.Size([8192])
+Set persistent: 180 size: 16384 persistent_mem: 2195456 shape: torch.Size([8192])
+Set persistent: 341 size: 16384 persistent_mem: 2211840 shape: torch.Size([8192])
+Set persistent: 558 size: 16384 persistent_mem: 2228224 shape: torch.Size([8192])
+Set persistent: 449 size: 16384 persistent_mem: 2244608 shape: torch.Size([8192])
+Set persistent: 710 size: 16384 persistent_mem: 2260992 shape: torch.Size([8192])
+Set persistent: 486 size: 16384 persistent_mem: 2277376 shape: torch.Size([8192])
+Set persistent: 252 size: 16384 persistent_mem: 2293760 shape: torch.Size([8192])
+Set persistent: 576 size: 16384 persistent_mem: 2310144 shape: torch.Size([8192])
+Set persistent: 512 size: 16384 persistent_mem: 2326528 shape: torch.Size([8192])
+Set persistent: 395 size: 16384 persistent_mem: 2342912 shape: torch.Size([8192])
+Set persistent: 99 size: 16384 persistent_mem: 2359296 shape: torch.Size([8192])
+Set persistent: 170 size: 16384 persistent_mem: 2375680 shape: torch.Size([8192])
+Set persistent: 647 size: 16384 persistent_mem: 2392064 shape: torch.Size([8192])
+Set persistent: 98 size: 16384 persistent_mem: 2408448 shape: torch.Size([8192])
+Set persistent: 378 size: 16384 persistent_mem: 2424832 shape: torch.Size([8192])
+Set persistent: 593 size: 16384 persistent_mem: 2441216 shape: torch.Size([8192])
+Set persistent: 567 size: 16384 persistent_mem: 2457600 shape: torch.Size([8192])
+Set persistent: 485 size: 16384 persistent_mem: 2473984 shape: torch.Size([8192])
+Set persistent: 539 size: 16384 persistent_mem: 2490368 shape: torch.Size([8192])
+Set persistent: 522 size: 16384 persistent_mem: 2506752 shape: torch.Size([8192])
+Set persistent: 521 size: 16384 persistent_mem: 2523136 shape: torch.Size([8192])
+Set persistent: 683 size: 16384 persistent_mem: 2539520 shape: torch.Size([8192])
+Set persistent: 638 size: 16384 persistent_mem: 2555904 shape: torch.Size([8192])
+Set persistent: 585 size: 16384 persistent_mem: 2572288 shape: torch.Size([8192])
+Set persistent: 467 size: 16384 persistent_mem: 2588672 shape: torch.Size([8192])
+Set persistent: 89 size: 16384 persistent_mem: 2605056 shape: torch.Size([8192])
+Set persistent: 674 size: 16384 persistent_mem: 2621440 shape: torch.Size([8192])
+Set persistent: 665 size: 16384 persistent_mem: 2637824 shape: torch.Size([8192])
+Set persistent: 2 size: 16777216 persistent_mem: 19415040 shape: torch.Size([1024, 8192])
+Set persistent: 651 size: 16777216 persistent_mem: 36192256 shape: torch.Size([1024, 8192])
+Set persistent: 20 size: 16777216 persistent_mem: 52969472 shape: torch.Size([1024, 8192])
+Set persistent: 444 size: 16777216 persistent_mem: 69746688 shape: torch.Size([1024, 8192])
+Set persistent: 3 size: 16777216 persistent_mem: 86523904 shape: torch.Size([1024, 8192])
+Set persistent: 12 size: 16777216 persistent_mem: 103301120 shape: torch.Size([1024, 8192])
+Set persistent: 471 size: 16777216 persistent_mem: 120078336 shape: torch.Size([1024, 8192])
+Set persistent: 281 size: 16777216 persistent_mem: 136855552 shape: torch.Size([1024, 8192])
+Set persistent: 398 size: 16777216 persistent_mem: 153632768 shape: torch.Size([1024, 8192])
+Set persistent: 138 size: 16777216 persistent_mem: 170409984 shape: torch.Size([1024, 8192])
+Set persistent: 11 size: 16777216 persistent_mem: 187187200 shape: torch.Size([1024, 8192])
+Set persistent: 659 size: 16777216 persistent_mem: 203964416 shape: torch.Size([1024, 8192])
+Set persistent: 83 size: 16777216 persistent_mem: 220741632 shape: torch.Size([1024, 8192])
+Set persistent: 21 size: 16777216 persistent_mem: 237518848 shape: torch.Size([1024, 8192])
+Set persistent: 308 size: 16777216 persistent_mem: 254296064 shape: torch.Size([1024, 8192])
+Set persistent: 533 size: 16777216 persistent_mem: 271073280 shape: torch.Size([1024, 8192])
+Set persistent: 173 size: 16777216 persistent_mem: 287850496 shape: torch.Size([1024, 8192])
+Set persistent: 641 size: 16777216 persistent_mem: 304627712 shape: torch.Size([1024, 8192])
+Set persistent: 551 size: 16777216 persistent_mem: 321404928 shape: torch.Size([1024, 8192])
+Set persistent: 119 size: 16777216 persistent_mem: 338182144 shape: torch.Size([1024, 8192])
+Set persistent: 65 size: 16777216 persistent_mem: 354959360 shape: torch.Size([1024, 8192])
+Set persistent: 632 size: 16777216 persistent_mem: 371736576 shape: torch.Size([1024, 8192])
+Set persistent: 408 size: 16777216 persistent_mem: 388513792 shape: torch.Size([1024, 8192])
+Set persistent: 291 size: 16777216 persistent_mem: 405291008 shape: torch.Size([1024, 8192])
+Set persistent: 183 size: 16777216 persistent_mem: 422068224 shape: torch.Size([1024, 8192])
+Set persistent: 497 size: 16777216 persistent_mem: 438845440 shape: torch.Size([1024, 8192])
+Set persistent: 56 size: 16777216 persistent_mem: 455622656 shape: torch.Size([1024, 8192])
+Set persistent: 326 size: 16777216 persistent_mem: 472399872 shape: torch.Size([1024, 8192])
+Set persistent: 66 size: 16777216 persistent_mem: 489177088 shape: torch.Size([1024, 8192])
+Set persistent: 642 size: 16777216 persistent_mem: 505954304 shape: torch.Size([1024, 8192])
+Set persistent: 561 size: 16777216 persistent_mem: 522731520 shape: torch.Size([1024, 8192])
+Set persistent: 389 size: 16777216 persistent_mem: 539508736 shape: torch.Size([1024, 8192])
+Set persistent: 605 size: 16777216 persistent_mem: 556285952 shape: torch.Size([1024, 8192])
+Set persistent: 515 size: 16777216 persistent_mem: 573063168 shape: torch.Size([1024, 8192])
+Set persistent: 344 size: 16777216 persistent_mem: 589840384 shape: torch.Size([1024, 8192])
+Set persistent: 165 size: 16777216 persistent_mem: 606617600 shape: torch.Size([1024, 8192])
+Set persistent: 453 size: 16777216 persistent_mem: 623394816 shape: torch.Size([1024, 8192])
+Set persistent: 74 size: 16777216 persistent_mem: 640172032 shape: torch.Size([1024, 8192])
+Set persistent: 75 size: 16777216 persistent_mem: 656949248 shape: torch.Size([1024, 8192])
+Set persistent: 164 size: 16777216 persistent_mem: 673726464 shape: torch.Size([1024, 8192])
+Set persistent: 606 size: 16777216 persistent_mem: 690503680 shape: torch.Size([1024, 8192])
+Set persistent: 47 size: 16777216 persistent_mem: 707280896 shape: torch.Size([1024, 8192])
+Set persistent: 336 size: 16777216 persistent_mem: 724058112 shape: torch.Size([1024, 8192])
+Set persistent: 380 size: 16777216 persistent_mem: 740835328 shape: torch.Size([1024, 8192])
+Set persistent: 588 size: 16777216 persistent_mem: 757612544 shape: torch.Size([1024, 8192])
+Set persistent: 371 size: 16777216 persistent_mem: 774389760 shape: torch.Size([1024, 8192])
+Set persistent: 218 size: 16777216 persistent_mem: 791166976 shape: torch.Size([1024, 8192])
+Set persistent: 534 size: 16777216 persistent_mem: 807944192 shape: torch.Size([1024, 8192])
+Set persistent: 29 size: 16777216 persistent_mem: 824721408 shape: torch.Size([1024, 8192])
+Set persistent: 264 size: 16777216 persistent_mem: 841498624 shape: torch.Size([1024, 8192])
+Set persistent: 48 size: 16777216 persistent_mem: 858275840 shape: torch.Size([1024, 8192])
+Set persistent: 362 size: 16777216 persistent_mem: 875053056 shape: torch.Size([1024, 8192])
+Set persistent: 542 size: 16777216 persistent_mem: 891830272 shape: torch.Size([1024, 8192])
+Set persistent: 228 size: 16777216 persistent_mem: 908607488 shape: torch.Size([1024, 8192])
+Set persistent: 129 size: 16777216 persistent_mem: 925384704 shape: torch.Size([1024, 8192])
+Set persistent: 407 size: 16777216 persistent_mem: 942161920 shape: torch.Size([1024, 8192])
+Set persistent: 363 size: 16777216 persistent_mem: 958939136 shape: torch.Size([1024, 8192])
+Set persistent: 687 size: 16777216 persistent_mem: 975716352 shape: torch.Size([1024, 8192])
+Set persistent: 254 size: 16777216 persistent_mem: 992493568 shape: torch.Size([1024, 8192])
+Set persistent: 480 size: 16777216 persistent_mem: 1009270784 shape: torch.Size([1024, 8192])
+Set persistent: 506 size: 16777216 persistent_mem: 1026048000 shape: torch.Size([1024, 8192])
+Set persistent: 623 size: 16777216 persistent_mem: 1042825216 shape: torch.Size([1024, 8192])
+Set persistent: 263 size: 16777216 persistent_mem: 1059602432 shape: torch.Size([1024, 8192])
+Set persistent: 435 size: 16777216 persistent_mem: 1076379648 shape: torch.Size([1024, 8192])
+Set persistent: 182 size: 16777216 persistent_mem: 1093156864 shape: torch.Size([1024, 8192])
+Set persistent: 282 size: 16777216 persistent_mem: 1109934080 shape: torch.Size([1024, 8192])
+Set persistent: 273 size: 16777216 persistent_mem: 1126711296 shape: torch.Size([1024, 8192])
+Set persistent: 38 size: 16777216 persistent_mem: 1143488512 shape: torch.Size([1024, 8192])
+Set persistent: 578 size: 16777216 persistent_mem: 1160265728 shape: torch.Size([1024, 8192])
+Set persistent: 461 size: 16777216 persistent_mem: 1177042944 shape: torch.Size([1024, 8192])
+Set persistent: 30 size: 16777216 persistent_mem: 1193820160 shape: torch.Size([1024, 8192])
+Set persistent: 524 size: 16777216 persistent_mem: 1210597376 shape: torch.Size([1024, 8192])
+Set persistent: 678 size: 16777216 persistent_mem: 1227374592 shape: torch.Size([1024, 8192])
+Set persistent: 236 size: 16777216 persistent_mem: 1244151808 shape: torch.Size([1024, 8192])
+Set persistent: 137 size: 16777216 persistent_mem: 1260929024 shape: torch.Size([1024, 8192])
+Set persistent: 677 size: 16777216 persistent_mem: 1277706240 shape: torch.Size([1024, 8192])
+Set persistent: 596 size: 16777216 persistent_mem: 1294483456 shape: torch.Size([1024, 8192])
+Set persistent: 272 size: 16777216 persistent_mem: 1311260672 shape: torch.Size([1024, 8192])
+Set persistent: 516 size: 16777216 persistent_mem: 1328037888 shape: torch.Size([1024, 8192])
+Set persistent: 318 size: 16777216 persistent_mem: 1344815104 shape: torch.Size([1024, 8192])
+Set persistent: 155 size: 16777216 persistent_mem: 1361592320 shape: torch.Size([1024, 8192])
+Set persistent: 156 size: 16777216 persistent_mem: 1378369536 shape: torch.Size([1024, 8192])
+Set persistent: 300 size: 16777216 persistent_mem: 1395146752 shape: torch.Size([1024, 8192])
+Set persistent: 704 size: 16777216 persistent_mem: 1411923968 shape: torch.Size([1024, 8192])
+Set persistent: 146 size: 16777216 persistent_mem: 1428701184 shape: torch.Size([1024, 8192])
+Set persistent: 92 size: 16777216 persistent_mem: 1445478400 shape: torch.Size([1024, 8192])
+Set persistent: 462 size: 16777216 persistent_mem: 1462255616 shape: torch.Size([1024, 8192])
+Set persistent: 327 size: 16777216 persistent_mem: 1479032832 shape: torch.Size([1024, 8192])
+Set persistent: 309 size: 16777216 persistent_mem: 1495810048 shape: torch.Size([1024, 8192])
+Set persistent: 210 size: 16777216 persistent_mem: 1512587264 shape: torch.Size([1024, 8192])
+Set persistent: 200 size: 16777216 persistent_mem: 1529364480 shape: torch.Size([1024, 8192])
+Set persistent: 209 size: 16777216 persistent_mem: 1546141696 shape: torch.Size([1024, 8192])
+Set persistent: 111 size: 16777216 persistent_mem: 1562918912 shape: torch.Size([1024, 8192])
+Set persistent: 110 size: 16777216 persistent_mem: 1579696128 shape: torch.Size([1024, 8192])
+Set persistent: 290 size: 16777216 persistent_mem: 1596473344 shape: torch.Size([1024, 8192])
+Set persistent: 668 size: 16777216 persistent_mem: 1613250560 shape: torch.Size([1024, 8192])
+Set persistent: 399 size: 16777216 persistent_mem: 1630027776 shape: torch.Size([1024, 8192])
+Set persistent: 191 size: 16777216 persistent_mem: 1646804992 shape: torch.Size([1024, 8192])
+Set persistent: 434 size: 16777216 persistent_mem: 1663582208 shape: torch.Size([1024, 8192])
+Set persistent: 696 size: 16777216 persistent_mem: 1680359424 shape: torch.Size([1024, 8192])
+Set persistent: 39 size: 16777216 persistent_mem: 1697136640 shape: torch.Size([1024, 8192])
+Set persistent: 660 size: 16777216 persistent_mem: 1713913856 shape: torch.Size([1024, 8192])
+Set persistent: 120 size: 16777216 persistent_mem: 1730691072 shape: torch.Size([1024, 8192])
+Set persistent: 633 size: 16777216 persistent_mem: 1747468288 shape: torch.Size([1024, 8192])
+Set persistent: 201 size: 16777216 persistent_mem: 1764245504 shape: torch.Size([1024, 8192])
+Set persistent: 93 size: 16777216 persistent_mem: 1781022720 shape: torch.Size([1024, 8192])
+Set persistent: 102 size: 16777216 persistent_mem: 1797799936 shape: torch.Size([1024, 8192])
+Set persistent: 570 size: 16777216 persistent_mem: 1814577152 shape: torch.Size([1024, 8192])
+Set persistent: 219 size: 16777216 persistent_mem: 1831354368 shape: torch.Size([1024, 8192])
+Set persistent: 488 size: 16777216 persistent_mem: 1848131584 shape: torch.Size([1024, 8192])
+Set persistent: 560 size: 16777216 persistent_mem: 1864908800 shape: torch.Size([1024, 8192])
+Set persistent: 128 size: 16777216 persistent_mem: 1881686016 shape: torch.Size([1024, 8192])
+Set persistent: 470 size: 16777216 persistent_mem: 1898463232 shape: torch.Size([1024, 8192])
+Set persistent: 174 size: 16777216 persistent_mem: 1915240448 shape: torch.Size([1024, 8192])
+Set persistent: 101 size: 16777216 persistent_mem: 1932017664 shape: torch.Size([1024, 8192])
+Set persistent: 317 size: 16777216 persistent_mem: 1948794880 shape: torch.Size([1024, 8192])
+Set persistent: 579 size: 16777216 persistent_mem: 1965572096 shape: torch.Size([1024, 8192])
+Set persistent: 705 size: 16777216 persistent_mem: 1982349312 shape: torch.Size([1024, 8192])
+Set persistent: 57 size: 16777216 persistent_mem: 1999126528 shape: torch.Size([1024, 8192])
+Set persistent: 84 size: 16777216 persistent_mem: 2015903744 shape: torch.Size([1024, 8192])
+Set persistent: 147 size: 16777216 persistent_mem: 2032680960 shape: torch.Size([1024, 8192])
+Set persistent: 192 size: 16777216 persistent_mem: 2049458176 shape: torch.Size([1024, 8192])
+Set persistent: 417 size: 16777216 persistent_mem: 2066235392 shape: torch.Size([1024, 8192])
+Set persistent: 353 size: 16777216 persistent_mem: 2083012608 shape: torch.Size([1024, 8192])
+Set persistent: 299 size: 16777216 persistent_mem: 2099789824 shape: torch.Size([1024, 8192])
+Set persistent: 624 size: 16777216 persistent_mem: 2116567040 shape: torch.Size([1024, 8192])
+Set persistent: 443 size: 16777216 persistent_mem: 2133344256 shape: torch.Size([1024, 8192])
+Set persistent: 416 size: 16777216 persistent_mem: 2150121472 shape: torch.Size([1024, 8192])
+Set persistent: 227 size: 16777216 persistent_mem: 2166898688 shape: torch.Size([1024, 8192])
+Set persistent: 552 size: 16777216 persistent_mem: 2183675904 shape: torch.Size([1024, 8192])
+Set persistent: 569 size: 16777216 persistent_mem: 2200453120 shape: torch.Size([1024, 8192])
+Set persistent: 255 size: 16777216 persistent_mem: 2217230336 shape: torch.Size([1024, 8192])
+Set persistent: 452 size: 16777216 persistent_mem: 2234007552 shape: torch.Size([1024, 8192])
+Set persistent: 354 size: 16777216 persistent_mem: 2250784768 shape: torch.Size([1024, 8192])
+Set persistent: 426 size: 16777216 persistent_mem: 2267561984 shape: torch.Size([1024, 8192])
+Set persistent: 237 size: 16777216 persistent_mem: 2284339200 shape: torch.Size([1024, 8192])
+Set persistent: 381 size: 16777216 persistent_mem: 2301116416 shape: torch.Size([1024, 8192])
+Set persistent: 390 size: 16777216 persistent_mem: 2317893632 shape: torch.Size([1024, 8192])
+Set persistent: 587 size: 16777216 persistent_mem: 2334670848 shape: torch.Size([1024, 8192])
+Set persistent: 489 size: 16777216 persistent_mem: 2351448064 shape: torch.Size([1024, 8192])
+Set persistent: 246 size: 16777216 persistent_mem: 2368225280 shape: torch.Size([1024, 8192])
+Set persistent: 507 size: 16777216 persistent_mem: 2385002496 shape: torch.Size([1024, 8192])
+Set persistent: 498 size: 16777216 persistent_mem: 2401779712 shape: torch.Size([1024, 8192])
+Set persistent: 543 size: 16777216 persistent_mem: 2418556928 shape: torch.Size([1024, 8192])
+Set persistent: 597 size: 16777216 persistent_mem: 2435334144 shape: torch.Size([1024, 8192])
+Set persistent: 345 size: 16777216 persistent_mem: 2452111360 shape: torch.Size([1024, 8192])
+Set persistent: 614 size: 16777216 persistent_mem: 2468888576 shape: torch.Size([1024, 8192])
+Set persistent: 479 size: 16777216 persistent_mem: 2485665792 shape: torch.Size([1024, 8192])
+Set persistent: 425 size: 16777216 persistent_mem: 2502443008 shape: torch.Size([1024, 8192])
+Set persistent: 615 size: 16777216 persistent_mem: 2519220224 shape: torch.Size([1024, 8192])
+Set persistent: 686 size: 16777216 persistent_mem: 2535997440 shape: torch.Size([1024, 8192])
+Set persistent: 245 size: 16777216 persistent_mem: 2552774656 shape: torch.Size([1024, 8192])
+Set persistent: 372 size: 16777216 persistent_mem: 2569551872 shape: torch.Size([1024, 8192])
+Set persistent: 695 size: 16777216 persistent_mem: 2586329088 shape: torch.Size([1024, 8192])
+Set persistent: 650 size: 16777216 persistent_mem: 2603106304 shape: torch.Size([1024, 8192])
+Set persistent: 714 size: 16777216 persistent_mem: 2619883520 shape: torch.Size([1024, 8192])
+Set persistent: 713 size: 16777216 persistent_mem: 2636660736 shape: torch.Size([1024, 8192])
+Set persistent: 335 size: 16777216 persistent_mem: 2653437952 shape: torch.Size([1024, 8192])
+Set persistent: 525 size: 16777216 persistent_mem: 2670215168 shape: torch.Size([1024, 8192])
+Set persistent: 669 size: 16777216 persistent_mem: 2686992384 shape: torch.Size([1024, 8192])
+Set persistent: 643 size: 134217728 persistent_mem: 2821210112 shape: torch.Size([8192, 8192])
+Set persistent: 1 size: 134217728 persistent_mem: 2955427840 shape: torch.Size([8192, 8192])
+Set persistent: 4 size: 134217728 persistent_mem: 3089645568 shape: torch.Size([8192, 8192])
+Set persistent: 136 size: 134217728 persistent_mem: 3223863296 shape: torch.Size([8192, 8192])
+Set persistent: 10 size: 134217728 persistent_mem: 3358081024 shape: torch.Size([8192, 8192])
+Set persistent: 415 size: 134217728 persistent_mem: 3492298752 shape: torch.Size([8192, 8192])
+Set persistent: 229 size: 134217728 persistent_mem: 3626516480 shape: torch.Size([8192, 8192])
+Set persistent: 172 size: 134217728 persistent_mem: 3760734208 shape: torch.Size([8192, 8192])
+Set persistent: 130 size: 134217728 persistent_mem: 3894951936 shape: torch.Size([8192, 8192])
+Set persistent: 13 size: 134217728 persistent_mem: 4029169664 shape: torch.Size([8192, 8192])
+Set persistent: 316 size: 134217728 persistent_mem: 4163387392 shape: torch.Size([8192, 8192])
+Set persistent: 697 size: 134217728 persistent_mem: 4297605120 shape: torch.Size([8192, 8192])
+Set persistent: 382 size: 134217728 persistent_mem: 4431822848 shape: torch.Size([8192, 8192])
+Set persistent: 55 size: 134217728 persistent_mem: 4566040576 shape: torch.Size([8192, 8192])
+Set persistent: 238 size: 134217728 persistent_mem: 4700258304 shape: torch.Size([8192, 8192])
+Set persistent: 400 size: 134217728 persistent_mem: 4834476032 shape: torch.Size([8192, 8192])
+Set persistent: 19 size: 134217728 persistent_mem: 4968693760 shape: torch.Size([8192, 8192])
+Set persistent: 388 size: 134217728 persistent_mem: 5102911488 shape: torch.Size([8192, 8192])
+Set persistent: 190 size: 134217728 persistent_mem: 5237129216 shape: torch.Size([8192, 8192])
+Set persistent: 409 size: 134217728 persistent_mem: 5371346944 shape: torch.Size([8192, 8192])
+Set persistent: 31 size: 134217728 persistent_mem: 5505564672 shape: torch.Size([8192, 8192])
+Set persistent: 706 size: 134217728 persistent_mem: 5639782400 shape: torch.Size([8192, 8192])
+Set persistent: 40 size: 134217728 persistent_mem: 5774000128 shape: torch.Size([8192, 8192])
+Set persistent: 307 size: 134217728 persistent_mem: 5908217856 shape: torch.Size([8192, 8192])
+Set persistent: 508 size: 134217728 persistent_mem: 6042435584 shape: torch.Size([8192, 8192])
+Set persistent: 64 size: 134217728 persistent_mem: 6176653312 shape: torch.Size([8192, 8192])
+Set persistent: 217 size: 134217728 persistent_mem: 6310871040 shape: torch.Size([8192, 8192])
+Set persistent: 280 size: 134217728 persistent_mem: 6445088768 shape: torch.Size([8192, 8192])
+Set persistent: 418 size: 134217728 persistent_mem: 6579306496 shape: torch.Size([8192, 8192])
+Set persistent: 442 size: 134217728 persistent_mem: 6713524224 shape: torch.Size([8192, 8192])
+Set persistent: 598 size: 134217728 persistent_mem: 6847741952 shape: torch.Size([8192, 8192])
+Set persistent: 109 size: 134217728 persistent_mem: 6981959680 shape: torch.Size([8192, 8192])
+Set persistent: 661 size: 134217728 persistent_mem: 7116177408 shape: torch.Size([8192, 8192])
+Set persistent: 490 size: 134217728 persistent_mem: 7250395136 shape: torch.Size([8192, 8192])
+Set persistent: 676 size: 134217728 persistent_mem: 7384612864 shape: torch.Size([8192, 8192])
+Set persistent: 28 size: 134217728 persistent_mem: 7518830592 shape: torch.Size([8192, 8192])
+Set persistent: 46 size: 134217728 persistent_mem: 7653048320 shape: torch.Size([8192, 8192])
+Set persistent: 535 size: 134217728 persistent_mem: 7787266048 shape: torch.Size([8192, 8192])
+Set persistent: 679 size: 134217728 persistent_mem: 7921483776 shape: torch.Size([8192, 8192])
+Set persistent: 472 size: 134217728 persistent_mem: 8055701504 shape: torch.Size([8192, 8192])
+Set persistent: 337 size: 134217728 persistent_mem: 8189919232 shape: torch.Size([8192, 8192])
+Set persistent: 604 size: 134217728 persistent_mem: 8324136960 shape: torch.Size([8192, 8192])
+Set persistent: 355 size: 134217728 persistent_mem: 8458354688 shape: torch.Size([8192, 8192])
+Set persistent: 145 size: 134217728 persistent_mem: 8592572416 shape: torch.Size([8192, 8192])
+Set persistent: 193 size: 134217728 persistent_mem: 8726790144 shape: torch.Size([8192, 8192])
+Set persistent: 37 size: 134217728 persistent_mem: 8861007872 shape: torch.Size([8192, 8192])
+Set persistent: 103 size: 134217728 persistent_mem: 8995225600 shape: torch.Size([8192, 8192])
+Set persistent: 49 size: 134217728 persistent_mem: 9129443328 shape: torch.Size([8192, 8192])
+Set persistent: 121 size: 134217728 persistent_mem: 9263661056 shape: torch.Size([8192, 8192])
+Set persistent: 148 size: 134217728 persistent_mem: 9397878784 shape: torch.Size([8192, 8192])
+Set persistent: 445 size: 134217728 persistent_mem: 9532096512 shape: torch.Size([8192, 8192])
+Set persistent: 184 size: 134217728 persistent_mem: 9666314240 shape: torch.Size([8192, 8192])
+Set persistent: 265 size: 134217728 persistent_mem: 9800531968 shape: torch.Size([8192, 8192])
+Set persistent: 274 size: 134217728 persistent_mem: 9934749696 shape: torch.Size([8192, 8192])
+Set persistent: 94 size: 134217728 persistent_mem: 10068967424 shape: torch.Size([8192, 8192])
+Set persistent: 76 size: 134217728 persistent_mem: 10203185152 shape: torch.Size([8192, 8192])
+Set persistent: 127 size: 134217728 persistent_mem: 10337402880 shape: torch.Size([8192, 8192])
+Set persistent: 73 size: 134217728 persistent_mem: 10471620608 shape: torch.Size([8192, 8192])
+Set persistent: 526 size: 134217728 persistent_mem: 10605838336 shape: torch.Size([8192, 8192])
+Set persistent: 346 size: 134217728 persistent_mem: 10740056064 shape: torch.Size([8192, 8192])
+Set persistent: 481 size: 134217728 persistent_mem: 10874273792 shape: torch.Size([8192, 8192])
+Set persistent: 256 size: 134217728 persistent_mem: 11008491520 shape: torch.Size([8192, 8192])
+Set persistent: 325 size: 134217728 persistent_mem: 11142709248 shape: torch.Size([8192, 8192])
+Set persistent: 586 size: 134217728 persistent_mem: 11276926976 shape: torch.Size([8192, 8192])
+Set persistent: 208 size: 134217728 persistent_mem: 11411144704 shape: torch.Size([8192, 8192])
+Set persistent: 166 size: 134217728 persistent_mem: 11545362432 shape: torch.Size([8192, 8192])
+Set persistent: 163 size: 134217728 persistent_mem: 11679580160 shape: torch.Size([8192, 8192])
+Set persistent: 658 size: 134217728 persistent_mem: 11813797888 shape: torch.Size([8192, 8192])
+Set persistent: 433 size: 134217728 persistent_mem: 11948015616 shape: torch.Size([8192, 8192])
+Set persistent: 22 size: 134217728 persistent_mem: 12082233344 shape: torch.Size([8192, 8192])
+Set persistent: 688 size: 134217728 persistent_mem: 12216451072 shape: torch.Size([8192, 8192])
+Set persistent: 607 size: 134217728 persistent_mem: 12350668800 shape: torch.Size([8192, 8192])
+Set persistent: 343 size: 134217728 persistent_mem: 12484886528 shape: torch.Size([8192, 8192])
+Set persistent: 352 size: 134217728 persistent_mem: 12619104256 shape: torch.Size([8192, 8192])
+Set persistent: 427 size: 134217728 persistent_mem: 12753321984 shape: torch.Size([8192, 8192])
+Set persistent: 391 size: 134217728 persistent_mem: 12887539712 shape: torch.Size([8192, 8192])
+Set persistent: 139 size: 134217728 persistent_mem: 13021757440 shape: torch.Size([8192, 8192])
+Set persistent: 91 size: 134217728 persistent_mem: 13155975168 shape: torch.Size([8192, 8192])
+Set persistent: 541 size: 134217728 persistent_mem: 13290192896 shape: torch.Size([8192, 8192])
+Set persistent: 694 size: 134217728 persistent_mem: 13424410624 shape: torch.Size([8192, 8192])
+Set persistent: 460 size: 134217728 persistent_mem: 13558628352 shape: torch.Size([8192, 8192])
+Set persistent: 397 size: 134217728 persistent_mem: 13692846080 shape: torch.Size([8192, 8192])
+Set persistent: 211 size: 134217728 persistent_mem: 13827063808 shape: torch.Size([8192, 8192])
+Set persistent: 118 size: 134217728 persistent_mem: 13961281536 shape: torch.Size([8192, 8192])
+Set persistent: 235 size: 134217728 persistent_mem: 14095499264 shape: torch.Size([8192, 8192])
+Set persistent: 550 size: 134217728 persistent_mem: 14229716992 shape: torch.Size([8192, 8192])
+Set persistent: 454 size: 134217728 persistent_mem: 14363934720 shape: torch.Size([8192, 8192])
+Set persistent: 616 size: 134217728 persistent_mem: 14498152448 shape: torch.Size([8192, 8192])
+Set persistent: 58 size: 134217728 persistent_mem: 14632370176 shape: torch.Size([8192, 8192])
+Set persistent: 544 size: 134217728 persistent_mem: 14766587904 shape: torch.Size([8192, 8192])
+Set persistent: 289 size: 134217728 persistent_mem: 14900805632 shape: torch.Size([8192, 8192])
+Set persistent: 157 size: 134217728 persistent_mem: 15035023360 shape: torch.Size([8192, 8192])
+Set persistent: 631 size: 134217728 persistent_mem: 15169241088 shape: torch.Size([8192, 8192])
+Set persistent: 532 size: 134217728 persistent_mem: 15303458816 shape: torch.Size([8192, 8192])
+Set persistent: 685 size: 134217728 persistent_mem: 15437676544 shape: torch.Size([8192, 8192])
+Set persistent: 478 size: 134217728 persistent_mem: 15571894272 shape: torch.Size([8192, 8192])
+Set persistent: 202 size: 134217728 persistent_mem: 15706112000 shape: torch.Size([8192, 8192])
+Set persistent: 634 size: 134217728 persistent_mem: 15840329728 shape: torch.Size([8192, 8192])
+Set persistent: 292 size: 134217728 persistent_mem: 15974547456 shape: torch.Size([8192, 8192])
+Set persistent: 334 size: 134217728 persistent_mem: 16108765184 shape: torch.Size([8192, 8192])
+Set persistent: 310 size: 134217728 persistent_mem: 16242982912 shape: torch.Size([8192, 8192])
+Set persistent: 379 size: 134217728 persistent_mem: 16377200640 shape: torch.Size([8192, 8192])
+Set persistent: 82 size: 134217728 persistent_mem: 16511418368 shape: torch.Size([8192, 8192])
+Set persistent: 175 size: 134217728 persistent_mem: 16645636096 shape: torch.Size([8192, 8192])
+Set persistent: 667 size: 134217728 persistent_mem: 16779853824 shape: torch.Size([8192, 8192])
+Set persistent: 328 size: 134217728 persistent_mem: 16914071552 shape: torch.Size([8192, 8192])
+Set persistent: 112 size: 134217728 persistent_mem: 17048289280 shape: torch.Size([8192, 8192])
+Set persistent: 100 size: 134217728 persistent_mem: 17182507008 shape: torch.Size([8192, 8192])
+Set persistent: 253 size: 134217728 persistent_mem: 17316724736 shape: torch.Size([8192, 8192])
+Set persistent: 301 size: 134217728 persistent_mem: 17450942464 shape: torch.Size([8192, 8192])
+Set persistent: 568 size: 134217728 persistent_mem: 17585160192 shape: torch.Size([8192, 8192])
+Set persistent: 298 size: 134217728 persistent_mem: 17719377920 shape: torch.Size([8192, 8192])
+Set persistent: 226 size: 134217728 persistent_mem: 17853595648 shape: torch.Size([8192, 8192])
+Set persistent: 436 size: 134217728 persistent_mem: 17987813376 shape: torch.Size([8192, 8192])
+Set persistent: 640 size: 134217728 persistent_mem: 18122031104 shape: torch.Size([8192, 8192])
+Set persistent: 154 size: 134217728 persistent_mem: 18256248832 shape: torch.Size([8192, 8192])
+Set persistent: 613 size: 134217728 persistent_mem: 18390466560 shape: torch.Size([8192, 8192])
+Set persistent: 406 size: 134217728 persistent_mem: 18524684288 shape: torch.Size([8192, 8192])
+Set persistent: 514 size: 134217728 persistent_mem: 18658902016 shape: torch.Size([8192, 8192])
+Set persistent: 244 size: 134217728 persistent_mem: 18793119744 shape: torch.Size([8192, 8192])
+Set persistent: 199 size: 134217728 persistent_mem: 18927337472 shape: torch.Size([8192, 8192])
+[2024-12-17 02:04:47,260] [WARNING] [stage3.py:2146:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+Epoch 1, Step 10, Loss: 0.05207943916320801 sync: True time: 12.18187665939331 alloc_mem: 60614922240 peak_mem: 76574317056
+Epoch 1, Step 20, Loss: 0.041297487914562225 sync: True time: 12.15851354598999 alloc_mem: 60614922240 peak_mem: 76574317056
+Epoch 1, Step 30, Loss: 0.049453604966402054 sync: True time: 12.180356740951538 alloc_mem: 60614922240 peak_mem: 76574317056
+meta-llama/Meta-Llama-3-70B-Instruct ds=True np=32 batch_size=2 seq=2048 zero_stage=3 acc=1 ac=True compile=True schedule=True passes=prefetch,selective_gather compile_time=533.1349551677704 iteration time: 12.1581 alloc_mem: 60614922240 peak_mem: 76574317056
