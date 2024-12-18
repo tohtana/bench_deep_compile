@@ -6,12 +6,13 @@ from datetime import datetime
 from contextlib import nullcontext
 
 import torch
-from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoConfig, AutoModelForCausalLM, enable_full_determinism
 from datasets import load_dataset
 from accelerate import Accelerator
-from accelerate.utils import wait_for_everyone
 from torch.utils.data import DataLoader
+from torch.utils.data.distributed import DistributedSampler
 
+from patch_phi3_moe import patch_phi3moe
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -42,6 +43,9 @@ def get_args():
 def main():
     args = get_args()
 
+    if args.deterministic:
+        enable_full_determinism(0)
+
     accelerator = Accelerator(gradient_accumulation_steps=args.gradient_accumulation_steps)
     device = accelerator.device
     is_deepspeed = accelerator.state.deepspeed_plugin is not None
@@ -60,6 +64,12 @@ def main():
         model = AutoModelForCausalLM.from_config(model_config, trust_remote_code=True)
     else:
         model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
+
+    if "microsoft/Phi-3.5-MoE" in model_name:
+        if accelerator.is_main_process:
+            print("Patching Phi-3.5-MoE model")
+        patch_phi3moe(model)
+
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
     if args.activation_checkpointing:
@@ -82,7 +92,8 @@ def main():
     tokenized_dataset = dataset.map(tokenize_function, batched=True)
     tokenized_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
-    data_loader = DataLoader(tokenized_dataset, batch_size=args.batch_size, shuffle=False)
+    sampler = DistributedSampler(tokenized_dataset, num_replicas=accelerator.num_processes, rank=accelerator.process_index)
+    data_loader = DataLoader(tokenized_dataset, batch_size=args.batch_size, sampler=sampler, num_workers=4)
 
     # Prepare optimizer
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
